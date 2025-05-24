@@ -5,7 +5,26 @@ const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('theme', theme);
-    updateThemeIcon(); // Ensure the icon updates after setting the theme
+    updateThemeIcon();
+    updateThemeLogo();
+}
+
+function updateThemeLogo() {
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    // Header logo
+    const logoImg = document.querySelector('.header .logo img');
+    if (logoImg) {
+        logoImg.src = isDark
+            ? 'assets/icons/LOGO-OCTOR-BRANCO.svg'
+            : 'assets/icons/LOGO-OCTOR-ROXO.svg';
+    }
+    // Footer logo
+    const footerLogoImg = document.querySelector('.footer .logo img');
+    if (footerLogoImg) {
+        footerLogoImg.src = isDark
+            ? 'assets/icons/LOGO-OCTOR-BRANCO.svg'
+            : 'assets/icons/LOGO-OCTOR-ROXO.svg';
+    }
 }
 
 function updateThemeIcon() {
@@ -120,3 +139,7 @@ faqItems.forEach(item => {
 
 // Update copyright year
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+function scrolToaraSecao() {
+  document.getElementById('secao-desejada').scrollIntoView({ behavior: 'smooth' });
+}
