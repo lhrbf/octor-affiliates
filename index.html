@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -29,6 +29,17 @@
             aria-label="Alternar tema"
           ></button>
           <a href="#signup" class="btn btn-primary">Torne-se um afiliado</a>
+          <button
+            id="hamburger"
+            class="hamburger"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="mainNav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
       </div>
     </header>
@@ -373,7 +384,7 @@
             Junte-se a milhares de afiliados que já estão lucrando com nosso
             programa. O cadastro é rápido, fácil e totalmente gratuito.
           </p>
-          <a href="#" class="btn btn-light btn-large">Cadastre-se agora</a>
+          <a href="#" class="btn btn-primary btn-large">Cadastre-se agora</a>
         </div>
       </section>
     </main>
@@ -506,5 +517,11 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <button
+      id="themeToggleFloating"
+      class="theme-toggle-floating"
+      aria-label="Alternar tema"
+      type="button"
+    ></button>
   </body>
 </html>

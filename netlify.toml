@@ -1,0 +1,9 @@
+# filepath: /home/henrique-fraga/Área de trabalho/projetos/octor-affiliates/netlify.toml
+[build]
+  publish = "./"
+  command = "npm run lint:js . && npm run lint:css . && npm run lint:html . && npm run format ."
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
