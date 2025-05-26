@@ -199,4 +199,27 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Header background on scroll
+  const header = document.querySelector('.header');
+  window.addEventListener('scroll', () => {
+    // Só aplica o efeito se não for mobile (largura maior que 900px)
+    if (window.innerWidth > 900) {
+      if (window.scrollY > 25) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    } else {
+      // Garante que no mobile nunca fica com cor
+      header.classList.remove('header-scrolled');
+    }
+  });
+
+  // Também remove a cor se redimensionar para mobile estando rolado
+  window.addEventListener('resize', () => {
+    if (window.innerWidth <= 900) {
+      header.classList.remove('header-scrolled');
+    }
+  });
 });
