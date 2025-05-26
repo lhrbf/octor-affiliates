@@ -9,7 +9,11 @@
     "stylelint": "^16.19.1"
   },
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint:js": "eslint .",
+    "lint:css": "stylelint '**/*.css'",
+    "lint:html": "htmlhint '**/*.html'",
+    "format": "prettier --write ."
   },
   "lint-staged": {
     "*.{js,jsx}": [
