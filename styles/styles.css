@@ -7,6 +7,7 @@
     --bg: #fafafa;
     --bg-alt: #f5f5f5;
     --bg-contrast: #f0f2fa;
+    --bg-footer: #d3d3d3;
     --transition: 300ms;
 }
 
@@ -19,6 +20,7 @@
     --bg: #151934;
     --bg-alt: #23244a;
     --bg-contrast: #1f2042;
+    --bg-footer: #0c0d29;
 }
 
 * {
