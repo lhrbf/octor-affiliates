@@ -141,13 +141,14 @@ nav a:hover {
     cursor: pointer;
     transition: transform 0.3s, background var(--transition), color var(--transition);
     display: none;
-    /* escondido por padrão */
     align-items: center;
     justify-content: center;
+    width: 48px;
+    height: 48px;
 }
 
-.theme-toggle-floating svg {
-    transition: transform 0.3s, opacity 0.3s;
+.theme-toggle-floating:hover {
+    transform: scale(1.1);
 }
 
 [data-theme="dark"] .theme-toggle svg {

@@ -72,7 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  window.addEventListener('resize', updateThemeIconFloating);
+  // Função para mostrar/esconder o botão floating baseado no tamanho da tela
+  function handleFloatingToggleVisibility() {
+    if (themeToggleFloating) {
+      if (window.innerWidth <= 900) {
+        themeToggleFloating.style.display = 'flex';
+      } else {
+        themeToggleFloating.style.display = 'none';
+      }
+    }
+  }
+
+  // Chama a função no carregamento e no redimensionamento
+  handleFloatingToggleVisibility();
+  window.addEventListener('resize', handleFloatingToggleVisibility);
 
   // Benefits Section Animation
   const benefitItems = document.querySelectorAll('.benefit-item');
