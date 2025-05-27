@@ -7,7 +7,7 @@
     --bg: #fafafa;
     --bg-alt: #f5f5f5;
     --bg-contrast: #f0f2fa;
-    --bg-footer: #d3d3d3;
+    --bg-footer: #dadada;
     --transition: 300ms;
 }
 
@@ -468,7 +468,7 @@ nav a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--bg);
+    background-color: var(--bg-footer);
     padding: 4rem 0 2rem;
 }
 
