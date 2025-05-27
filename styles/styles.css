@@ -196,7 +196,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    min-height: 90vh;
+    min-height: 75vh;
     display: flex;
     align-items: center;
     text-align: center;
