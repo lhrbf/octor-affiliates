@@ -1,8 +1,0 @@
-# filepath: /home/henrique-fraga/Área de trabalho/projetos/octor-affiliates/netlify.toml
-[build]
-  publish = "."
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
