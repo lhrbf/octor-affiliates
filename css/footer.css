@@ -23,3 +23,11 @@ footer {
     font-family: var(--font-family-body);
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .container-footer {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        text-align: center;
+    }
+}

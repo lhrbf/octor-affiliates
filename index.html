@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/variables.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <script src="js/scripts.js" defer></script>
 </head>
 
 <body>
     <header>
         <div class="container-nav">
             <div class="logo">
-                <img src="assets/icons/LOGO-OCTOR-ROXO.svg" alt="Logo Octor" />
+                <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor" />
             </div>
+
+            <!-- Menu Desktop -->
             <nav>
                 <ul>
                     <li><a href="#benefits">Benefícios</a></li>
@@ -27,7 +30,30 @@
                     <option value="en">English</option>
                 </select>
             </nav>
-            <button class="btn btn-primary">Fale Conosco</button>
+
+            <button class="btn btn-secondary desktop-btn">Fale Conosco</button>
+
+            <!-- Menu Hambúrguer -->
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Menu Mobile -->
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#benefits">Benefícios</a></li>
+                    <li><a href="#grupo-octor">Grupo Octor</a></li>
+                    <li class="lang-select-mobile-li">
+                        <select id="lang-select-mobile" aria-label="Selecionar idioma">
+                            <option value="pt-BR">Português</option>
+                            <option value="en">English</option>
+                        </select>
+                    </li>
+                    <li><button class="btn btn-secondary mobile-btn">Fale Conosco</button></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -58,33 +84,35 @@
             <div class="container">
                 <div class="benefits-content">
                     <h1>BENEFÍCIOS</h1>
-                    <div class="benefit-item">
-                        <h3>
-                            Saque quinzenal
-                        </h3>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>
-                            Gerente de contas
-                            exclusivo pra você 24/7
-                        </h3>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>
-                            A bet mais buscada
-                            no Google no Brasil
-                        </h3>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>
-                            Acordos com CPA e REV
-                        </h3>
-                    </div>
-                    <div class="benefit-item">
-                        <h3>
-                            Contrato formalizado
-                            de afiliação
-                        </h3>
+                    <div class="grid-itens">
+                        <div class="benefit-item">
+                            <h3>
+                                Saque quinzenal
+                            </h3>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>
+                                Gerente de contas
+                                exclusivo pra você 24/7
+                            </h3>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>
+                                A bet mais buscada
+                                no Google no Brasil
+                            </h3>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>
+                                Acordos com CPA e REV
+                            </h3>
+                        </div>
+                        <div class="benefit-item">
+                            <h3>
+                                Contrato formalizado
+                                de afiliação
+                            </h3>
+                        </div>
                     </div>
                 </div>
         </section>

@@ -9,13 +9,13 @@ header {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  padding: var(--spacing-md);
 }
 
 .container-nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: var(--spacing-sm);
   background: transparent;
   flex-direction: row;
   width: 100%;
@@ -50,9 +50,8 @@ nav ul {
 }
 
 nav a {
-  color: var(--text-primary);
   text-decoration: none;
-  transition: text-decoration 0.4s ease-in-out;
+  transition: text-decoration 0.4s;
   font-size: var(--font-md);
   font-family: var(--font-family-benzin-semibold);
   font-weight: var(--font-weight-benzin-semibold);
@@ -76,26 +75,43 @@ nav a:hover {
   border: none;
   cursor: pointer;
   z-index: calc(var(--z-header, 1000) + 1);
-  color: var(--text-primary);
+  color: white;
 }
 
 .hamburger span {
   display: block;
   height: 4px;
   width: 100%;
-  background: var(--text-primary);
+  background: white;
   margin: 5px 0;
   border-radius: 2px;
   transition: 0.3s;
 }
 
+/* Animação do hambúrguer */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
 @media (max-width: 900px) {
-  .btn-primary {
+  .desktop-btn {
     display: none !important;
   }
 
   .hamburger {
     display: flex;
+  }
+
+  nav {
+    display: none;
   }
 
   .nav-links {
@@ -105,8 +121,9 @@ nav a:hover {
     left: auto;
     width: 100vw;
     max-width: 100%;
-    background: #fff;
-    box-shadow: none;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     flex-direction: column;
     padding: var(--spacing-md) 0;
     display: none;
@@ -129,14 +146,18 @@ nav a:hover {
     width: 65%;
     text-align: end;
     padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-lg) 0;
-    border-top: 1px solid var(--tertiary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-links a {
+    color: white;
   }
 
   .lang-select-mobile-li {
     width: 65%;
     text-align: end;
     padding: var(--spacing-md) var(--spacing-sm) var(--spacing-lg) 0;
-    border-top: 1px solid var(--tertiary-color);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -237,4 +258,27 @@ h1.carousel-title {
 #lang-select option {
   color: var(--text-primary, #181b3e);
   background: #fff;
+}
+
+/* Botões mobile e desktop */
+.mobile-btn {
+  display: none;
+  width: 65%;
+  max-width: 220px;
+  margin-top: 10px;
+}
+
+.desktop-btn {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .mobile-btn {
+    display: block;
+  }
+}
+
+/* Esconder menu mobile no desktop */
+.nav-links {
+  display: none;
 }

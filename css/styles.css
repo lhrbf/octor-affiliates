@@ -1,8 +1,10 @@
-*, html, body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+*,
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
 }
 
 body {
@@ -11,7 +13,14 @@ body {
   background-image: url("/assets/images/bg-section.png");
 }
 
-h1, h2, h3, h4, h5, h6, .hero-title, .ecosystem-title {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.hero-title,
+.ecosystem-title {
   font-family: var(--font-family-title);
   font-size: var(--font-xl);
 }
@@ -21,7 +30,11 @@ h1 {
   font-weight: var(--font-weight-benzin-bold);
 }
 
-p, a, span, select, .btn {
+p,
+a,
+span,
+select,
+.btn {
   font-family: var(--font-family-body);
   font-size: var(--font-lg);
 }
@@ -46,7 +59,7 @@ p, a, span, select, .btn {
 }
 
 .btn-secondary {
-  background: linear-gradient(90deg, var(--green-color), #1A1A1A);
+  background: linear-gradient(90deg, var(--green-color), #003f03);
   max-width: 350px;
   color: white;
   font-size: var(--font-xl);
@@ -66,32 +79,32 @@ p, a, span, select, .btn {
 
 .container {
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   padding: 50px 20px;
   margin: 0 auto;
   background: transparent;
+  min-height: 85vh;
 }
 
 .hero-image {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xl);
-    font-size: var(--font-lg);
-    width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  font-size: var(--font-lg);
+  width: 80%;
 }
 
 .benefits-content {
@@ -99,10 +112,26 @@ p, a, span, select, .btn {
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-2xl);
+  padding: 100px 0;
+}
+
+.benefits-content h1 {
+  position: sticky;
+  top: 85px;
+  z-index: 2;
+  padding: var(--spacing-lg) 0;
+}
+
+.grid-itens {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px;
+  width: 100%;
+  padding: 250px 0;
 }
 
 .benefit-item {
-  max-width: 600px;
+  max-width: 450px;
   width: 100%;
   border: 1px solid var(--tertiary-color);
   border-radius: var(--border-radius-md);
@@ -111,6 +140,83 @@ p, a, span, select, .btn {
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Grid alternado: sempre uma row vazia entre os itens */
+.grid-itens .benefit-item {
+  justify-self: start;
+}
+.grid-itens .benefit-item:nth-child(even) {
+  justify-self: end;
+}
+
+/* Animação de entrada dos cards de benefício ao scrollar */
+.grid-itens .benefit-item {
+  opacity: 0;
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+.grid-itens .benefit-item:nth-child(odd) {
+  transform: translateX(-80vw);
+}
+.grid-itens .benefit-item:nth-child(even) {
+  transform: translateX(80vw);
+}
+.grid-itens .benefit-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 950px) {
+  .container-footer {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .hero .container {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .how-to .container {
+    padding: 0px 20px 10px 20px;
+  }
+
+  .btn-secondary {
+    margin: auto;
+  }
+
+  .hero-text,
+  .hero-text p,
+  .how-to-text,
+  .how-to-text p,
+  .benefits-content,
+  .benefit-item,
+  .box-bet,
+  .box-bet h1 {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .how-to-content {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+
+  .grid-itens {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .grid-itens .benefit-item {
+    margin-bottom: 40px;
+    justify-self: center !important;
+  }
+
+  .grid-itens .benefit-item {
+    grid-row: auto !important;
+    justify-self: center !important;
+  }
 }
 
 .bet {
@@ -134,7 +240,8 @@ p, a, span, select, .btn {
 }
 
 .how-to .container {
-  padding: 150px 0;
+  align-items: center;
+  padding: 125px 20px;
 }
 
 .how-to-content {
@@ -143,14 +250,16 @@ p, a, span, select, .btn {
 }
 
 .how-to-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  max-width: 850px;
   height: 100%;
 }
 
 .how-to-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -159,9 +268,5 @@ p, a, span, select, .btn {
   max-width: 550px;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-lg);
-}
-
-.how-to-text p {
-  line-height: 1.5;
+  gap: var(--spacing-xl);
 }
