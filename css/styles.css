@@ -2,14 +2,28 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    color: white;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/assets/images/bg-section.png");
 }
 
 h1, h2, h3, h4, h5, h6, .hero-title, .ecosystem-title {
   font-family: var(--font-family-title);
+  font-size: var(--font-xl);
+}
+
+h1 {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-weight-benzin-bold);
 }
 
 p, a, span, select, .btn {
   font-family: var(--font-family-body);
+  font-size: var(--font-lg);
 }
 
 .btn {
@@ -28,12 +42,12 @@ p, a, span, select, .btn {
 .btn-primary {
   background-color: var(--primary-color);
   color: white;
-  max-width: 200px;
+  max-width: 225px;
 }
 
 .btn-secondary {
-  background-color: var(--secondary-color);
-  max-width: 600px;
+  background: linear-gradient(90deg, var(--green-color), #1A1A1A);
+  max-width: 350px;
   color: white;
   font-size: var(--font-xl);
 }
@@ -58,6 +72,7 @@ p, a, span, select, .btn {
   max-width: 1400px;
   padding: 50px 20px;
   margin: 0 auto;
+  background: transparent;
 }
 
 .hero-image {
@@ -77,4 +92,76 @@ p, a, span, select, .btn {
     gap: var(--spacing-xl);
     font-size: var(--font-lg);
     width: 80%;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+}
+
+.benefit-item {
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid var(--tertiary-color);
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bet {
+  height: 100vh;
+  background-image: url("/assets/images/Leo-Santana-Carlinhos.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bet .container {
+  height: 100%;
+  text-align: center;
+  align-items: flex-start;
+}
+
+.box-bet {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  padding-top: 100px;
+}
+
+.how-to .container {
+  padding: 150px 0;
+}
+
+.how-to-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.how-to-image {
+  width: 100%;
+  max-width: 850px;
+  height: 100%;
+}
+
+.how-to-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.how-to-text {
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.how-to-text p {
+  line-height: 1.5;
 }
