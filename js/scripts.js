@@ -114,8 +114,14 @@ function initSmoothScroll() {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
+            // Verificar se é um link externo ou se tem target="_blank"
+            if (this.hasAttribute('target') && this.getAttribute('target') === '_blank') {
+                // Permitir navegação normal para links externos
+                return;
+            }
+            
             // Verificar se é um link para seção (que tem href="...")
-            if (href && href !== '#') {
+            if (href && href !== '#' && !href.startsWith('http')) {
                 e.preventDefault();
                 
                 let targetSection = null;
@@ -123,8 +129,6 @@ function initSmoothScroll() {
                 // Mapear links para seções correspondentes
                 if (href.includes('benefits') || this.textContent.includes('Benefícios')) {
                     targetSection = document.getElementById('benefits');
-                } else if (href.includes('grupo-octor') || this.textContent.includes('Grupo Octor')) {
-                    targetSection = document.getElementById('how-to'); // ou criar uma seção específica
                 }
                 
                 // Fazer scroll suave para a seção
