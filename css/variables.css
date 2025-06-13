@@ -45,12 +45,12 @@
   --spacing-2xl: 48px;
 
   /* Font sizes */
-  --font-sm: 17.5px;
-  --font-md: 20px;
-  --font-lg: 22.5px;
-  --font-xl: 26.5px;
-  --font-2xl: 32px;
-  --font-hero: 60px;
+  --font-sm: 20px;
+  --font-md: 24px;
+  --font-lg: 28px;
+  --font-xl: 32px;
+  --font-2xl: 38px;
+  --font-hero: 72px;
 
   /* Dimensions */
   --border-radius-sm: 8px;
