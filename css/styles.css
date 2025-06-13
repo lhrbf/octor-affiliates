@@ -11,7 +11,7 @@ body {
   background-color: #11164d;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/assets/images/bg-section.png");
+  background-image: url("../assets/images/bg-section.png");
 }
 
 h1,
@@ -114,7 +114,7 @@ select,
 }
 
 .bet {
-  background-image: url("/assets/images/Leo-Santana-Carlinhos.png");
+  background-image: url("../assets/images/Leo-Santana-Carlinhos.png");
   background-repeat: no-repeat;
   background-size: cover;
 }

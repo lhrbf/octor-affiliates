@@ -7,11 +7,14 @@ Sitemap: https://octor.pro/octor-affiliates/sitemap.xml
 # Allow all search engines to index the affiliate site
 # This helps with SEO for the affiliate program
 
-# Block access to sensitive directories if any
-Disallow: /css/
-Disallow: /js/
-Disallow: /assets/fonts/
+# Allow access to CSS, JS, and assets for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /assets/
 
-# Allow access to images for social media previews
-Allow: /assets/images/
-Allow: /assets/icons/
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to sensitive files if any
+Disallow: /*.log$
+Disallow: /check-resources.html
