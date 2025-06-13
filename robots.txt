@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://octor.pro/octor-affiliates/sitemap.xml
+
+# Allow all search engines to index the affiliate site
+# This helps with SEO for the affiliate program
+
+# Block access to sensitive directories if any
+Disallow: /css/
+Disallow: /js/
+Disallow: /assets/fonts/
+
+# Allow access to images for social media previews
+Allow: /assets/images/
+Allow: /assets/icons/
