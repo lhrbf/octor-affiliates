@@ -45,12 +45,12 @@
   --spacing-2xl: 48px;
 
   /* Font sizes */
-  --font-sm: 20px;
-  --font-md: 24px;
-  --font-lg: 28px;
-  --font-xl: 32px;
-  --font-2xl: 38px;
-  --font-hero: 72px;
+  --font-base: 16px;
+  --font-sm: clamp(18px, 2vw, 20px);
+  --font-md: clamp(20px, 3vw, 24px);
+  --font-lg: clamp(24px, 3.5vw, 28px);
+  --font-xl: clamp(28px, 4vw, 32px);
+  --font-2xl: clamp(32px, 4.5vw, 38px);
 
   /* Dimensions */
   --border-radius-sm: 8px;
@@ -70,4 +70,10 @@
   /* Blob Shadows */
   --blob-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   --blob-shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.2);
+
+  /* Breakpoints */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1200px;
 }

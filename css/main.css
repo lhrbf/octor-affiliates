@@ -1,0 +1,20 @@
+/* IMPORTS DOS ARQUIVOS CSS */
+
+/* Reset e configurações globais */
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./global.css");
+
+/* Layout */
+@import url("./layout/hero.css");
+@import url("./layout/benefits.css");
+@import url("./layout/bet.css");
+@import url("./layout/how-to.css");
+
+/* Componentes */
+@import url("./components/buttons.css");
+@import url("./components/header.css");
+@import url("./components/footer.css");
+
+/* Utilities */
+@import url("./utilities.css");

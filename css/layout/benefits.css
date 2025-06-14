@@ -1,0 +1,105 @@
+/* BENEFITS SECTION */
+.benefits {
+  position: relative;
+}
+
+.benefits-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.sticky-title {
+  position: sticky;
+  top: 115px;
+  z-index: 100;
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  padding: var(--spacing-md);
+  backdrop-filter: blur(10px);
+}
+
+.sticky-title h1 {
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 250px;
+  margin: 225px 0;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10px);
+  border: 0.6px solid rgba(255, 255, 255, 0.6);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  max-width: 650px;
+}
+
+.benefit-item h3 {
+  text-align: center;
+  line-height: 1.2;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Posicionamento alternado dos itens */
+.benefit-item:nth-child(2) { align-self: flex-start; transform: translateX(-200px); }
+.benefit-item:nth-child(3) { align-self: flex-end; transform: translateX(200px); }
+.benefit-item:nth-child(4) { align-self: flex-start; transform: translateX(-200px); }
+.benefit-item:nth-child(5) { align-self: flex-end; transform: translateX(200px); }
+.benefit-item:nth-child(6) { align-self: flex-start; transform: translateX(-200px); }
+
+.benefit-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mobile Responsivity */
+/* Tablet */
+@media (max-width: 1024px) {
+  .sticky-title {
+    top: 90px;
+  }
+  
+  .benefit-item {
+    margin: 150px 0;
+    max-width: 550px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .benefits {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .sticky-title {
+    top: 80px;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .benefit-item {
+    margin: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) var(--spacing-md);
+    min-height: 200px;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .benefit-item {
+    padding: var(--spacing-lg) var(--spacing-sm);
+    margin: var(--spacing-xl) 0;
+  }
+}

@@ -1,0 +1,50 @@
+/* BET SECTION */
+.bet {
+  background-image: url("../../assets/images/Leo-Santana-Carlinhos.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.bet .container {
+  justify-content: center;
+  align-items: start;
+  text-align: center;
+}
+
+.box-bet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-2xl);
+}
+
+/* Mobile Responsivity */
+/* Tablet */
+@media (max-width: 1024px) {
+  .box-bet {
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-xl);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .bet .container {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+  
+  .box-bet {
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .bet .container {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+}

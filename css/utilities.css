@@ -1,0 +1,70 @@
+/* UTILITIES - Classes auxiliares para responsividade */
+
+/* Visibility utilities */
+.desktop-only {
+  display: block;
+}
+
+.tablet-only,
+.mobile-only {
+  display: none;
+}
+
+/* Text alignment utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Spacing utilities responsive */
+.spacing-responsive {
+  padding: var(--spacing-lg);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .desktop-only {
+    display: none;
+  }
+  
+  .tablet-only {
+    display: block;
+  }
+  
+  .spacing-responsive {
+    padding: var(--spacing-md);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tablet-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+  
+  .spacing-responsive {
+    padding: var(--spacing-sm);
+  }
+  
+  .text-center-mobile {
+    text-align: center;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .spacing-responsive {
+    padding: var(--spacing-xs);
+  }
+}
