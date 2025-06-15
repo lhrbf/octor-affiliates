@@ -198,3 +198,31 @@ function initHeroImageRotator() {
 
 // Inicializar rotator quando o DOM carregar
 document.addEventListener('DOMContentLoaded', initHeroImageRotator);
+
+// Funcionalidade dos botões "Fale Conosco" - WhatsApp
+function initContactButtons() {
+    const contactButtons = document.querySelectorAll('.btn');
+    const whatsappNumber = '5598855828455'; // Número formatado para WhatsApp
+    const message = 'Olá! Tenho interesse no programa de afiliados da Octor.'; // Mensagem padrão
+    
+    contactButtons.forEach(button => {
+        // Verificar se o botão contém o texto "Fale Conosco"
+        if (button.textContent.includes('Fale Conosco')) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Criar URL do WhatsApp
+                const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+                
+                // Abrir WhatsApp em uma nova aba
+                window.open(whatsappURL, '_blank');
+            });
+            
+            // Adicionar cursor pointer para indicar que é clicável
+            button.style.cursor = 'pointer';
+        }
+    });
+}
+
+// Inicializar botões de contato quando o DOM carregar
+document.addEventListener('DOMContentLoaded', initContactButtons);
