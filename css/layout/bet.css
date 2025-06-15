@@ -32,10 +32,6 @@
 
 /* Mobile */
 @media (max-width: 768px) {
-  .bet .container {
-    padding: var(--spacing-2xl) var(--spacing-md);
-  }
-  
   .box-bet {
     gap: var(--spacing-lg);
     margin-top: var(--spacing-lg);
@@ -44,7 +40,4 @@
 
 /* Mobile pequeno */
 @media (max-width: 480px) {
-  .bet .container {
-    padding: var(--spacing-xl) var(--spacing-sm);
-  }
 }

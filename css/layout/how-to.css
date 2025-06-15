@@ -71,7 +71,6 @@
   .how-to .container {
     flex-direction: column;
     gap: var(--spacing-xl);
-    padding: var(--spacing-2xl) var(--spacing-md);
   }
 
   .how-to-content {
@@ -98,9 +97,5 @@
 @media (max-width: 480px) {
   .how-to {
     padding: var(--spacing-xl) 0;
-  }
-  
-  .how-to .container {
-    padding: var(--spacing-xl) var(--spacing-sm);
   }
 }
