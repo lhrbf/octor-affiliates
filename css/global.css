@@ -1,9 +1,9 @@
 /* ESTILOS GLOBAIS */
 
 html {
-    scroll-behavior: smooth;
-    font-size: var(--font-base);
-    height: 100%;
+  scroll-behavior: smooth;
+  font-size: var(--font-base);
+  height: 100%;
 }
 
 body {
@@ -18,40 +18,58 @@ body {
 }
 
 /* Tipografia Global */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-title);
 }
 
-p, a, span, select {
+p,
+a,
+span,
+select {
   font-family: var(--font-family-body);
 }
 
 /* Font Sizes Globais */
-h1 { font-size: var(--font-2xl); }
-h2 { font-size: var(--font-xl); }
-h3 { font-size: var(--font-lg); }
-h4 { font-size: var(--font-md); }
-h5 { font-size: var(--font-sm); }
-h6 { font-size: var(--font-base); }
+h1 {
+  font-size: var(--font-2xl);
+}
+h2 {
+  font-size: var(--font-xl);
+}
+h3 {
+  font-size: var(--font-lg);
+}
+h4 {
+  font-size: var(--font-md);
+}
+h5 {
+  font-size: var(--font-sm);
+}
+h6 {
+  font-size: var(--font-base);
+}
 
-p { font-size: var(--font-md); }
-a { font-size: var(--font-md); }
-span { font-size: var(--font-md); }
-select { font-size: var(--font-lg); }
+p {
+  font-size: var(--font-md);
+}
+a {
+  font-size: var(--font-md);
+}
+span {
+  font-size: var(--font-md);
+}
+select {
+  font-size: var(--font-lg);
+}
 
-nav a { font-size: var(--font-lg); }
-.nav-links a { font-size: var(--font-xl); }
-.btn { font-size: var(--font-md); }
-footer p { font-size: var(--font-sm); }
-
-/* Elementos específicos com clamp responsivo */
-.sticky-title h1,
-.sticky-title h2 { font-size: clamp(3rem, 7vw, 5rem); }
-.benefit-item h3 { font-size: clamp(1.8rem, 5vw, 2.8rem); }
-.how-to-text h1 { font-size: clamp(2rem, 4vw, 3rem); }
-.box-bet h1 { font-size: var(--font-2xl); }
-.hero-text { font-size: var(--font-lg); }
-.how-to-text p { font-size: var(--font-md); }
+.btn {
+  font-size: var(--font-lg);
+}
 
 /* Container Global */
 .container {
@@ -75,10 +93,6 @@ footer .container {
   .container {
     padding: 4.5rem var(--spacing-md);
   }
-  
-  .sticky-title h1,
-  .sticky-title h2 { font-size: var(--font-2xl); }
-  .benefit-item h3 { font-size: var(--font-xl); }
 }
 
 @media (max-width: 768px) {
@@ -87,23 +101,19 @@ footer .container {
     gap: var(--spacing-xl);
     padding: 3rem var(--spacing-sm);
   }
-  
+
   /* Centralizar todos os textos no mobile */
-  h1, h2, h3, h4, h5, h6, p, a, span {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  span {
     text-align: center;
   }
-  
-  .sticky-title h1,
-  .sticky-title h2 { font-size: clamp(2.5rem, 8vw, 4rem); }
-  .benefit-item h3 { font-size: var(--font-lg); }
-  nav a { font-size: var(--font-md); }
-  .nav-links a { font-size: var(--font-xl); }
-  .hamburger-text { font-size: var(--font-lg); }
-  .btn { font-size: var(--font-md); }
-  .how-to-text h1 { font-size: var(--font-md); }
-  .how-to-text p { font-size: var(--font-md); }
-  footer p { font-size: var(--font-sm); }
-  .footer-copyright { font-size: var(--font-sm); }
 }
 
 @media (max-width: 480px) {
@@ -111,10 +121,4 @@ footer .container {
     padding: 2rem var(--spacing-sm);
     gap: var(--spacing-lg);
   }
-  
-  .btn { font-size: var(--font-sm); }
-  .how-to-text h1 { font-size: var(--font-sm); }
-  .how-to-text p { font-size: var(--font-sm); }
-  .footer-copyright { font-size: 14px; }
-  footer .container p { font-size: 14px; }
 }
