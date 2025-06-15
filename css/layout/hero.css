@@ -5,13 +5,18 @@
 
 .hero-image {
   width: 100%;
-  height: auto;
+  height: 600px; /* Altura fixa para evitar mudanças de layout */
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: contain; /* Mantém proporção sem cortar */
+  object-position: center;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -37,6 +42,10 @@
 /* Mobile Responsivity */
 /* Tablet */
 @media (max-width: 1024px) {
+  .hero-image {
+    height: 500px; /* Altura menor para tablet */
+  }
+  
   .hero-text {
     width: 90%;
   }
@@ -44,6 +53,10 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  .hero-image {
+    height: 400px; /* Altura menor para mobile */
+  }
+  
   .hero-text {
     width: 100%;
     text-align: center;
@@ -62,6 +75,10 @@
 
 /* Mobile pequeno */
 @media (max-width: 480px) {
+  .hero-image {
+    height: 300px; /* Altura ainda menor para mobile pequeno */
+  }
+  
   .hero-text {
     gap: var(--spacing-lg);
   }

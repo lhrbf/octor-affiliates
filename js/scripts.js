@@ -55,22 +55,36 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Animação de entrada lateral dos benefit-item com alternância
+// Animação de entrada lateral dos benefit-item com pausa de 10s
+let lastAnimationTime = {};
+const ANIMATION_COOLDOWN = 10000; // 10 segundos
+
 function animateBenefitItems() {
   const items = document.querySelectorAll('.benefit-item');
   const triggerBottom = window.innerHeight * 0.8;
   const triggerTop = window.innerHeight * 0.2;
+  const currentTime = Date.now();
   
   items.forEach((item, index) => {
     const boxTop = item.getBoundingClientRect().top;
     const boxBottom = item.getBoundingClientRect().bottom;
+    const itemKey = `item-${index}`;
     
     // Se o elemento está na área visível (com margem para trigger)
     if (boxTop < triggerBottom && boxBottom > triggerTop) {
-      item.classList.add('visible');
+      // Verificar se passou o tempo de cooldown desde a última animação
+      if (!lastAnimationTime[itemKey] || (currentTime - lastAnimationTime[itemKey]) > ANIMATION_COOLDOWN) {
+        if (!item.classList.contains('visible')) {
+          item.classList.add('visible');
+          lastAnimationTime[itemKey] = currentTime;
+        }
+      }
     } else {
-      // Se o elemento saiu da área visível, remove a classe para permitir re-animação
-      item.classList.remove('visible');
+      // Se o elemento saiu da área visível, remove a classe após o cooldown
+      if (item.classList.contains('visible') && lastAnimationTime[itemKey] && (currentTime - lastAnimationTime[itemKey]) > ANIMATION_COOLDOWN) {
+        item.classList.remove('visible');
+        delete lastAnimationTime[itemKey]; // Reset do tempo para permitir nova animação
+      }
     }
   });
 }
