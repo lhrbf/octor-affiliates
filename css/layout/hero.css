@@ -57,6 +57,10 @@
     height: 400px; /* Altura menor para mobile */
   }
   
+  .hero-logo {
+    display: none;
+  }
+  
   .hero-text {
     width: 100%;
     text-align: center;
@@ -77,6 +81,10 @@
 @media (max-width: 480px) {
   .hero-image {
     height: 300px; /* Altura ainda menor para mobile pequeno */
+  }
+
+  .hero-logo {
+    display: none;
   }
   
   .hero-text {
