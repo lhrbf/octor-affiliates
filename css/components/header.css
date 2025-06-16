@@ -17,7 +17,8 @@ header .container {
   min-height: auto;
   padding: var(--spacing-sm) var(--spacing-lg) !important;
   justify-content: space-between;
-  flex-direction: row !important; /* Forçar row no header sempre */
+  flex-direction: row !important;
+  max-width: 100%;
 }
 
 .logo {

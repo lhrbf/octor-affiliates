@@ -1,0 +1,120 @@
+/* Firefox-specific CSS fixes for octor-affiliates */
+
+/* Firefox-specific fixes */
+@-moz-document url-prefix() {
+  /* Otimizações gerais para Firefox */
+  body {
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Fix para imagens no Firefox */
+  img {
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  /* Fix para botões no Firefox */
+  button, .btn {
+    -moz-appearance: none;
+    appearance: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  /* Fix para inputs no Firefox */
+  input, select, textarea {
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Fix para select no Firefox */
+  select {
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23111b3e" height="18" viewBox="0 0 20 20" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M5.516 7.548a1 1 0 0 1 1.415 0L10 10.617l3.07-3.07a1 1 0 1 1 1.415 1.415l-3.777 3.778a1 1 0 0 1-1.415 0L5.516 8.963a1 1 0 0 1 0-1.415z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.8em center;
+    background-size: 1.1em;
+    padding-right: 2em;
+  }
+  
+  /* Otimização para scroll no Firefox */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Fix para header sticky no Firefox */
+  header {
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Performance optimization para imagens */
+  .hero-image img,
+  .how-to-image img {
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Fix para benefit items no Firefox */
+  .benefit-item {
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Fallback para outros browsers baseados em Mozilla */
+@supports (-moz-appearance: none) {
+  /* Font smoothing optimization */
+  body {
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Form elements styling */
+  input, select, textarea, button {
+    -moz-appearance: none;
+    appearance: none;
+  }
+  
+  /* Performance optimizations */
+  .hero-image,
+  .benefit-item,
+  .how-to-image {
+    transform: translateZ(0);
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Mozilla-specific media queries */
+@-moz-document url-prefix() {
+  /* Fix para problemas de rendering no Firefox */
+  .benefits {
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Fix para gradients no Firefox */
+  .hero {
+    background: -moz-linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  }
+  
+  /* Fix para box-shadow no Firefox */
+  .btn {
+    -moz-box-shadow: 0 4px 14px 0 rgba(var(--primary-color-rgb), 0.3);
+    box-shadow: 0 4px 14px 0 rgba(var(--primary-color-rgb), 0.3);
+  }
+  
+  /* Fix para border-radius no Firefox */
+  .btn,
+  input,
+  select,
+  textarea {
+    -moz-border-radius: var(--border-radius-sm);
+    border-radius: var(--border-radius-sm);
+  }
+}
