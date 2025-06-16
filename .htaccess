@@ -1,0 +1,34 @@
+# MIME Types para Safari e outros navegadores
+AddType text/css .css
+AddType application/javascript .js
+AddType font/ttf .ttf
+AddType font/otf .otf
+AddType font/woff .woff
+AddType font/woff2 .woff2
+AddType image/svg+xml .svg
+AddType video/mp4 .mp4
+AddType video/webm .webm
+AddType image/webp .webp
+
+# Cache para fontes
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Headers para CORS de fontes
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ttf|otf|woff|woff2)$">
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+</IfModule>
+
+# Compressão
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE text/html
+</IfModule>

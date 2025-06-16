@@ -22,3 +22,4 @@
 /* Browser-specific fixes */
 @import url("./firefox-fixes.css");
 @import url("./safari-fixes.css");
+@import url("./safari-font-fixes.css");
