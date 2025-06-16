@@ -5,7 +5,7 @@
 
 .hero-image {
   width: 100%;
-  height: 600px; /* Altura fixa para evitar mudanças de layout */
+  /* Removido height fixa */
   position: relative;
   display: flex;
   align-items: center;
@@ -14,22 +14,11 @@
 
 .hero-image img {
   width: 100%;
-  height: 100%;
-  object-fit: contain; /* Mantém proporção sem cortar */
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
   object-position: center;
   transition: opacity 0.3s ease-in-out;
-}
-
-.hero-image::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 120px;
-  background: linear-gradient(to bottom, transparent 0%, var(--primary-color) 100%);
-  pointer-events: none;
-  z-index: 2;
 }
 
 .hero-text {
@@ -42,34 +31,31 @@
 /* Mobile Responsivity */
 /* Tablet */
 @media (max-width: 1024px) {
-  .hero-image {
-    height: 500px; /* Altura menor para tablet */
-  }
-  
   .hero-text {
     width: 90%;
   }
 }
 
 /* Mobile */
-@media (max-width: 768px) {
-  .hero-image {
-    height: 400px; /* Altura menor para mobile */
-  }
-  
-  .hero-logo {
-    display: none;
-  }
-  
+@media (max-width: 950px) {
   .hero-text {
     width: 100%;
     text-align: center;
+    order: 2;
   }
-
+  .hero-logo {
+    display: none;
+  }
+  .hero-image {
+    order: 1;
+  }
+  /* Remove qualquer order dos filhos de .hero-text para não afetar o layout interno */
+  .hero-text > * {
+    order: unset !important;
+  }
   .hero-text .btn {
     margin: var(--spacing-lg) auto;
   }
-
   .hero-text h1,
   .hero-text p {
     width: 100%;
@@ -79,19 +65,7 @@
 
 /* Mobile pequeno */
 @media (max-width: 480px) {
-  .hero-image {
-    height: 300px; /* Altura ainda menor para mobile pequeno */
-  }
-
-  .hero-logo {
-    display: none;
-  }
-  
   .hero-text {
     gap: var(--spacing-lg);
-  }
-  
-  .hero-image::after {
-    height: 80px;
   }
 }

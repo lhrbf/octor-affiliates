@@ -29,7 +29,6 @@
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: var(--spacing-xl);
-  text-align: justify;
 }
 
 .how-to-text .btn {
@@ -86,10 +85,6 @@
   .how-to-text h1 {
     text-align: center;
     margin-bottom: var(--spacing-md);
-  }
-
-  .how-to-text p {
-    text-align: left;
   }
 }
 

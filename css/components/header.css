@@ -130,7 +130,7 @@ nav a:hover {
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   header .container {
     padding: var(--spacing-xs) var(--spacing-md) !important;
   }
@@ -149,7 +149,7 @@ nav a:hover {
 
   .nav-links {
     position: absolute;
-    top: 118px;
+    top: 57px;
     right: 0;
     width: 100vw;
     background: rgba(24, 47, 152, 0.5);
