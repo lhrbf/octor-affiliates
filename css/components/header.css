@@ -15,7 +15,7 @@ header.scrolled {
 
 header .container {
   min-height: auto;
-  padding: var(--spacing-sm) var(--spacing-lg) !important;
+  padding: var(--spacing-sm) var(--spacing-2xl) !important;
   justify-content: space-between;
   flex-direction: row !important;
   max-width: 100%;
