@@ -30,6 +30,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-Regular.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 
 @font-face {
@@ -61,6 +69,7 @@
   --font-weight-benzin-semibold: 600;
   --font-weight-benzin-medium: 500;
   --font-weight-benzin-regular: 400;
+  --font-weight-benzin-light: 300;
   --font-weight-benzin-thin: 400;
 
   /* Spacing */

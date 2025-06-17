@@ -6,6 +6,7 @@ header {
   width: 100vw;
   z-index: var(--z-header);
   transition: all 0.3s ease;
+  padding: var(--spacing-md);
 }
 
 header.scrolled {
@@ -15,20 +16,22 @@ header.scrolled {
 
 header .container {
   min-height: auto;
-  padding: var(--spacing-sm) var(--spacing-2xl) !important;
+  padding: var(--spacing-sm) var(--spacing-lg);
   justify-content: space-between;
   align-items: center;
-  flex-direction: row !important;
-  max-width: 100%;
+  flex-direction: row;
   display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: clamp(2.2rem, 5vw, 5rem);
   flex-shrink: 0;
+  flex-basis: 200px;
 }
 
 .logo img {
@@ -63,7 +66,7 @@ nav a {
   text-decoration: none;
   transition: all 0.3s ease;
   font-family: var(--font-family-benzin-semibold);
-  font-weight: var(--font-weight-benzin-semibold);
+  font-weight: var(--font-weight-benzin-light);
   position: relative;
   overflow: hidden;
   font-size: var(--font-sm);
@@ -157,12 +160,15 @@ nav a:hover::after {
 /* Mobile */
 @media (max-width: 950px) {
   header .container {
-    padding: var(--spacing-xs) var(--spacing-md) !important;
+    padding: var(--spacing-xs) var(--spacing-sm) !important;
     justify-content: space-between;
+    min-height: 50px;
   }
 
   .logo {
     flex-shrink: 0;
+    width: 55px;
+    height: 55px;
   }
 
   nav {
@@ -219,7 +225,7 @@ nav a:hover::after {
     color: white;
     text-decoration: none;
     font-family: var(--font-family-benzin-semibold);
-    font-weight: var(--font-weight-benzin-semibold);
+    font-weight: var(--font-weight-benzin-light);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -243,17 +249,21 @@ nav a:hover::after {
 /* Mobile pequeno */
 @media (max-width: 480px) {
   header .container {
-    padding: var(--spacing-xs) var(--spacing-sm) !important;
+    padding: var(--spacing-xs) !important;
+    min-height: 45px;
   }
 
   .logo {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .desktop-btn {
   flex-shrink: 0;
+  flex-basis: 200px;
+  display: flex;
+  justify-content: flex-end;
   width: auto !important;
   max-width: 200px;
   min-width: 150px;

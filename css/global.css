@@ -40,7 +40,7 @@ select {
   align-items: center;
   justify-content: center;
   width: 100%;
-  max-width: 1920px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 6rem var(--spacing-lg);
   min-height: 100vh;
