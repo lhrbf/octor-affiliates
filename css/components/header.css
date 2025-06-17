@@ -61,7 +61,7 @@ nav select {
 
 nav a {
   text-decoration: none;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s ease;
   font-family: var(--font-family-benzin-semibold);
   font-weight: var(--font-weight-benzin-semibold);
   position: relative;
@@ -69,49 +69,15 @@ nav a {
   font-size: var(--font-sm);
 }
 
-nav a::before {
-  content: '';
+nav a::after {
+  content: "";
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
-  background: #ffffff;
-  opacity: 1;
-  z-index: 2;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 1px;
-}
-
-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -3px;
-  left: 0;
-  width: 30%;
-  height: 3px;
-  background: #ffffff;
-  opacity: 0;
-  z-index: 3;
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 1px;
-  animation-play-state: paused;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-}
-
-@keyframes shimmer {
-  0% { 
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  50% { 
-    transform: translateX(0%);
-    opacity: 1;
-  }
-  100% { 
-    transform: translateX(100%);
-    opacity: 0;
-  }
+  height: 1px;
+  background-color: white;
+  transition: width 0.3s ease;
 }
 
 nav a:hover {
@@ -121,17 +87,8 @@ nav a:hover {
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.3);
 }
 
-nav a:hover::before {
-  width: 100%;
-  background: #ffffff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
-}
-
 nav a:hover::after {
-  width: 30%;
-  opacity: 1;
-  animation: shimmer 2s infinite;
-  animation-play-state: running;
+  width: 100%;
 }
 
 .hamburger {
@@ -225,8 +182,8 @@ nav a:hover::after {
     top: 57px;
     right: 0;
     width: 100vw;
-    background: rgba(24, 47, 152, 0.5);
-    backdrop-filter: blur(10px);
+    background: var(--primary-color);
+    backdrop-filter: none;
     box-shadow: var(--shadow-md);
     flex-direction: column;
     padding: var(--spacing-lg) 0;
@@ -269,28 +226,9 @@ nav a:hover::after {
     font-size: var(--font-sm);
   }
 
-  .nav-links a::before {
-    content: '';
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ffffff;
-    opacity: 1;
-    z-index: 2;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 1px;
-  }
-
   .nav-links a:hover {
     color: var(--green-color);
     transform: translateX(5px);
-  }
-
-  .nav-links a:hover::before {
-    width: 100%;
-    background: #ffffff;
   }
 
   #lang-select {
