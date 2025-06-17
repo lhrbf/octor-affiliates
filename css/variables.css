@@ -30,6 +30,8 @@
   font-display: swap;
 }
 
+
+
 @font-face {
   font-family: 'Poppins';
   src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
@@ -57,6 +59,9 @@
   /* Font weights */
   --font-weight-benzin-bold: 700;
   --font-weight-benzin-semibold: 600;
+  --font-weight-benzin-medium: 500;
+  --font-weight-benzin-regular: 400;
+  --font-weight-benzin-thin: 400;
 
   /* Spacing */
   --spacing-xs: 4px;
