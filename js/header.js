@@ -2,6 +2,65 @@ document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
   const navLinks = document.querySelector('.nav-links');
   const header = document.querySelector('header');
+  
+  let lastScrollY = window.scrollY;
+  let scrollTimeout = null;
+  let isScrollingUp = false;
+
+  function handleHeaderVisibility() {
+    const heroSection = document.querySelector('.hero');
+    const currentScrollY = window.scrollY;
+    
+    if (heroSection) {
+      const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+      
+      // Se o menu mobile estiver aberto, sempre mostra o header
+      if (navLinks && navLinks.classList.contains('open')) {
+        header.style.transform = 'translateY(0)';
+        header.style.transition = 'transform 0.3s ease-in-out';
+        return;
+      }
+      
+      // Se estamos na hero section, sempre mostra o header
+      if (currentScrollY <= heroBottom - 100) {
+        header.style.transform = 'translateY(0)';
+        header.style.transition = 'transform 0.3s ease-in-out';
+        lastScrollY = currentScrollY;
+        return;
+      }
+      
+      // Detecta direção do scroll
+      const scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+      
+      // Clear timeout anterior
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+      
+      if (scrollDirection === 'up' && !isScrollingUp) {
+        // Scroll para cima - mostrar com delay
+        isScrollingUp = true;
+        scrollTimeout = setTimeout(() => {
+          if (isScrollingUp) { // Só mostra se o último movimento foi para cima
+            header.style.transform = 'translateY(0)';
+            header.style.transition = 'transform 0.3s ease-in-out';
+          }
+        }, 800); // Delay de ~1 segundo
+        
+      } else if (scrollDirection === 'down' && isScrollingUp) {
+        // Scroll para baixo - esconder imediatamente e cancelar timeout
+        isScrollingUp = false;
+        if (scrollTimeout) {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = null;
+        }
+        header.style.transform = 'translateY(-100%)';
+        header.style.transition = 'transform 0.3s ease-in-out';
+      }
+    }
+    
+    lastScrollY = currentScrollY;
+  }
 
   function handleHeaderBg() {
     if (window.scrollY > 120 || (navLinks && navLinks.classList.contains('open'))) {
@@ -51,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
               hamburger.setAttribute('aria-expanded', 'false');
             }
             handleHeaderBg();
+            handleHeaderVisibility();
           }
           return; // Permite navegação normal para links externos
         }
@@ -74,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.setAttribute('aria-expanded', 'false');
           }
           handleHeaderBg();
+          handleHeaderVisibility();
         }
       };
     });
@@ -107,6 +168,9 @@ document.addEventListener('DOMContentLoaded', function() {
         header.style.boxShadow = 'none';
         navLinks.style.background = 'transparent';
       }
+      
+      // Atualiza a visibilidade do header quando o menu é aberto/fechado
+      handleHeaderVisibility();
     };
 
     // Close menu when clicking outside
@@ -116,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         handleHeaderBg();
+        handleHeaderVisibility();
       }
     });
 
@@ -126,6 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
         handleHeaderBg();
+        handleHeaderVisibility();
       }
     });
   }
@@ -137,7 +203,12 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   }
 
-  window.addEventListener('scroll', handleHeaderBg);
+  window.addEventListener('scroll', () => {
+    handleHeaderBg();
+    handleHeaderVisibility();
+  });
+  
   handleHeaderBg();
+  handleHeaderVisibility();
   setupMenuLinks();
 });

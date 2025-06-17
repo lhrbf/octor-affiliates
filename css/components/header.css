@@ -51,7 +51,7 @@ header .container {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  font-size: var(--font-sm);;
+  font-size: var(--font-xs);
 }
 
 .nav-links a::after {
