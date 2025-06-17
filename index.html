@@ -6,6 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Octor Affiliates - Programa de Afiliados | Ganhe Comissões</title>
     
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="
+      default-src 'self';
+      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com;
+      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+      font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
+      img-src 'self' data: https: blob:;
+      media-src 'self' blob:;
+      connect-src 'self' https://www.google-analytics.com;
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+    " />
+    
+    <!-- Permissions Policy -->
+    <meta http-equiv="Permissions-Policy" content="
+      geolocation=(),
+      microphone=(),
+      camera=(),
+      payment=(),
+      usb=(),
+      magnetometer=(),
+      gyroscope=(),
+      accelerometer=()
+    " />
+
     <!-- Preload de fontes críticas -->
     <link rel="preload" href="assets/fonts/Benzin-Bold.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="assets/fonts/Benzin-Semibold.ttf" as="font" type="font/ttf" crossorigin>
@@ -63,6 +90,7 @@
     <link rel="canonical" href="https://octor.pro/octor-affiliates/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/error-suppression.css" />
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -250,6 +278,7 @@
         </div>
     </footer>
 
+     <script src="js/error-handler.js"></script>
      <script src="js/scripts.js"></script>
     <script src="js/header.js"></script>
     <script src="js/firefox-fixes.js"></script>

@@ -1,0 +1,93 @@
+/* 
+ * CSS para suprimir elementos de debugging e warnings externos
+ * Esconde elementos criados por extensões, analytics e ads que podem causar erros visuais
+ */
+
+/* Esconde elementos de debugging do Chrome DevTools */
+[data-inspector-id],
+[data-react-inspector],
+.react-inspector,
+.__react-devtools-inspector__ {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Esconde warnings de third-party cookies */
+[data-cookie-warning],
+.cookie-warning,
+.third-party-cookie-warning {
+  display: none !important;
+}
+
+/* Esconde elementos de ads que podem gerar erros */
+[id*="google_ads"],
+[class*="google-ads"],
+[id*="doubleclick"],
+[class*="doubleclick"],
+.ads-container,
+.ad-container {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* Previne layout shifts causados por scripts externos */
+script[src*="inspector"],
+script[src*="ads."],
+script[src*="analytics"],
+link[href*="inspector"],
+link[href*="ads."] {
+  display: none !important;
+}
+
+/* Melhora a performance escondendo elementos desnecessários */
+iframe[src*="doubleclick"],
+iframe[src*="google-analytics"],
+iframe[src*="facebook.com/tr"] {
+  display: none !important;
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+}
+
+/* Esconde popups de debugging */
+.debug-popup,
+.inspector-popup,
+.dev-tools-popup,
+[data-debug="true"] {
+  display: none !important;
+  z-index: -1 !important;
+}
+
+/* Previne interferência em nossos estilos */
+* {
+  box-sizing: border-box;
+}
+
+/* Garante que nossos elementos tenham prioridade */
+.hero,
+.ecosystem,
+.values,
+.contact,
+footer,
+header {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+/* Esconde warnings de browsers sobre third-party cookies */
+.chrome-third-party-warning,
+.browser-cookie-warning,
+[data-testid*="cookie-banner"],
+[aria-label*="cookie"],
+[role="alertdialog"][aria-describedby*="cookie"] {
+  display: none !important;
+  visibility: hidden !important;
+}
