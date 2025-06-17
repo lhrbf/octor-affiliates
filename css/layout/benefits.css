@@ -14,7 +14,7 @@
 
 .sticky-title {
   position: sticky;
-  top: 115px;
+  top: 112px;
   z-index: 100;
   text-align: center;
   margin-bottom: var(--spacing-2xl);
