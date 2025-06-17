@@ -68,11 +68,11 @@
 
   /* Font sizes */
   --font-base: 16px;
-  --font-sm: clamp(19px, 2.1vw, 21px);
-  --font-md: clamp(21px, 3.1vw, 25px);
-  --font-lg: clamp(25px, 3.7vw, 29px);
-  --font-xl: clamp(29px, 4.2vw, 34px);
-  --font-2xl: clamp(32px, 4.8vw, 40px);
+  --font-sm: clamp(0.875rem, 1vw, 1.2rem);
+  --font-md: clamp(1.125rem, 1.8vw, 1.3125rem);
+  --font-lg: clamp(1.25rem, 2.2vw, 1.5rem);
+  --font-xl: clamp(1.375rem, 2.6vw, 1.75rem);
+  --font-2xl: clamp(1.625rem, 3vw, 2rem);
 
   /* Dimensions */
   --border-radius-sm: 8px;

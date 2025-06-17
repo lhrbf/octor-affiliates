@@ -34,43 +34,6 @@ select {
   font-family: var(--font-family-body);
 }
 
-/* Font Sizes Globais */
-h1 {
-  font-size: var(--font-2xl);
-}
-h2 {
-  font-size: var(--font-xl);
-}
-h3 {
-  font-size: var(--font-lg);
-}
-h4 {
-  font-size: var(--font-md);
-}
-h5 {
-  font-size: var(--font-sm);
-}
-h6 {
-  font-size: var(--font-base);
-}
-
-p {
-  font-size: var(--font-md);
-}
-a {
-  font-size: var(--font-md);
-}
-span {
-  font-size: var(--font-md);
-}
-select {
-  font-size: var(--font-lg);
-}
-
-.btn {
-  font-size: var(--font-lg);
-}
-
 /* Container Global */
 .container {
   display: flex;
