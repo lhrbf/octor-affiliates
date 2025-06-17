@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Update aria-expanded for accessibility
       const isOpen = navLinks.classList.contains('open');
       hamburger.setAttribute('aria-expanded', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
       
       // Aplica imediatamente o background correto ao header/nav
       if (navLinks.classList.contains('open')) {
