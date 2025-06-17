@@ -66,10 +66,8 @@ iframe[src*="facebook.com/tr"] {
   z-index: -1 !important;
 }
 
-/* Previne interferência em nossos estilos */
-* {
-  box-sizing: border-box;
-}
+/* Previne interferência em nossos estilos - removido o seletor universal */
+/* O box-sizing já está definido no reset.css */
 
 /* Garante que nossos elementos tenham prioridade */
 .hero,
