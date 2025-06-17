@@ -37,12 +37,22 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
+  .bet {
+    background-image: url("/assets/images/Mobile-Carlinhos-Leo.jpg");
+  }
+
+  .bet .container {
+    justify-content: start;
+    align-items: start;
+    min-height: 80vh;
+  }
+
   .box-bet {
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
+    gap: var(--spacing-2xl);
+    margin: 0 auto;
+    margin-top: var(--spacing-2xl);
     text-align: center;
-    background-size: contain;
   }
   
   .box-bet h1 {

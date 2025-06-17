@@ -79,6 +79,7 @@
   --spacing-lg: 22px;
   --spacing-xl: 35px;
   --spacing-2xl: 48px;
+  --spacing-nav: clamp(2.5rem, 5vw, 4.5rem);
 
   /* Font sizes */
   --font-base: 16px;
@@ -96,6 +97,9 @@
   /* Z-index */
   --z-header: 1000;
   --z-modal: 2000;
+
+  /* Container */
+  --container-width: 1680px;
 
   /* Box Shadows */
   --shadow-sm: 0 1.5px 4px 0 rgba(0, 0, 0, 0.1);

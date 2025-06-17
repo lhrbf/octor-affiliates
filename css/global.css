@@ -15,6 +15,7 @@ body {
   background-position: center;
   color: white;
   min-height: 100vh; /* Garante altura mínima */
+  padding-top: 80px; /* Compensa altura do header fixo */
 }
 
 /* Tipografia Global */

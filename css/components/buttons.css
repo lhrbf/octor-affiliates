@@ -12,12 +12,6 @@
   font-family: var(--font-family-body);
 }
 
-.btn-primary {
-  background-color: var(--primary-color);
-  color: white;
-  max-width: 220px;
-}
-
 .btn-secondary {
   background: linear-gradient(135deg, var(--green-color) 0%, #0a7a37 100%);
   max-width: 250px;

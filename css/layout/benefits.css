@@ -77,6 +77,12 @@
   .sticky-title {
     top: 90px;
   }
+
+  /* Remover posicionamento alternado no mobile */
+  .benefit-item:nth-child(n) {
+    transform: translateX(0) !important;
+    align-self: center !important;
+  }
   
   .benefit-item {
     margin: 150px 0;
@@ -98,7 +104,7 @@
 }
 
 /* Mobile */
-@media (max-width: 768px) {
+@media (max-width: 919px) {
   .benefits {
     padding: var(--spacing-2xl) 0;
   }
