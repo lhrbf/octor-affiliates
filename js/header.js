@@ -37,18 +37,18 @@ document.addEventListener('DOMContentLoaded', function() {
         clearTimeout(scrollTimeout);
       }
       
-      if (scrollDirection === 'up' && !isScrollingUp) {
-        // Scroll para cima - mostrar com delay
+      if (scrollDirection === 'up') {
+        // Scroll para cima - mostrar imediatamente
         isScrollingUp = true;
-        scrollTimeout = setTimeout(() => {
-          if (isScrollingUp) { // Só mostra se o último movimento foi para cima
-            header.style.transform = 'translateY(0)';
-            header.style.transition = 'transform 0.3s ease-in-out';
-          }
-        }, 800); // Delay de ~1 segundo
+        if (scrollTimeout) {
+          clearTimeout(scrollTimeout);
+          scrollTimeout = null;
+        }
+        header.style.transform = 'translateY(0)';
+        header.style.transition = 'transform 0.3s ease-in-out';
         
-      } else if (scrollDirection === 'down' && isScrollingUp) {
-        // Scroll para baixo - esconder imediatamente e cancelar timeout
+      } else if (scrollDirection === 'down') {
+        // Scroll para baixo - esconder imediatamente
         isScrollingUp = false;
         if (scrollTimeout) {
           clearTimeout(scrollTimeout);
