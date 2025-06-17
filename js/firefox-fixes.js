@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
   
   if (isFirefox) {
-    console.log('Firefox detectado no octor-affiliates, aplicando correções...');
     
     // Corrigir vídeos - remover controles no Firefox
     const videos = document.querySelectorAll('video');
@@ -19,7 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
       video.addEventListener('loadeddata', function() {
         if (video.hasAttribute('autoplay')) {
           video.play().catch(e => {
-            console.log('Erro ao reproduzir vídeo no Firefox:', e);
           });
         }
       });

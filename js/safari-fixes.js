@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
   
   if (isSafari) {
-    console.log('Safari detectado no octor-affiliates, aplicando correções...');
     
     // Corrigir vídeos - garantir que não mostrem controles no Safari
     const videos = document.querySelectorAll('video');
@@ -25,9 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
           const playPromise = video.play();
           if (playPromise !== undefined) {
             playPromise.catch(e => {
-              console.log('Erro ao reproduzir vídeo no Safari:', e);
               document.addEventListener('touchstart', function() {
-                video.play().catch(err => console.log('Erro após toque:', err));
               }, { once: true });
             });
           }
@@ -80,7 +77,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Fix específico para Safari mobile
     if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
-      console.log('Safari iOS detectado no octor-affiliates...');
       
       const viewport = document.querySelector('meta[name="viewport"]');
       if (viewport) {
