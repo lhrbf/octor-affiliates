@@ -15,7 +15,6 @@ body {
   background-position: center;
   color: white;
   min-height: 100vh; /* Garante altura mínima */
-  padding-top: 80px; /* Compensa altura do header fixo */
 }
 
 /* Tipografia Global */
@@ -43,27 +42,22 @@ select {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 6rem var(--spacing-lg);
+  padding: 0 var(--spacing-lg);
   min-height: 100vh;
-}
-
-/* Override específico para footer */
-footer .container {
-  min-height: auto !important;
 }
 
 /* Responsividade Global */
 @media (max-width: 1024px) {
   .container {
-    padding: 5rem var(--spacing-md);
+    padding: 3rem var(--spacing-md);
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 810px) {
   .container {
     flex-direction: column;
     gap: var(--spacing-xl);
-    padding: 4.5rem var(--spacing-sm) 2rem var(--spacing-sm);
+    padding: 2.5rem var(--spacing-md) 2rem var(--spacing-md);
   }
 
   /* Centralizar todos os textos no mobile */
@@ -82,6 +76,6 @@ footer .container {
 
 @media (max-width: 480px) {
   .container {
-    gap: var(--spacing-lg);
+    gap: var(--spacing-lg) var(--spacing-sm);
   }
 }

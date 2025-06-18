@@ -1,71 +1,47 @@
-/* HERO SECTION */
-.hero {
-  min-height: 100vh;
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  width: 50%;
 }
 
-.hero-image {
+.hero-logo {
+  display: flex;
+  align-items: center;
+  width: clamp(5rem, 5vw, 10rem);
+}
+
+.hero-logo img {
   width: 100%;
-  /* Removido height fixa */
-  position: relative;
+  height: auto;
+}
+
+.hero-text p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.4;
+}
+
+.hero-img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-image img {
+.hero-img img {
   width: 100%;
   height: auto;
-  max-height: 70vh;
-  object-fit: contain;
-  object-position: center;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
-  width: 80%;
+.bet-br {
+  align-items: start !important;
+  justify-content: start !important;
 }
 
-/* Mobile Responsivity */
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-text {
-    width: 90%;
-  }
-}
-
-/* Mobile */
-@media (max-width: 950px) {
-  .hero-text {
-    width: 100%;
-    text-align: center;
-    order: 2;
-  }
-  .hero-logo {
-    display: none;
-  }
-  .hero-image {
+@media (max-width: 810px) {
+  .container.hero .hero-img {
     order: 1;
-  }
-  /* Remove qualquer order dos filhos de .hero-text para não afetar o layout interno */
-  .hero-text > * {
-    order: unset !important;
-  }
-  .hero-text .btn {
-    margin: var(--spacing-lg) auto;
-  }
-  .hero-text h1,
-  .hero-text p {
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
-  .hero-text {
-    gap: var(--spacing-lg);
   }
 }

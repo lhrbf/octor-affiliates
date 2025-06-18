@@ -30,11 +30,13 @@ h4 {
     font-size: var(--font-lg);
 }
 
-p, span, a, button, select {
+p, span, button, select {
+    font-weight: var(--font-weight-benzin-regular);
     font-size: var(--font-md);
 }
 
 /* Form Elements */
-footer p {
+footer p, a {
+    font-weight: var(--font-weight-benzin-regular);
     font-size: var(--font-sm);
 }

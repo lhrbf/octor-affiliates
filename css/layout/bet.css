@@ -1,65 +1,15 @@
-/* BET SECTION */
 .bet {
-  background-image: url("../../assets/images/Leo-Santana-Carlinhos.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 110vh;
-}
-
-.bet .container {
-  justify-content: center;
-  align-items: self-start;
-  text-align: center;
+    background-image: url("/assets/images/Leo-Santana-Carlinhos.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .box-bet {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: var(--spacing-2xl);
-  margin-top: var(--spacing-2xl);
-  text-align: center;
-}
-
-.box-bet h1 {
-  text-align: center;
-}
-
-/* Mobile Responsivity */
-/* Tablet */
-@media (max-width: 1024px) {
-  .box-bet {
-    gap: var(--spacing-xl);
-    margin-top: var(--spacing-xl);
-  }
-}
-
-/* Mobile */
-@media (max-width: 850px) {
-  .bet {
-    background-image: url("/assets/images/Mobile-Carlinhos-Leo.jpg");
-  }
-
-  .bet .container {
-    justify-content: start;
-    align-items: start;
-    min-height: 80vh;
-  }
-
-  .box-bet {
-    gap: var(--spacing-2xl);
-    margin: 0 auto;
-    margin-top: var(--spacing-2xl);
-    text-align: center;
-  }
-  
-  .box-bet h1 {
-    text-align: center;
-  }
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
+    display: flex;
+    align-items: center;
+   margin-top: -40%;
+   justify-content: center;
+   text-align: center;
+   flex-direction: column;
+   gap: var(--spacing-xl);
 }

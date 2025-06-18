@@ -1,26 +1,26 @@
 /* IMPORTS DOS ARQUIVOS CSS */
 
 /* Reset e configurações globais */
-@import url("./reset.css");
-@import url("./variables.css");
-@import url("./typography.css");
-@import url("./global.css");
+@import '/css/reset.css';
+@import '/css/variables.css';
+@import '/css/typography.css';
+@import '/css/global.css';
 
 /* Layout */
-@import url("./layout/hero.css");
-@import url("./layout/benefits.css");
-@import url("./layout/bet.css");
-@import url("./layout/how-to.css");
+@import '/css/layout/hero.css';
+@import '/css/layout/benefits.css';
+@import '/css/layout/bet.css';
+@import '/css/layout/how-to.css';
 
 /* Componentes */
-@import url("./components/buttons.css");
-@import url("./components/header.css");
-@import url("./components/footer.css");
+@import '/css/components/button.css';
+@import '/css/components/header.css';
+@import '/css/components/footer.css';
 
 /* Utilities */
-@import url("./utilities.css");
+@import '/css/utilities.css';
 
 /* Browser-specific fixes */
-@import url("./firefox-fixes.css");
-@import url("./safari-fixes.css");
-@import url("./safari-font-fixes.css");
+@import '/css/firefox-fixes.css';
+@import '/css/safari-fixes.css';
+@import '/css/safari-font-fixes.css';

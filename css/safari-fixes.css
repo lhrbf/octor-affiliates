@@ -112,7 +112,8 @@
     background-repeat: no-repeat;
     background-position: right 0.8em center;
     background-size: 1.1em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1.8em;
   }
   
   /* Performance optimization */
