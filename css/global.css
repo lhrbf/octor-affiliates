@@ -42,25 +42,24 @@ select {
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-2xl);
   min-height: 100vh;
 }
 
 /* Responsividade Global */
 @media (max-width: 1024px) {
   .container {
-    padding: 3rem var(--spacing-md);
+    padding: var(--spacing-lg) var(--spacing-xl);
   }
 }
 
 @media (max-width: 810px) {
   .container {
     flex-direction: column;
-    gap: var(--spacing-xl);
-    padding: 2.5rem var(--spacing-md) 2rem var(--spacing-md);
+    gap: var(--spacing-2xl);
+    padding: var(--spacing-xl) var(--spacing-md);
   }
 
-  /* Centralizar todos os textos no mobile */
   h1,
   h2,
   h3,
@@ -72,10 +71,8 @@ select {
   span {
     text-align: center;
   }
-}
 
-@media (max-width: 480px) {
-  .container {
-    gap: var(--spacing-lg) var(--spacing-sm);
+  .btn {
+    margin: 0 auto;
   }
 }

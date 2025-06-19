@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Função para adicionar/remover blur no header baseado no scroll
     function handleScroll() {
-        if (window.scrollY > 100) {
+        if (window.innerWidth <= 810 && window.scrollY > 10) {
+            header.classList.add('scrolled');
+        } else if (window.innerWidth > 810 && window.scrollY > 100) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
@@ -19,18 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger && navLinks) {
         // Toggle do menu quando clica no hambúrguer
         hamburger.addEventListener('click', function() {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            const isMenuOpen = navLinks.classList.contains('menu-open');
             
-            // Alterna o estado aria-expanded
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            
-            // Alterna a visibilidade do menu
-            if (!isExpanded) {
+            if (!isMenuOpen) {
                 navLinks.style.display = 'flex';
                 navLinks.classList.add('menu-open');
             } else {
                 navLinks.classList.remove('menu-open');
-                // Pequeno delay para a animação antes de esconder
                 setTimeout(() => {
                     navLinks.style.display = 'none';
                 }, 300);
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
         navLinksItems.forEach(link => {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 810) {
-                    hamburger.setAttribute('aria-expanded', 'false');
                     navLinks.classList.remove('menu-open');
                     setTimeout(() => {
                         navLinks.style.display = 'none';
@@ -54,24 +50,44 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fecha o menu quando redimensiona para desktop
         window.addEventListener('resize', function() {
             if (window.innerWidth > 810) {
-                hamburger.setAttribute('aria-expanded', 'false');
                 navLinks.style.display = 'flex';
                 navLinks.classList.remove('menu-open');
             } else {
-                // No mobile, esconde o menu se não está expandido
-                const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-                if (!isExpanded) {
+                const isMenuOpen = navLinks.classList.contains('menu-open');
+                if (!isMenuOpen) {
                     navLinks.style.display = 'none';
                 }
+            }
+        });
+        
+        // Fecha o menu quando clica no botão close dentro do menu
+        navLinks.addEventListener('click', function(event) {
+            const rect = navLinks.getBoundingClientRect();
+            const clickX = event.clientX;
+            const clickY = event.clientY;
+            
+            // Área do botão close (canto superior direito)
+            const closeButtonArea = {
+                left: rect.right - 60,
+                right: rect.right - 20,
+                top: rect.top + 20,
+                bottom: rect.top + 60
+            };
+            
+            if (clickX >= closeButtonArea.left && clickX <= closeButtonArea.right &&
+                clickY >= closeButtonArea.top && clickY <= closeButtonArea.bottom) {
+                navLinks.classList.remove('menu-open');
+                setTimeout(() => {
+                    navLinks.style.display = 'none';
+                }, 300);
             }
         });
         
         // Fecha o menu quando clica fora dele (mobile)
         document.addEventListener('click', function(event) {
             if (window.innerWidth <= 810) {
-                const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-                if (isExpanded && !hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-                    hamburger.setAttribute('aria-expanded', 'false');
+                const isMenuOpen = navLinks.classList.contains('menu-open');
+                if (isMenuOpen && !hamburger.contains(event.target) && !navLinks.contains(event.target)) {
                     navLinks.classList.remove('menu-open');
                     setTimeout(() => {
                         navLinks.style.display = 'none';

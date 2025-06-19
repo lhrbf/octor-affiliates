@@ -16,9 +16,9 @@ a:hover, select:hover {
 /* Estilos dos botões */
 .btn {
     width: 100%;
-    max-width: 180px;
+    max-width: 200px;
     display: inline-block;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    padding: var(--spacing-xs) var(--spacing-md);
     border: 2px solid transparent;
     border-radius: var(--border-radius-sm);
     text-decoration: none;

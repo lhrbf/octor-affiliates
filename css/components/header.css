@@ -114,24 +114,10 @@ select#lang-select-mobile option,
   position: relative;
 }
 
-.hamburger-open,
-.hamburger-close {
+.hamburger-open {
   color: white;
   font-size: 24px;
   transition: opacity 0.3s ease;
-}
-
-.hamburger-close {
-  display: none;
-}
-
-/* Estados do hambúrguer quando menu está aberto */
-.hamburger[aria-expanded="true"] .hamburger-open {
-  display: none;
-}
-
-.hamburger[aria-expanded="true"] .hamburger-close {
-  display: block;
 }
 
 .btn-secondary.mobile {
@@ -148,32 +134,60 @@ select#lang-select-mobile option,
 
 /* Menu mobile */
 @media (max-width: 810px) {
+  header {
+    padding: var(--spacing-xs) var(--spacing-md);
+  }
+
+  .logo {
+    position: static;
+  }
+
+  .container.nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   #lang-select-mobile {
     display: flex;
   }
 
   .hamburger {
     display: block;
-    padding: var(--spacing-md);
-  }
-
-  .container.nav {
-    padding: 0;
+    padding: var(--spacing-sm);
   }
 
   .nav-links {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
+    width: 100vw;
     background: var(--primary-color);
     flex-direction: column;
-    padding: var(--spacing-lg);
-    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    padding: var(--spacing-lg) 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: translateY(-10px);
     opacity: 0;
     transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  /* Botão close dentro do menu mobile */
+  .nav-links::before {
+    content: '✕';
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links.menu-open {
@@ -183,8 +197,7 @@ select#lang-select-mobile option,
 
   .nav-links a {
     padding: var(--spacing-md) 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
+    text-align: end;
   }
 
   .nav-links a:last-child {
@@ -192,6 +205,10 @@ select#lang-select-mobile option,
   }
 
   #lang-select {
+    display: none;
+  }
+
+  .btn-secondary.desktop {
     display: none;
   }
 }
