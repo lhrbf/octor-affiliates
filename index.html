@@ -4,139 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Octor Affiliates - Programa de Afiliados | Ganhe Comissões</title>
-
-    <!-- Content Security Policy -->
-    <meta http-equiv="Content-Security-Policy" content="
-      default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://www.google-analytics.com;
-      style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com;
-      font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com;
-      img-src 'self' data: https: blob:;
-      media-src 'self' blob:;
-      connect-src 'self' https://www.google-analytics.com;
-      frame-src 'self';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self';
-    " />
-
-    <!-- Permissions Policy -->
-    <meta http-equiv="Permissions-Policy" content="
-      geolocation=(),
-      microphone=(),
-      camera=(),
-      payment=(),
-      usb=(),
-      magnetometer=(),
-      gyroscope=(),
-      accelerometer=()
-    " />
-
-    <!-- Preload de fontes críticas -->
-    <link rel="preload" href="assets/fonts/Benzin-Bold.ttf" as="font" type="font/ttf" crossorigin>
-    <link rel="preload" href="assets/fonts/Benzin-Semibold.ttf" as="font" type="font/ttf" crossorigin>
-
-    <!-- SEO Meta Tags -->
-    <meta name="description"
-        content="Torne-se afiliado Octor e ganhe comissões por indicação. Programa de afiliados com comissões altas, suporte dedicado e materiais exclusivos. Cadastre-se grátis!" />
-    <meta name="keywords"
-        content="octor affiliates, programa de afiliados, afiliados octor, ganhar dinheiro online, comissões afiliados, marketing de afiliação, renda extra, trabalhar em casa, monetizar tráfego, parceiros octor, indicação remunerada, afiliados brasil, programa parceiros, comissão por venda, marketing digital, negócio online, empreendedorismo digital, affiliate marketing, CPA marketing, revenue share, performance marketing, digital partnership, online income, referral program, commission based, affiliate network, digital marketing, online business, work from home, passive income, internet marketing, affiliate commission, partner program, digital affiliate, marketing partnership, online earning, affiliate marketing brasil" />
-    <meta name="author" content="Octor Affiliates" />
-    <meta name="robots" content="index, follow" />
-    <meta name="language" content="pt-BR" />
-    <meta name="revisit-after" content="7 days" />
-    <meta name="rating" content="general" />
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Octor Affiliates - Programa de Afiliados | Ganhe Comissões" />
-    <meta property="og:description"
-        content="Torne-se afiliado Octor e ganhe comissões por indicação. Comissões altas, suporte dedicado e materiais exclusivos." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://octor.pro/octor-affiliates/" />
-    <meta property="og:image" content="https://octor.pro/octor-affiliates/assets/images/Mobile-Carlinhos-Leo.jpg" />
-    <meta property="og:image:alt" content="Octor Affiliates Program" />
-    <meta property="og:site_name" content="Octor Affiliates" />
-    <meta property="og:locale" content="pt_BR" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Octor Affiliates - Programa de Afiliados" />
-    <meta name="twitter:description"
-        content="Torne-se afiliado Octor e ganhe até R$ 1.500 por indicação. Comissões altas e suporte dedicado." />
-    <meta name="twitter:image" content="https://octor.pro/octor-affiliates/assets/images/Mobile-Carlinhos-Leo.jpg" />
-
-    <!-- Additional SEO Tags -->
-    <meta name="theme-color" content="#182f98" />
-    <meta name="msapplication-TileColor" content="#182f98" />
-    <meta name="msapplication-TileImage" content="assets/icons/LOGO-OCTOR-ROXO.svg" />
-    <link rel="canonical" href="https://octor.pro/octor-affiliates/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://octor.pro/octor-affiliates/" />
-    <meta property="og:image" content="https://octor.pro/octor-affiliates/assets/images/LEO-SANTANA.png" />
-    <meta property="og:site_name" content="Octor Affiliates" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/icons/LOGO-OCTOR-BRANCO.svg" />
-    <link rel="alternate icon" href="assets/icons/LOGO-OCTOR-BRANCO.svg" />
-    <link rel="mask-icon" href="assets/icons/LOGO-OCTOR-BRANCO.svg" color="#11164D" />
-
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" href="assets/icons/LOGO-OCTOR-BRANCO.svg" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Octor Affiliates - Programa de Afiliados" />
-    <meta name="twitter:description"
-        content="Junte-se ao programa de afiliados da Octor e ganhe comissões promovendo nossas soluções tecnológicas." />
-    <meta name="twitter:image" content="https://octor.pro/octor-affiliates/assets/images/LEO-SANTANA.png" />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://octor.pro/octor-affiliates/" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/main.css" />
-    <!-- <link rel="stylesheet" href="css/error-suppression.css" /> -->
-
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Octor Affiliates",
-      "alternateName": "Programa de Afiliados Octor",
-      "url": "https://octor.pro/octor-affiliates/",
-      "description": "Programa de afiliados. Cadastre-se grátis e comece a ganhar dinheiro online hoje mesmo.",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Octor",
-        "logo": "https://octor.pro/octor-affiliates/assets/icons/Logo-octor-Horizontal.png"
-      },
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://octor.pro/octor-affiliates/?s={search_term_string}",
-        "query-input": "required name=search_term_string"
-      },
-      "mainEntity": {
-        "@type": "Service",
-        "name": "Programa de Afiliados Octor",
-        "description": "Torne-se afiliado Octor!",
-        "provider": {
-          "@type": "Organization",
-          "name": "Octor"
-        },
-        "areaServed": "BR",
-        "availableLanguage": "pt-BR",
-        "serviceType": "Affiliate Marketing Program",
-        "offers": {
-          "@type": "Offer",
-          "description": "Comissões de até R$ 1.500 por indicação qualificada",
-          "price": "0",
-          "priceCurrency": "BRL",
-          "availability": "https://schema.org/InStock"
-        }
-      }
-    }
-    </script>
+    <title>Octor Affiliates</title>
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body>
@@ -147,15 +16,20 @@
             </div>
             <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
                 <i class="fas fa-bars hamburger-open"></i>
+                <i class="fas fa-times hamburger-close"></i>
             </button>
             <nav class="nav-links" id="main-nav">
                 <a href="#benefits">Benefícios</a>
                 <a href="https://octor.pro/" target="_blank" rel="noopener noreferrer">Grupo Octor</a>
-                <select id="lang-select" aria-label="Selecionar idioma">
-                    <option value="pt-BR">PT</option>
-                    <option value="en">EN</option>
-                </select>
-                <button class="btn btn-secondary" type="button">Fale Conosco</button>
+                <div class="lang-select-mobile">
+                    <select id="lang-select-mobile" aria-label="Selecionar idioma">
+                        <option value="pt-BR">PT</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+                <div class="mobile-menu-btn">
+                    <button class="btn btn-secondary" type="button">Fale Conosco</button>
+                </div>
                 <div class="mobile-menu-logo">
                     <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Octor Logo">
                 </div>
@@ -178,98 +52,101 @@
                         <img src="assets/images/eds-ona.png" alt="Logo EDS e ONABET" />
                     </div>
                     <h1>Partners Afiliate</h1>
-                    <p>
+                    <p class="hero-text">
                         Nosso programa de afiliação conecta marcas a influenciadores de
                         todos os portes, com gestão completa de parcerias, negociações
                         alinhadas a cada campanha e foco em resultados eficientes e
                         escaláveis.
                     </p>
-                    <p class="bet-br"><strong>A casa de apostas 100% brasileira 🇧🇷</strong></p>
-                    <button class="btn btn-primary">Fale Conosco</button>
+                    <p class="bet-br">A casa de apostas 100% brasileira 🇧🇷</p>
+                    <button class="btn btn-secondary">Fale Conosco</button>
                 </div>
 
                 <div class="hero-image">
-                    <img src="assets/images/LEO-SANTANA.png" alt="Leo Santana EDS" />
+                    <img src="assets/images/carlinhos-maia.png" alt="Carlinhos Maia Onabet" />
                 </div>
             </div>
         </section>
         <section class="benefits" id="benefits">
-            <div class="container benefits">
-                <div class="sticky-title">
-                    <h2>BENEFÍCIOS</h2>
+            <div class="container">
+                <div class="benefits-content">
+                    <h1>BENEFÍCIOS</h1>
+                    <div class="benefit-item">
+                        <h3>
+                            Saque quinzenal
+                        </h3>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>
+                            Gerente de contas
+                            exclusivo pra você 24/7
+                        </h3>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>
+                            A bet mais buscada
+                            no Google no Brasil
+                        </h3>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>
+                            Acordos com CPA e REV
+                        </h3>
+                    </div>
+                    <div class="benefit-item">
+                        <h3>
+                            Contrato formalizado
+                            de afiliação
+                        </h3>
+                    </div>
                 </div>
-                <div class="benefit-item">
-                    <h3>
-                        Saque quinzenal
-                    </h3>
-                </div>
-                <div class="benefit-item">
-                    <h3>
-                        Gerente de contas
-                        exclusivo pra você 24/7
-                    </h3>
-                </div>
-                <div class="benefit-item">
-                    <h3>
-                        A bet mais buscada
-                        no Google no Brasil
-                    </h3>
-                </div>
-                <div class="benefit-item">
-                    <h3>
-                        Acordos com CPA e REV
-                    </h3>
-                </div>
-                <div class="benefit-item">
-                    <h3>
-                        Contrato formalizado
-                        de afiliação
-                    </h3>
-                </div>
-            </div>
         </section>
         <section class="bet" id="bet">
-            <div class="container div-bet">
+            <div class="container">
                 <div class="box-bet">
                     <h1>A BET mais buscada<br />
                         no Google no Brasil</h1>
-                    <button class="btn btn-primary">Fale Conosco</button>
+                    <button class="btn btn-secondary">Fale Conosco</button>
                 </div>
             </div>
         </section>
         <section class="how-to" id="how-to">
-            <div class="container div-how-to">
-                <div class="how-to-text">
-                    <h1>COMO FUNCIONA</h1>
-                    <p>
-                        Você só precisa informar alguns dados básicos: Nome completo, E-mail, Número de telefone, País
-                        de origem, criar sua senha de acesso e rapidinho você finaliza essa parte!
-                        <br />
-                        Depois, é só aguardar a aprovação do seu perfil. Assim que
-                        Espere nosso time entrar em contato: Depois de enviar
-                        o formulário, um dos nossos gerentes de afiliação vai
-                        falar com você por WhatsApp ou e-mail. Eles vão avaliar
-                        seu perfil e explicar direitinho como tudo funciona.
-                        <br />
-                        Acesso à plataforma de afiliados: Quando sua conta for aprovada, você já poderá acessar o
-                        painel exclusivo de Dashboard. Nele, você vai encontrar: Seu link de afiliado
-                        da Onabet / Esportes da Sorte, materiais de apoio, aompanhamento em tempo real das comissões e
-                        Suporte direto com a equipe EDS.
-                    </p>
-                    <button class="btn btn-primary">Fale Conosco</button>
-                </div>
-                <div class="how-to-image">
-                    <img src="assets/images/MOBILE.png" alt="Site EDS e Ona" />
+            <div class="container">
+                <div class="how-to-content">
+                    <div class="how-to-text">
+                        <h1>COMO FUNCIONA</h1>
+                        <p>
+                            Você só precisa informar alguns dados básicos: Nome completo E-mail Número de telefone País
+                            de origem
+                            E criar sua senha de acesso e rapidinho você finaliza
+                            essa parte!
+                            <br />
+                            <br />
+                            Depois, é só aguardar a aprovação do seu perfil. Assim que
+                            Espere nosso time entrar em contato: Depois de enviar
+                            o formulário, um dos nossos gerentes de afiliação vai
+                            falar com você por WhatsApp ou e-mail. Eles vão avaliar
+                            seu perfil e explicar direitinho como tudo funciona.
+                            <br />
+                            <br />
+                            Acesso à plataforma de afiliados: Quando sua conta for aprovada, você já poderá acessar o
+                            painel exclusivo de Dashboard. Nele, você vai encontrar: Seu link de afiliado
+                            da Onabet / Esportes da Sorte Materiais de apoio Acompanhamento em tempo real das comissões
+                            Suporte direto com a equipe EDS
+                        </p>
+                        <button class="btn btn-secondary">Fale Conosco</button>
+                    </div>
+                    <div class="how-to-image">
+                        <img src="assets/images/MOBILE.png" alt="Site EDS e Ona" />
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container footer">
-            <div class="footer-logo">
-                <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor" />
-            </div>
+        <div class="container-footer">
+            <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor" />
             <p>
                 © 2024 Grupo Esportes da Sorte. Todos os direitos reservados.
             </p>
@@ -278,12 +155,6 @@
             </p>
         </div>
     </footer>
-
-    <script src="js/error-handler.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/firefox-fixes.js"></script>
-    <script src="js/safari-fixes.js"></script>
 </body>
 
 </html>

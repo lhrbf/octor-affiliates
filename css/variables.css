@@ -59,6 +59,7 @@
   --font-weight-benzin-semibold: 600;
   --font-weight-benzin-medium: 500;
   --font-weight-benzin-regular: 400;
+  --font-weight-benzin-light: 200;
 
   /* Spacing */
   --spacing-xs: 6px;
@@ -70,6 +71,7 @@
   --spacing-nav: clamp(1.7rem, 5vw, 3rem);
 
   /* Font sizes */
+  --font-xs: clamp(0.7rem, 0.8vw, 0.9rem);
   --font-base: 16px;
   --font-sm: clamp(0.875rem, 1vw, 1.2rem);
   --font-md: clamp(1.11rem, 1.8vw, 1.3125rem);
@@ -78,6 +80,7 @@
   --font-2xl: clamp(1.625rem, 3vw, 2rem);
 
   /* Dimensions */
+  --border-radius: 8px;
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
   --border-radius-lg: 16px;
