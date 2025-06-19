@@ -3,16 +3,42 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     const header = document.querySelector('header');
+    const mobileButton = document.querySelector('.nav-links .btn-secondary');
     
-    // Função para adicionar/remover blur no header baseado no scroll
+    // Função para controlar visibilidade do header baseado na direção do scroll
+    let lastScrollY = 0;
+    let isInHeroSection = true;
+    
     function handleScroll() {
-        if (window.innerWidth <= 810 && window.scrollY > 10) {
-            header.classList.add('scrolled');
-        } else if (window.innerWidth > 810 && window.scrollY > 100) {
+        const currentScrollY = window.scrollY;
+        const heroSection = document.querySelector('#hero');
+        const heroHeight = heroSection ? heroSection.offsetHeight : 0;
+        
+        // Verifica se está na seção hero
+        isInHeroSection = currentScrollY < heroHeight;
+        
+        // Aplica blur baseado no scroll (independente da seção)
+        if (currentScrollY > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
         }
+        
+        if (isInHeroSection) {
+            // Na seção hero, header sempre visível
+            header.classList.remove('hidden');
+        } else {
+            // Fora da seção hero, controla visibilidade baseado na direção do scroll
+            if (currentScrollY > lastScrollY) {
+                // Scrolling down - esconde header
+                header.classList.add('hidden');
+            } else {
+                // Scrolling up - mostra header
+                header.classList.remove('hidden');
+            }
+        }
+        
+        lastScrollY = currentScrollY;
     }
     
     // Event listener para o scroll
@@ -24,13 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const isMenuOpen = navLinks.classList.contains('menu-open');
             
             if (!isMenuOpen) {
-                navLinks.style.display = 'flex';
                 navLinks.classList.add('menu-open');
             } else {
                 navLinks.classList.remove('menu-open');
-                setTimeout(() => {
-                    navLinks.style.display = 'none';
-                }, 300);
             }
         });
         
@@ -40,9 +62,6 @@ document.addEventListener('DOMContentLoaded', function() {
             link.addEventListener('click', function() {
                 if (window.innerWidth <= 810) {
                     navLinks.classList.remove('menu-open');
-                    setTimeout(() => {
-                        navLinks.style.display = 'none';
-                    }, 300);
                 }
             });
         });
@@ -50,13 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Fecha o menu quando redimensiona para desktop
         window.addEventListener('resize', function() {
             if (window.innerWidth > 810) {
-                navLinks.style.display = 'flex';
                 navLinks.classList.remove('menu-open');
-            } else {
-                const isMenuOpen = navLinks.classList.contains('menu-open');
-                if (!isMenuOpen) {
-                    navLinks.style.display = 'none';
-                }
             }
         });
         
@@ -77,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (clickX >= closeButtonArea.left && clickX <= closeButtonArea.right &&
                 clickY >= closeButtonArea.top && clickY <= closeButtonArea.bottom) {
                 navLinks.classList.remove('menu-open');
-                setTimeout(() => {
-                    navLinks.style.display = 'none';
-                }, 300);
             }
         });
         
@@ -89,9 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 const isMenuOpen = navLinks.classList.contains('menu-open');
                 if (isMenuOpen && !hamburger.contains(event.target) && !navLinks.contains(event.target)) {
                     navLinks.classList.remove('menu-open');
-                    setTimeout(() => {
-                        navLinks.style.display = 'none';
-                    }, 300);
                 }
             }
         });
