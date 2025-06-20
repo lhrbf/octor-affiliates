@@ -62,11 +62,11 @@
   --font-weight-benzin-light: 200;
 
   /* Spacing */
-  --spacing-xs: 6px;
-  --spacing-sm: 10px;
-  --spacing-md: 18px;
-  --spacing-lg: 22px;
-  --spacing-xl: 35px;
+  --spacing-xs: 8px;
+  --spacing-sm: 12px;
+  --spacing-md: 20px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
   --spacing-2xl: 48px;
   --spacing-nav: clamp(1.7rem, 5vw, 3rem);
 

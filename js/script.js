@@ -1,5 +1,17 @@
 // Alternância de imagens do Hero
 document.addEventListener('DOMContentLoaded', function() {
+    // Função para atualizar o ano no footer automaticamente
+    function updateFooterYear() {
+        const currentYearSpan = document.getElementById('current-year');
+        if (currentYearSpan) {
+            const currentYear = new Date().getFullYear();
+            currentYearSpan.textContent = currentYear;
+        }
+    }
+    
+    // Executa a função para atualizar o ano
+    updateFooterYear();
+    
     const heroImage = document.querySelector('.hero-image img');
     
     if (heroImage) {
