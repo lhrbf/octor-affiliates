@@ -1,5 +1,5 @@
 .bet {
-    background-image: url("/assets/images/Leo-Santana-Carlinhos.webp");
+    background-image: url("/assets/images/Leo-Santana-Carlinhos.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -16,7 +16,7 @@
 
 @media (max-width: 950px) {
     .bet {
-        background-image: url("/assets/images/Mobile-Carlinhos-Leo.webp");
+        background-image: url("/assets/images/Mobile-Carlinhos-Leo.jpg");
         background-position: bottom;
     }
 

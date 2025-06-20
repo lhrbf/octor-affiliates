@@ -12,7 +12,7 @@
     <header>
         <div class="container nav">
             <div class="logo">
-                <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Octor Affiliates Logo" />
+                <img src="assets/icons/Logo-octor-Horizontal.png" alt="Octor Affiliates Logo" />
             </div>
             <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
                 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -59,7 +59,7 @@
             <div class="container hero">
                 <div class="hero-text">
                     <div class="hero-logo">
-                        <img src="assets/images/eds-ona.webp" alt="Logo EDS e ONABET" />
+                        <img src="assets/images/eds-ona.png" alt="Logo EDS e ONABET" />
                     </div>
                     <h1>Partners Afiliate</h1>
                     <p class="hero-text">
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="hero-image">
-                    <img src="assets/images/LEO-SANTANA.webp" alt="Leo Santana EDS" />
+                    <img src="assets/images/LEO-SANTANA.png" alt="Leo Santana EDS" />
                 </div>
             </div>
         </section>
@@ -147,7 +147,7 @@
                         <button class="btn btn-secondary">Fale Conosco</button>
                     </div>
                     <div class="how-to-image">
-                        <img src="assets/images/MOBILE.webp" alt="Site EDS e Ona" />
+                        <img src="assets/images/MOBILE.png" alt="Site EDS e Ona" />
                     </div>
                 </div>
             </div>

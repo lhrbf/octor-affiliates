@@ -1,0 +1,33 @@
+/* Safari Font Fixes - Octor Affiliates */
+
+/* Detectar Safari e aplicar correções específicas */
+@supports (-webkit-appearance: none) {
+  /* Forçar carregamento de fontes no Safari */
+  body {
+    font-family: var(--font-family-body) !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6,
+  .hero-title,
+  .title,
+  .benzin-bold {
+    font-family: var(--font-family-title) !important;
+    font-weight: var(--font-weight-benzin-bold) !important;
+  }
+  
+  /* Força renderização de fonte personalizada */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+/* Fallback para quando a fonte não carrega */
+@font-face {
+  font-family: 'Benzin-Fallback';
+  src: local('Arial Black'), local('Arial-Black'), local('Helvetica Neue');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

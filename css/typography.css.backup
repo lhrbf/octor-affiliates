@@ -1,0 +1,42 @@
+/* TIPOGRAFIA - OCTOR AFFILIATES */
+
+/* Font Families */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+
+p, a, span, select, button {
+    font-family: var(--font-family-body);
+}
+
+/* Headings */
+h1 {
+    font-weight: var(--font-weight-benzin-bold);
+    font-size: var(--font-2xl);
+}
+
+h2 {
+    font-weight: var(--font-weight-benzin-bold);
+    font-size: var(--font-xl);
+}
+
+h3 {
+    font-weight: var(--font-weight-benzin-semibold);
+    font-size: var(--font-lg);
+}
+
+h4 {
+    font-weight: var(--font-weight-benzin-semibold);
+    font-size: var(--font-lg);
+}
+
+p, span, button, select {
+    font-weight: var(--font-weight-benzin-regular);
+    font-size: var(--font-md);
+}
+
+/* Form Elements */
+footer p, a {
+    font-weight: var(--font-weight-benzin-regular);
+    font-size: var(--font-sm);
+}
