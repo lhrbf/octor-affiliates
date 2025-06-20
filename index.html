@@ -15,8 +15,18 @@
                 <img src="assets/icons/Logo-octor-Horizontal.png" alt="Octor Affiliates Logo" />
             </div>
             <button class="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
-                <i class="fas fa-bars hamburger-open"></i>
-                <i class="fas fa-times hamburger-close"></i>
+                <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <!-- Ícone de hambúrguer (3 linhas) -->
+                    <g class="hamburger-bars">
+                        <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" />
+                        <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </g>
+                    <!-- Letra X -->
+                    <text class="hamburger-x" x="12" y="16" text-anchor="middle" fill="white" font-size="16"
+                        font-family="Arial, sans-serif" font-weight="bold">X</text>
+                </svg>
             </button>
             <nav class="nav-links" id="main-nav">
                 <a href="#benefits">Benefícios</a>
@@ -28,8 +38,8 @@
                     </select>
                 </div>
                 <div class="mobile-menu-btn">
-                    <button class="btn btn-secondary" type="button">Fale Conosco</button>
-                </div>
+                        <button class="btn btn-primary" type="button">Fale Conosco</button>
+                    </div>
                 <div class="mobile-menu-logo">
                     <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Octor Logo">
                 </div>
@@ -39,7 +49,7 @@
                     <option value="pt-BR">PT</option>
                     <option value="en">EN</option>
                 </select>
-                <button class="btn btn-secondary" type="button">Fale Conosco</button>
+                <button class="btn btn-primary" type="button">Fale Conosco</button>
             </div>
         </div>
     </header>
@@ -63,7 +73,7 @@
                 </div>
 
                 <div class="hero-image">
-                    <img src="assets/images/carlinhos-maia.png" alt="Carlinhos Maia Onabet" />
+                    <img src="assets/images/LEO-SANTANA.png" alt="Leo Santana EDS" />
                 </div>
             </div>
         </section>
@@ -155,6 +165,9 @@
             </p>
         </div>
     </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

@@ -76,3 +76,15 @@ select {
     margin: 0 auto;
   }
 }
+
+@media (max-width: 500px) {
+
+  .container {
+    padding: var(--spacing-md);
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  p, a, span {
+    font-size: var(--font-sm);
+  }
+}

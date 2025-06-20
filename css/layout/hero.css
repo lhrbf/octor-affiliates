@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
-  width: 55%;
+  width: 75%;
 }
 
 .hero-logo {
@@ -16,11 +16,8 @@
   height: auto;
 }
 
-.hero-text p {
+.hero-text {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   line-height: 1.4;
 }
 
@@ -33,11 +30,6 @@
 .hero-image img {
   width: 100%;
   height: auto;
-}
-
-.bet-br {
-  align-items: start !important;
-  justify-content: start !important;
 }
 
 @media (max-width: 1280px) {

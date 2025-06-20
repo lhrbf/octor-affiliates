@@ -44,46 +44,37 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', handleScroll);
     
     if (hamburger && navLinks) {
-        // Toggle do menu quando clica no hambúrguer
-        hamburger.addEventListener('click', function() {
-            const isMenuOpen = navLinks.classList.contains('open');
-            
-            if (!isMenuOpen) {
-                navLinks.classList.add('open');
-                hamburger.classList.add('active');
-            } else {
-                navLinks.classList.remove('open');
-                hamburger.classList.remove('active');
+        let isMenuOpen = false;
+        
+        // Função simples para alternar o menu
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+            navLinks.classList.toggle('open', isMenuOpen);
+            hamburger.classList.toggle('active', isMenuOpen);
+        }
+        
+        // Events
+        hamburger.addEventListener('click', toggleMenu);
+        
+        // Fecha menu ao clicar nos links
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A' && window.innerWidth <= 810) {
+                toggleMenu();
             }
         });
         
-        // Fecha o menu quando clica em um link (mobile)
-        const navLinksItems = navLinks.querySelectorAll('a');
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 810) {
-                    navLinks.classList.remove('open');
-                    hamburger.classList.remove('active');
-                }
-            });
-        });
-        
-        // Fecha o menu quando redimensiona para desktop
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 810) {
-                navLinks.classList.remove('open');
-                hamburger.classList.remove('active');
+        // Fecha menu ao redimensionar para desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 810 && isMenuOpen) {
+                toggleMenu();
             }
         });
         
-        // Fecha o menu quando clica fora dele (mobile)
-        document.addEventListener('click', function(event) {
-            if (window.innerWidth <= 810) {
-                const isMenuOpen = navLinks.classList.contains('open');
-                if (isMenuOpen && !hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-                    navLinks.classList.remove('open');
-                    hamburger.classList.remove('active');
-                }
+        // Fecha menu ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 810 && isMenuOpen && 
+                !hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+                toggleMenu();
             }
         });
     }

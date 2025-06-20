@@ -80,7 +80,6 @@
   --font-2xl: clamp(1.625rem, 3vw, 2rem);
 
   /* Dimensions */
-  --border-radius: 8px;
   --border-radius-sm: 8px;
   --border-radius-md: 12px;
   --border-radius-lg: 16px;

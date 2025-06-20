@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (heroImage) {
         // Adiciona transição suave no CSS
-        heroImage.style.transition = 'opacity 0.8s ease-in-out, transform 0.8s ease-in-out';
+        heroImage.style.transition = 'opacity 0.8s ease-in-out, transform 0.9s ease-in-out';
         
         const images = [
             'assets/images/LEO-SANTANA.png',
@@ -42,8 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 400); // Tempo aumentado para transição mais suave
         }
         
-        // Inicia a alternância a cada 3 segundos
-        setInterval(switchHeroImage, 3000);
+        setInterval(switchHeroImage, 2500);
         
         // Define a primeira imagem com estado inicial
         heroImage.src = images[0];
