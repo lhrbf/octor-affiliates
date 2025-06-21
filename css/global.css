@@ -2,48 +2,48 @@
 
 /* ===== FONT FACES ===== */
 @font-face {
-  font-family: 'Benzin';
-  src: url('../assets/fonts/Benzin-Regular.ttf') format('truetype');
+  font-family: "Benzin";
+  src: url("../assets/fonts/Benzin-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Benzin';
-  src: url('../assets/fonts/Benzin-Medium.ttf') format('truetype');
+  font-family: "Benzin";
+  src: url("../assets/fonts/Benzin-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Benzin';
-  src: url('../assets/fonts/Benzin-Semibold.ttf') format('truetype');
+  font-family: "Benzin";
+  src: url("../assets/fonts/Benzin-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Benzin';
-  src: url('../assets/fonts/Benzin-Bold.ttf') format('truetype');
+  font-family: "Benzin";
+  src: url("../assets/fonts/Benzin-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Benzin';
-  src: url('../assets/fonts/Benzin-ExtraBold.ttf') format('truetype');
+  font-family: "Benzin";
+  src: url("../assets/fonts/Benzin-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Poppins';
-  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-family: "Poppins";
+  src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -66,47 +66,44 @@ body {
 }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-benzin-bold);
   line-height: var(--line-height-tight);
   margin-bottom: var(--spacing-md);
 }
 
-h1 {
-  font-size: var(--font-5xl);
-  font-weight: var(--font-weight-benzin-extrabold);
-}
-
-h2 {
-  font-size: var(--font-4xl);
-  font-weight: var(--font-weight-benzin-bold);
-}
-
+h1,
+h2,
 h3 {
-  font-size: var(--font-3xl);
-  font-weight: var(--font-weight-benzin-semibold);
-}
-
-h4 {
   font-size: var(--font-2xl);
   font-weight: var(--font-weight-benzin-medium);
 }
 
-h5 {
+h4, h5 {
   font-size: var(--font-xl);
-  font-weight: var(--font-weight-benzin-medium);
+  font-weight: var(--font-weight-benzin-regular);
 }
 
 h6 {
   font-size: var(--font-lg);
-  font-weight: var(--font-weight-benzin-medium);
+  font-weight: var(--font-weight-benzin-regular);
 }
 
 p {
+  font-size: var(--font-md);
   margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
-  line-height: var(--line-height-relaxed);
+  line-height: var(--line-height-normal);
+}
+
+a,
+button {
+  font-size: var(--font-base);
 }
 
 /* ===== LAYOUT ===== */
@@ -115,33 +112,39 @@ p {
   margin: 0 auto;
   padding: var(--spacing-4xl) var(--spacing-2xl);
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .mobile {
-    display: none;
+  display: none;
+}
+
+.desktop {
+  display: inline-block;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 1024px) {
-    .container {
-        padding: var(--spacing-2xl) var(--spacing-lg);
-        flex-direction: column;
-    }   
+  .container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+    flex-direction: column;
+  }
 
-    .mobile {
-        display: flex;
-    }
+  .mobile {
+    display: inline-block;
+  }
+
+  .desktop {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: var(--spacing-xl) var(--spacing-md);
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: var(--spacing-lg) var(--spacing-md);
+    padding: var(--spacing-2xl) var(--spacing-md);
   }
 }
 

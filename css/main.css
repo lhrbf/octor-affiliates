@@ -1,5 +1,9 @@
-@import "/css/global.css";
-@import "/css/variables.css";
-@import "/css/reset.css";
-@import "/css/components/header.css";
-@import "/css/layout/hero.css";
+@import './variables.css';
+@import './reset.css';
+@import './global.css';
+@import './components/button.css';
+@import './components/footer.css';
+@import './components/header.css';
+@import './layout/benefits.css';
+@import './layout/bet.css';
+@import './layout/hero.css';
