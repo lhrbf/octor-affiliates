@@ -1,0 +1,97 @@
+/* ===== CSS VARIABLES - Octor Affiliates ===== */
+
+:root {
+  /* Colors */
+  --primary-color: #182f98;
+  --secondary-color: #4f46e5;
+  --tertiary-color: #8b5cf6;
+  --accent-color: #06b6d4;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e5e7eb;
+  --text-muted: #9ca3af;
+  --text-dark: #1f2937;
+  
+  /* Background Colors */
+  --bg-primary: #0f0f23;
+  --bg-secondary: #1a1a3a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #182f98 0%, #4f46e5 50%, #8b5cf6 100%);
+  --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
+  --gradient-hero: linear-gradient(135deg, #0f0f23 0%, #182f98 50%, #4f46e5 100%);
+  
+  /* Typography */
+  --font-family-primary: 'Benzin', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-secondary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-body: var(--font-family-secondary);
+  
+  /* Font Weights */
+  --font-weight-benzin-light: 300;
+  --font-weight-benzin-regular: 400;
+  --font-weight-benzin-medium: 500;
+  --font-weight-benzin-semibold: 600;
+  --font-weight-benzin-bold: 700;
+  --font-weight-benzin-extrabold: 800;
+  
+  /* Font Sizes */
+  --font-xs: clamp(0.75rem, 0.8vw, 0.875rem);
+  --font-sm: clamp(0.875rem, 1vw, 1rem);
+  --font-base: clamp(1rem, 1.2vw, 1.125rem);
+  --font-lg: clamp(1.125rem, 1.4vw, 1.25rem);
+  --font-xl: clamp(1.25rem, 1.6vw, 1.5rem);
+  --font-2xl: clamp(1.5rem, 2vw, 1.875rem);
+  --font-3xl: clamp(1.875rem, 2.5vw, 2.25rem);
+  --font-4xl: clamp(2.25rem, 3vw, 3rem);
+  --font-5xl: clamp(3rem, 4vw, 4rem);
+  --font-6xl: clamp(4rem, 5vw, 6rem);
+  
+  /* Line Heights */
+  --line-height-tight: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  --spacing-4xl: 6rem;
+  --spacing-5xl: 8rem;
+  
+  /* Container */
+  --container-width: 1600px;
+  
+  /* Border Radius */
+  --border-radius: 0.5rem;
+  --border-radius-sm: 0.25rem;
+  --border-radius-lg: 1rem;
+  --border-radius-xl: 1.5rem;
+  --border-radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
+  
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+  --z-toast: 1080;
+}

@@ -1,0 +1,20 @@
+header {
+    position: fixed;
+    top: 0;
+}
+
+.container.header {
+    padding: var(--spacing-md) var(--spacing-4xl);
+    min-height: auto;
+}
+
+.logo-header {
+    display: flex;
+    align-items: center;
+    width: clamp(5rem, 5vw, 10rem);
+}
+@media (min-width: 1610px) {
+    .container.header {
+        padding: var(--spacing-md) 0;
+    }
+}

@@ -1,0 +1,175 @@
+/* ===== GLOBAL STYLES - Octor Affiliates ===== */
+
+/* ===== FONT FACES ===== */
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Benzin';
+  src: url('../assets/fonts/Benzin-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== BASE STYLES ===== */
+html {
+  font-size: 16px;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-family-body);
+  font-size: var(--font-base);
+  line-height: var(--line-height-normal);
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-benzin-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 {
+  font-size: var(--font-5xl);
+  font-weight: var(--font-weight-benzin-extrabold);
+}
+
+h2 {
+  font-size: var(--font-4xl);
+  font-weight: var(--font-weight-benzin-bold);
+}
+
+h3 {
+  font-size: var(--font-3xl);
+  font-weight: var(--font-weight-benzin-semibold);
+}
+
+h4 {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-weight-benzin-medium);
+}
+
+h5 {
+  font-size: var(--font-xl);
+  font-weight: var(--font-weight-benzin-medium);
+}
+
+h6 {
+  font-size: var(--font-lg);
+  font-weight: var(--font-weight-benzin-medium);
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-secondary);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: var(--spacing-4xl) var(--spacing-2xl);
+  width: 100%;
+}
+
+.mobile {
+    display: none;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: var(--spacing-2xl) var(--spacing-lg);
+        flex-direction: column;
+    }   
+
+    .mobile {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: var(--tertiary-color);
+  color: white;
+}
+
+::-moz-selection {
+  background: var(--tertiary-color);
+  color: white;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--tertiary-color);
+  border-radius: var(--border-radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
