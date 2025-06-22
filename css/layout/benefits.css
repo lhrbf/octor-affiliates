@@ -1,3 +1,21 @@
+.benefits-section {
+    background-color: #dddddd;
+}
+
 .container.benefits {
     flex-direction: column;
+    color: var(--primary-color);
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    background-color: white;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-xl);
+    min-height: 55vh;
+    width: 100%;
+    max-width: 750px;
 }

@@ -1,0 +1,14 @@
+.hero-section {
+    background: var(--gradient-hero);
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 780px;
+    height: auto;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+}

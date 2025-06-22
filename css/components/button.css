@@ -27,3 +27,10 @@
     transform: scale(0.95) translateY(1px);
     box-shadow: none;
 }
+
+@media (max-width: 768px) {
+    .btn {
+        width: 100%;
+        max-width: 150px;
+    }
+}

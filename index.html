@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afiliados Octor</title>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -16,8 +18,9 @@
             </div>
             <nav class="menu">
                 <ul>
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/afiliados.html">Afiliados</a></li>
+                    <li><a href="#">Benefícios</a></li>
+                    <li><a href="octor.pro" target="_blank">Grupo Octor</a></li>
+                    <li><a href="#">Seja Afiliado</a></li>
                 </ul>
                 <button class="btn btn-primary mobile">Fale Conosco</button>
             </nav>
@@ -28,39 +31,121 @@
                 </div>
                 <button class="btn btn-primary desktop">Fale Conosco</button>
             </div>
+            <div class="menu-toggle mobile">
+                <i class="fa-solid fa-bars"></i>  
+                <i class="fa-solid fa-xmark"></i>
+            </div>
         </div>
     </header>
 
     <main>
-        <div class="container hero">
-            <div class="hero-text">
-                <h1>Programa de Afiliados Octor</h1>
-                <p>Ganhe comissões promovendo nossos produtos e serviços.</p>
+        <section class="hero-section">
+            <div class="container hero">
+                <div class="hero-text">
+                    <h1>Programa de Afiliados Octor</h1>
+                    <p>Ganhe comissões promovendo nossos produtos e serviços.</p>
+                    <button class="btn btn-secondary">Fale Conosco</button>
+                </div>
+                <div class="hero-image">
+                    <img src="/assets/images/LEO-SANTANA.webp" alt="Hero Image">
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section">
+            <div class="container benefits">
+                <h2>Benefícios</h2>
+                <div class="card-container">
+                    <div class="prev desktop"></div>
+                    <div class="card">
+                        <div class="card-content">
+                            <h4>Comissões Atrativas</h4>
+                            <p>Ganhe até 30% de comissão por cada venda realizada através do seu link de afiliado.</p>
+                        </div>
+                    </div>
+                    <div class="next desktop"></div>
+                </div>
+                <div class="indicators">
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                        <div class="indicator-dot"></div>
+                    </div>
+            </div>
+        </section>
+
+        <section class="bet-section">
+            <div class="container bet">
+                <h2>A Bet mais buscada do Brasil</h2>
                 <button class="btn btn-secondary">Fale Conosco</button>
             </div>
-            <div class="hero-image">
-                <img src="/assets/images/LEO-SANTANA.webp" alt="Hero Image">
-            </div>
-        </div>
+        </section>
 
-        <div class="container benefits">
-            <h2>Benefícios</h2>
-            <div class="card">
-                <div class="card-image">
-                    <img src="/assets/icons/commission-icon.webp" alt="Comissão">
+        <section class="how-it-works-section">
+            <div class="container how-it-works">
+                <div class="how-it-works-text">
+                    <h2>Como Funciona</h2>
+                    <p>Inscreva-se no programa de afiliados, receba seu link exclusivo e comece a promover nossos
+                        produtos. Acompanhe suas vendas e comissões em tempo real.</p>
                 </div>
-                <div class="card-content">
-                    <h4>Comissões Atrativas</h4>
-                    <p>Ganhe até 30% de comissão por cada venda realizada através do seu link de afiliado.</p>
+                <div>
+                    <img src="/assets/images/MOBILE.webp" alt="Como Funciona">
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
+        <div class="container bottom">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Logotipo do Grupo Octor"
+                            class="logo-img">
+                    </div>
+                    <p>Transformando o futuro digital, uma solução por vez.</p>
+                </div>
 
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Serviços</h3>
+                        <a href="#">Marketing Digital</a>
+                        <a href="#">SEO & Analytics</a>
+                        <a href="#">Desenvolvimento</a>
+                        <a href="#">Consultoria</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Empresa</h3>
+                        <a href="javascript:void(0)" data-scroll-to="about">Sobre Nós</a>
+                        <a href="#">Carreiras</a>
+                        <a href="#">Blog</a>
+                        <a href="javascript:void(0)" data-scroll-to="contact">Contato</a>
+                    </div>
+
+                    <div class="footer-column">
+                        <h3>Redes Sociais</h3>
+                        <div class="social-links">
+                            <a href="https://br.linkedin.com/company/grupo-octor" target="_blank"
+                                rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/grupooctor/" target="_blank" rel="noopener noreferrer"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container bottom lighter">
+                <p>&copy; <span id="current-year">2025</span> Octor. Todos os direitos reservados.</p>
+                <a href="pages/privacy-policy.html">Política de Privacidade</a>
+                <a href="pages/terms-conditions.html">Termos de Uso</a>
+            </div>
+        </div>
     </footer>
 
+    <script src="/js/header.js"></script>
 </body>
 
 </html>

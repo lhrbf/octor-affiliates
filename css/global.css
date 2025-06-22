@@ -123,7 +123,7 @@ button {
 }
 
 .desktop {
-  display: inline-block;
+  display: block;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -134,7 +134,7 @@ button {
   }
 
   .mobile {
-    display: inline-block;
+    display: block;
   }
 
   .desktop {
@@ -165,14 +165,14 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
+  background: rgba(99, 101, 112, 0.9);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--tertiary-color);
+  background: var(--text-secondary);
   border-radius: var(--border-radius-full);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--secondary-color);
+  background: var(--bg-primary);
 }
