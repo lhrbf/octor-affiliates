@@ -34,14 +34,6 @@
 }
 
 @font-face {
-  font-family: "Benzin";
-  src: url("../assets/fonts/Benzin-ExtraBold.ttf") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: "Poppins";
   src: url("../assets/fonts/Poppins-Medium.ttf") format("truetype");
   font-weight: 500;
@@ -51,7 +43,7 @@
 
 /* ===== BASE STYLES ===== */
 html {
-  font-size: 16px;
+  font-size: var(--font-base);
   scroll-padding-top: 80px;
 }
 
@@ -81,7 +73,7 @@ h1,
 h2,
 h3 {
   font-size: var(--font-2xl);
-  font-weight: var(--font-weight-benzin-medium);
+  font-weight: var(--font-weight-benzin-bold);
 }
 
 h4, h5 {

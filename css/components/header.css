@@ -72,6 +72,19 @@ nav ul li a:hover {
   font-size: var(--font-2xl);
 }
 
+.header-bg-blur {
+  background: rgba(20, 20, 40, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.3s, backdrop-filter 0.3s, opacity 0.3s, transform 0.3s;
+}
+
+.header-hide {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+}
+
 @media (max-width: 1024px) {
   .container.header {
     justify-content: space-between;
