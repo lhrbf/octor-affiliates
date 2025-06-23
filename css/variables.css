@@ -20,17 +20,17 @@
 
   /* Gradients */
   --gradient-primary: linear-gradient(
-    135deg,
+    150deg,
     #182f98 0%,
     #4f46e5 50%,
     #8b5cf6 100%
   );
   --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
   --gradient-hero: linear-gradient(
-    135deg,
-    #0d0d3b 0%,
-    #07175e 50%,
-    #1d1fad 100%
+    150deg,
+    #050533 0%,
+    #021152 50%,
+    #0d1096 100%
   );
 
   /* Typography */
