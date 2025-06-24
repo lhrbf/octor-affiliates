@@ -33,7 +33,6 @@
 .clique-aqui {
   font-size: var(--font-xs);
   font-weight: 100;
-  margin-top: var(--spacing-sm);
   max-width: 240px;
   text-align: center;
 }
@@ -51,6 +50,10 @@
 }
 
 @media (max-width: 768px) {
+  .container.hero {
+    padding-top: 5.5rem;
+  }
+
   .hero-text {
     max-width: 100%;
   }

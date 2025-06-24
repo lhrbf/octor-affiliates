@@ -2,15 +2,15 @@
 
 :root {
   /* Colors */
-  --primary-color: #0d2488;
-  --secondary-color: #4f46e5;
+  --primary-color: #001780;
+  --secondary-color: #003ee9;
   --tertiary-color: #8b5cf6;
   --accent-color: #06b6d4;
   --success-color: #008d2a;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
-  --bg-primary: #0a1a63;
-  --bg-dark: #00002c;
+  --bg-primary: #000d47;
+  --bg-dark: #00002e;
 
   /* Text Colors */
   --text-primary: #ffffff;
@@ -27,10 +27,10 @@
   );
   --gradient-secondary: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);
   --gradient-hero: linear-gradient(
-    150deg,
-    #050533 0%,
-    #021152 50%,
-    #0d1096 100%
+    180deg,
+    var(--bg-dark) 0%,
+    var(--bg-primary) 50%,
+    var(--primary-color) 100%
   );
 
   /* Typography */
@@ -48,13 +48,13 @@
   --font-weight-benzin-bold: 700;
 
   /* Font Sizes */
-  --font-xs: clamp(0.8rem, 0.7vw + 0.2rem, 0.9rem);
-  --font-sm: clamp(0.95rem, 0.9vw + 0.2rem, 1rem);
+  --font-xs: clamp(0.75rem, 0.7vw + 0.2rem, 0.9rem);
+  --font-sm: clamp(0.9rem, 0.9vw + 0.2rem, 1rem);
   --font-base: 16px;
   --font-md: clamp(1.1rem, 1.1vw + 0.2rem, 1.25rem);
-  --font-lg: clamp(1.25rem, 1.3vw + 0.2rem, 1.4rem);
-  --font-xl: clamp(1.45rem, 1.5vw + 0.2rem, 1.65rem);
-  --font-2xl: clamp(1.6rem, 1.8vw + 0.2rem, 2rem);
+  --font-lg: clamp(1.2rem, 1.3vw + 0.2rem, 1.4rem);
+  --font-xl: clamp(1.3rem, 1.5vw + 0.2rem, 1.65rem);
+  --font-2xl: clamp(1.4rem, 1.8vw + 0.2rem, 2rem);
 
   /* Line Heights */
   --line-height-tight: 1;
@@ -91,7 +91,7 @@
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-glow: 0 1.5px 16px 2px rgba(1, 33, 129, 0.25);
+  --shadow-glow: 0 1.5px 16px 2px rgba(0, 45, 179, 0.25);
 
   /* Z-index */
   --z-dropdown: 1000;

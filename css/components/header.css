@@ -43,9 +43,9 @@ header {
 }
 
 .lang-btn.active {
-  background-color: var(--text-secondary);
-  color: var(--text-dark);
-  border: 1.5px inset #424242;
+  background-color: white;
+  color: var(--primary-color);
+  border: 1.5px solid var(--secondary-color);
 }
 
 .header-right {
