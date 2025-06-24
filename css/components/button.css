@@ -17,6 +17,7 @@
     color: var(--text-primary);
     max-width: 240px;
     font-size: var(--font-lg);
+    margin-block: var(--spacing-md);
 }
 
 .btn:hover {
@@ -33,6 +34,6 @@
 @media (max-width: 768px) {
     .btn {
         width: 100%;
-        max-width: 150px;
+        max-width: 190px;
     }
 }

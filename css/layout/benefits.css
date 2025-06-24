@@ -1,21 +1,226 @@
 .benefits-section {
-    background-color: #dddddd;
+  background-color: #dddddd;
 }
 
 .container.benefits {
-    flex-direction: column;
-    color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+  margin: 0 auto;
+}
+
+.container.benefits h2 {
+  text-align: center;
+  font-size: var(--font-2xl);
+  font-weight: bold;
+  margin-bottom: 75px;
+}
+
+/* Desktop Carousel 3D */
+.card-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  perspective: 1450px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-xl);
+  width: 410px;
+  height: 410px;
+  transform-origin: center center;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card.active {
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+}
+
+.card-content {
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.card-content h3 {
+  font-weight: var(--font-benzin-bold);
+  font-size: var(--font-md);
+  line-height: 1.1;
+}
+
+.card-content p {
+  font-size: var(--font-base);
+  line-height: 1.25;
+}
+
+/* Navigation Arrows */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  transition: all 0.3s ease;
+}
+
+.prev:hover,
+.next:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  right: 385px;
+}
+
+.next {
+  left: 385px;
+}
+
+.prev i,
+.next i {
+  font-size: var(--font-2xl);
+}
+
+/* Indicators */
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.indicator-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(51, 51, 51, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+  background-color: var(--secondary-color);
+  transform: scale(1.2);
+}
+
+/* Mobile Styles */
+@media (max-width: 1024px) {
+  .container.benefits {
+    padding: 20px 0;
+  }
+
+  .container.benefits h2 {
+    margin-bottom: 60px;
+  }
+
+  .card-container {
+    height: auto;
+    overflow: hidden;
+    perspective: none;
+    min-height: 50vh;
+    padding: 0;
+  }
+
+  .carousel-wrapper {
     display: flex;
-    justify-content: center;
-    align-items: end;
-    background-color: white;
-    box-shadow: var(--shadow-lg);
-    border-radius: var(--border-radius);
-    padding: var(--spacing-xl);
-    min-height: 55vh;
-    width: 100%;
-    max-width: 750px;
+    transform-style: initial;
+    transition: transform 0.5s ease;
+  }
+
+  .card {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 400px;
+    height: 400px;
+    margin: 0 10px;
+    transform: none !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: var(--spacing-lg) var(--spacing-2xl);
+  }
+
+  .card.active {
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.25);
+    transform: scale(1.02) !important;
+  }
+
+  .prev,
+  .next {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .card-container {
+    overflow: hidden !important;
+    margin: 0 auto;
+    max-width: 100vw;
+  }
+
+  .carousel-wrapper {
+    padding-left: 10px !important;
+  }
+
+  .card {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+  }
 }

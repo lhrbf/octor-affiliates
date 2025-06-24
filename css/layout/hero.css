@@ -37,3 +37,21 @@
   max-width: 240px;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .hero-text {
+    max-width: 80%;
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .clique-aqui {
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-text {
+    max-width: 100%;
+  }
+}

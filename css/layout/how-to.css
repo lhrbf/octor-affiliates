@@ -1,0 +1,16 @@
+.how-it-works-text {
+    max-width: 45%;
+}
+
+@media (max-width: 1024px) {
+    .how-it-works-text {
+        max-width: 80%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works-text {
+        max-width: 100%;
+    }
+}
