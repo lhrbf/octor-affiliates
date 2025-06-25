@@ -15,28 +15,25 @@ header {
 
 .logo-header {
   position: absolute;
-  left: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  left: 28px;
   grid-column: 1;
   z-index: 2;
   gap: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-header img {
   width: 100%;
-  max-width: 115px;
+  max-width: 100px;
   height: auto;
 }
 
 .logo-text {
   width: 100%;
   max-width: 250px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .logo-text span {
@@ -46,9 +43,9 @@ header {
 
 .logo-text img {
   width: 100%;
-  max-width: 70px;
+  max-width: 60px;
   height: auto;
-  padding: var(--spacing-xs);
+  margin: 0 auto;
 }
 
 .lang-select {
@@ -80,7 +77,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: var(--spacing-2xl);
+  right: 28px;
   gap: var(--spacing-xl);
 }
 
@@ -126,6 +123,10 @@ nav ul li a:hover {
     position: static;
   }
 
+  .logo-header {
+    gap: var(--spacing-md);
+  }
+
   .fa-xmark {
     position: absolute;
     top: 25px;
@@ -165,6 +166,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: var(--spacing-lg);
     width: 100%;
     border-top: 1px solid #ccc;
     padding: var(--spacing-md) 0;
