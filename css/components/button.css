@@ -36,4 +36,8 @@
         width: 100%;
         max-width: 190px;
     }
+
+    .btn-primary.mobile {
+        margin-right: var(--spacing-lg);
+    }
 }
