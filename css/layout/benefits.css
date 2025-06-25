@@ -13,7 +13,6 @@
   text-align: center;
   font-size: var(--font-2xl);
   font-weight: bold;
-  margin-bottom: 60px;
   color: var(--primary-color);
 }
 
@@ -39,7 +38,6 @@
   position: absolute;
   left: 50%;
   top: 50%;
-  background: linear-gradient(145deg, #585858, #2d2d2d);
   box-shadow: var(--shadow-secondary);
   border-radius: var(--border-radius);
   padding: var(--spacing-xl);
@@ -52,6 +50,29 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.card.saque {
+  background-image: url('/assets/images/cards/');
+}
+
+.card.chat {
+  background-image: url('/assets/images/cards/chat.png');
+}
+
+.card.google-seo {
+  background-image: url('/assets/images/cards/');
+}
+
+.card.acordo {
+  background-image: url('/assets/images/cards/');
+}
+
+.card.contrato {
+  background-image: url('/assets/images/cards/');
 }
 
 .card::before {
@@ -63,6 +84,24 @@
   bottom: 0;
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
   pointer-events: none;
+  z-index: 1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg, 
+    rgba(0, 32, 173, 0.25) 0%, 
+    rgba(2, 10, 54, 0.5) 50%, 
+    rgba(6, 1, 36, 0.8) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
 }
 
 .card:hover {
@@ -79,6 +118,8 @@
   display: flex;
   flex-direction: column;
   justify-content: end;
+  position: relative;
+  z-index: 3;
 }
 
 .card-content h3 {
@@ -135,7 +176,7 @@
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-top: 75px;
+  margin-top: 50px;
 }
 
 .indicator-dot {

@@ -2,6 +2,7 @@
     background-image: url('/assets/images/Leo-Santana-Carlinhos.webp');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 .container.bet {
@@ -9,7 +10,7 @@
     flex-direction: column;
     text-align: center;
     min-height: 110vh;
-    gap: var(--spacing-md);
+    gap: var(--spacing-lg);
 }
 
 
