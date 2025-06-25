@@ -102,7 +102,7 @@ button {
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
-  padding: var(--spacing-4xl) var(--spacing-2xl);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
   width: 100%;
   display: flex;
   justify-content: center;

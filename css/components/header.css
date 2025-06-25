@@ -3,6 +3,8 @@ header {
   top: 0;
   width: 100%;
   z-index: var(--z-fixed);
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, 
+              backdrop-filter 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .container.header {
@@ -71,6 +73,20 @@ nav ul li a:hover {
 
 .menu-toggle {
   font-size: var(--font-2xl);
+}
+
+/* Header scroll effects */
+.header-bg-blur {
+  background: rgba(0, 13, 71, 0.9) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.header-hide {
+  transform: translateY(-100%) !important;
+  transition: transform 0.3s ease-in-out !important;
 }
 
 @media (max-width: 1024px) {

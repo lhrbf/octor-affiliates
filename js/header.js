@@ -46,6 +46,92 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  // --- Scroll suave para seções sem alterar URL ---
+  
+  // Função para scroll suave sem alterar o hash na URL
+  function scrollToSectionByText(text) {
+    text = text.trim().toLowerCase();
+    let targetSection = null;
+    
+    // Mapear texto dos links para seções correspondentes (usando IDs primeiro, depois classes)
+    if (text.includes('benefícios') || text.includes('benefits')) {
+      targetSection = document.querySelector('#benefits') || document.querySelector('.benefits-section');
+    } else if (text.includes('seja afiliado') || text.includes('afiliado') || text.includes('affiliate')) {
+      targetSection = document.querySelector('#affiliate') || document.querySelector('.how-it-works-section');
+    }
+    
+    if (targetSection) {
+      targetSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  }
+
+  // Função para scroll usando seletor de seção diretamente
+  function scrollToSection(sectionSelector) {
+    const targetSection = document.querySelector(sectionSelector);
+    if (targetSection) {
+      targetSection.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+  }
+
+  // Aplica o scroll suave para todos os links do menu (desktop e mobile)
+  function setupMenuLinks() {
+    // Selecionar todos os links do menu, incluindo mobile e desktop
+    const allMenuLinks = document.querySelectorAll('nav .menu ul li a, .menu ul li a');
+    
+    allMenuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        
+        // Se for um link externo (tem target="_blank") ou link para o grupo-octor
+        if (link.hasAttribute('target') && link.getAttribute('target') === '_blank' || 
+            href === 'https://octor.pro' || href === 'https://octor.pro/') {
+          // Close mobile menu after clicking external link
+          if (menu && menu.classList.contains('open')) {
+            closeMenu();
+          }
+          return; // Permite navegação normal para links externos
+        }
+        
+        // Para links internos, previne o comportamento padrão
+        e.preventDefault();
+        
+        scrollToSectionByText(link.textContent);
+        
+        // Close mobile menu after clicking a link
+        if (menu && menu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+    });
+
+    // Footer links com data-scroll-to
+    const footerScrollLinks = document.querySelectorAll('a[data-scroll-to]');
+    footerScrollLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sectionId = link.getAttribute('data-scroll-to');
+        
+        // Mapear IDs para seletores de seção
+        let sectionSelector = null;
+        if (sectionId === 'about') {
+          sectionSelector = '#hero'; // Scroll para o topo/hero
+        } else if (sectionId === 'contact') {
+          sectionSelector = '#contact'; // Scroll para footer/contato
+        }
+        
+        if (sectionSelector) {
+          scrollToSection(sectionSelector);
+        }
+      });
+    });
+  }
+
   // --- Header blur, opacity e esconder/mostrar ao scroll ---
   const header = document.querySelector('header');
   const firstSection = document.querySelector('main > section');
@@ -54,6 +140,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function onScroll() {
     const scrollY = window.scrollY;
+    
     // Blur e opacity
     if (scrollY > 50) {
       header.classList.add('header-bg-blur');
@@ -61,15 +148,19 @@ document.addEventListener('DOMContentLoaded', function () {
       header.classList.remove('header-bg-blur');
     }
 
-    // Esconde header ao passar da primeira seção e rolando para baixo
-    const firstSectionBottom = firstSection.offsetTop + firstSection.offsetHeight;
-    if (scrollY > firstSectionBottom && scrollY > lastScroll) {
-      header.classList.add('header-hide');
-    } else if (scrollY > firstSectionBottom && scrollY < lastScroll) {
-      header.classList.remove('header-hide');
-    } else if (scrollY <= firstSectionBottom) {
-      header.classList.remove('header-hide');
+    // Proteção: só aplica lógica de esconder/mostrar se firstSection existir
+    if (firstSection) {
+      // Esconde header ao passar da primeira seção e rolando para baixo
+      const firstSectionBottom = firstSection.offsetTop + firstSection.offsetHeight;
+      if (scrollY > firstSectionBottom && scrollY > lastScroll) {
+        header.classList.add('header-hide');
+      } else if (scrollY > firstSectionBottom && scrollY < lastScroll) {
+        header.classList.remove('header-hide');
+      } else if (scrollY <= firstSectionBottom) {
+        header.classList.remove('header-hide');
+      }
     }
+    
     lastScroll = scrollY;
     ticking = false;
   }
@@ -80,4 +171,12 @@ document.addEventListener('DOMContentLoaded', function () {
       ticking = true;
     }
   });
+
+  // Inicializar links com scroll suave
+  setupMenuLinks();
+  
+  // Garantir que os event listeners sejam aplicados mesmo se houver delay
+  setTimeout(() => {
+    setupMenuLinks();
+  }, 100);
 });
