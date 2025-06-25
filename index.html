@@ -5,12 +5,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; img-src 'self' data: https://octor.pro https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; connect-src 'self' https://octor.pro https://grupooctor.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=(), accelerometer=(), gyroscope=(), magnetometer=(), payment=(), usb=(), autoplay=(), fullscreen=(self), picture-in-picture=(), sync-xhr=(), speaker-selection=(), encrypted-media=(), midi=(), display-capture=()">
+  <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+  <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+  <meta http-equiv="Cross-Origin-Resource-Policy" content="same-site">
+  
   <!-- SEO Meta Tags -->
   <title>Afiliados Octor | Programa de Afiliação Partners - Esportes da Sorte</title>
   <meta name="description" content="Torne-se um afiliado Octor e ganhe com o programa Partners. Conectamos marcas a influenciadores com gestão completa, saque quinzenal e suporte 24/7.">
   <meta name="keywords" content="afiliados octor, programa afiliação, partners, esportes da sorte, marketing digital, influenciadores, CPA, REV">
   <meta name="author" content="Grupo Octor">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#8B5CF6">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -40,26 +53,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   
+  <!-- Preload critical resources -->
+  <link rel="preload" href="/assets/images/LEO-SANTANA.webp" as="image" type="image/webp">
+  <link rel="preload" href="/assets/icons/Logo-octor-Horizontal.webp" as="image" type="image/webp">
+  <link rel="preload" href="/css/main.css" as="style">
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
   <!-- Structured Data / Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Grupo Octor",
+    "alternateName": "Octor Affiliates",
     "url": "https://octor.pro/octor-affiliates",
     "logo": "https://octor.pro/octor-affiliates/assets/icons/Logo-octor-Horizontal.webp",
+    "description": "Programa de afiliação Partners do Grupo Octor. Conectamos marcas a influenciadores com gestão completa, saque quinzenal e suporte 24/7.",
+    "slogan": "Transformando o futuro digital, uma solução por vez",
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "industry": "Marketing Digital",
+    "areaServed": "BR",
+    "knowsLanguage": ["pt-BR", "en-US"],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+55-81-99533-2328",
       "contactType": "customer service",
       "email": "contato@grupooctor.com",
-      "availableLanguage": ["Portuguese", "English"]
+      "availableLanguage": ["Portuguese", "English"],
+      "hoursAvailable": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
     },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Recife",
       "addressRegion": "PE",
       "addressCountry": "BR"
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Programa de Afiliação Partners",
+      "description": "Programa completo de afiliação com saque quinzenal, gerente exclusivo 24/7 e acordos CPA/REV personalizados",
+      "category": "Affiliate Marketing",
+      "availability": "https://schema.org/InStock"
     },
     "sameAs": [
       "https://br.linkedin.com/company/grupo-octor",
@@ -73,32 +114,32 @@
   <header>
     <div class="container header">
       <div class="logo-header">
-        <a href="/">
-          <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Grupo Octor Logo" />
+        <a href="/" aria-label="Ir para página inicial do Grupo Octor">
+          <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Logotipo do Grupo Octor - Empresa de Marketing Digital" />
         </a>
         <div class="logo-text desktop">
           <span class="logo-text-bold">Prestação de serviço exclusivo</span>
-          <img class="eds-ona" src="/assets/images/eds-ona.webp" alt="Logos Esportes da Sorte Onabet">
+          <img class="eds-ona" src="/assets/images/eds-ona.webp" alt="Logotipos Esportes da Sorte e Onabet - Parceiros exclusivos">
         </div>
       </div>
-      <nav class="menu">
+      <nav class="menu" role="navigation" aria-label="Menu principal">
         <ul>
-          <li><a href="#">Benefícios</a></li>
-          <li><a href="https://octor.pro" target="_blank">Grupo Octor</a></li>
-          <li><a href="#">Seja Afiliado</a></li>
+          <li><a href="#benefits" aria-label="Ver benefícios do programa de afiliação">Benefícios</a></li>
+          <li><a href="https://octor.pro" target="_blank" rel="noopener noreferrer" aria-label="Visitar site do Grupo Octor (abre em nova aba)">Grupo Octor</a></li>
+          <li><a href="#affiliate" aria-label="Saiba como se tornar afiliado">Seja Afiliado</a></li>
         </ul>
-        <button class="btn btn-primary mobile">Fale Conosco</button>
+        <button class="btn btn-primary mobile" aria-label="Entrar em contato conosco">Fale Conosco</button>
         <div class="logo-header-nav mobile">
-          <img src="/assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor">
-          <img src="/assets/images/eds-ona.webp" alt="Logos Esportes da Sorte Onabet" class="eds-ona">
+          <img src="/assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor versão branca">
+          <img src="/assets/images/eds-ona.webp" alt="Logos Esportes da Sorte e Onabet" class="eds-ona">
         </div>
       </nav>
       <div class="header-right">
-        <div class="lang-select">
-          <button class="lang-btn active">PT</button>
-          <button class="lang-btn">EN</button>
+        <div class="lang-select" role="group" aria-label="Seletor de idioma">
+          <button class="lang-btn active" aria-label="Idioma Português (selecionado)" aria-pressed="true">PT</button>
+          <button class="lang-btn" aria-label="Idioma Inglês" aria-pressed="false">EN</button>
         </div>
-        <button class="btn btn-primary desktop">Fale Conosco</button>
+        <button class="btn btn-primary desktop" aria-label="Entrar em contato conosco">Fale Conosco</button>
       </div>
       <div class="menu-toggle mobile">
         <i class="fa-solid fa-bars"></i>
@@ -107,77 +148,80 @@
     </div>
   </header>
 
-  <main>
-    <section class="hero-section" id="hero">
+  <main role="main">
+    <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="container hero">
         <div class="hero-text">
           <div class="hero-logo">
-            <img src="/assets/images/eds-ona.webp" alt="Logo Octor">
+            <img src="/assets/images/eds-ona.webp" alt="Logotipos Esportes da Sorte e Onabet - Casas de apostas parceiras">
           </div>
-          <h1>Partners Afiliate</h1>
+          <h1 id="hero-title">Partners Affiliate</h1>
           <p>Nosso programa de afiliação conecta marcas a influenciadores de todos os portes, com gestão
             completa de parcerias, negociações alinhadas
             a cada campanha e foco em resultados eficientes
             e escaláveis.</p>
           <div class="hero-buttons">
             <p class="bet-br">A casa de apostas 100% brasileira 🇧🇷</p>
-            <button class="btn btn-secondary">Fale Conosco</button>
+            <button class="btn btn-secondary" aria-label="Entrar em contato para mais informações">Fale Conosco</button>
             <p class="clique-aqui">Clique aqui e fale com nosso gerente de afiliados</p>
           </div>
         </div>
         <div class="hero-image">
-          <img src="/assets/images/LEO-SANTANA.webp" alt="Hero Image">
+          <img src="/assets/images/LEO-SANTANA.webp" alt="Leo Santana, cantor e influenciador parceiro do programa de afiliados Octor">
         </div>
       </div>
     </section>
 
-    <section class="benefits-section" id="benefits">
+    <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
       <div class="container benefits">
-        <h2>Benefícios</h2>
-        <div class="card-container">
-          <div class="prev desktop"><i class="fas fa-chevron-left"></i></div>
-          <div class="carousel-wrapper">
-            <div class="card saque active" data-index="0">
+        <h2 id="benefits-title">Benefícios</h2>
+        <div class="card-container" role="region" aria-label="Carrossel de benefícios do programa">
+          <button class="prev desktop" aria-label="Ver benefício anterior" aria-controls="carousel">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <div class="carousel-wrapper" id="carousel" role="tablist">
+            <div class="card saque active" data-index="0" role="tabpanel" aria-labelledby="benefit-1">
               <div class="card-content">
-                <h3>Saque quinzenal</h3>
+                <h3 id="benefit-1">Saque quinzenal</h3>
                 <p>Receba seus ganhos a cada 15 dias, com total transparência e agilidade.</p>
               </div>
             </div>
-            <div class="card chat active" data-index="1">
+            <div class="card chat active" data-index="1" role="tabpanel" aria-labelledby="benefit-2">
               <div class="card-content">
-                <h3>Gerente de contas exclusivo pra você 24/7</h3>
-                <p>Receba suporte dedicado a qualquer hora do dia, com um gerente de contas exclusivo.
-                </p>
+                <h3 id="benefit-2">Gerente de contas exclusivo pra você 24/7</h3>
+                <p>Receba suporte dedicado a qualquer hora do dia, com um gerente de contas exclusivo.</p>
               </div>
             </div>
-            <div class="card google-seo" data-index="2">
+            <div class="card google-seo" data-index="2" role="tabpanel" aria-labelledby="benefit-3">
               <div class="card-content">
-                <h3>A bet mais buscada no Google no Brasil</h3>
+                <h3 id="benefit-3">A bet mais buscada no Google no Brasil</h3>
                 <p>Esteja à frente da concorrência com a bet mais popular do país.</p>
               </div>
             </div>
-            <div class="card acordo" data-index="3">
+            <div class="card acordo" data-index="3" role="tabpanel" aria-labelledby="benefit-4">
               <div class="card-content">
-                <h3>Acordos com CPA e REV</h3>
+                <h3 id="benefit-4">Acordos com CPA e REV</h3>
                 <p>Maximize seus ganhos com acordos personalizados.</p>
               </div>
             </div>
-            <div class="card contrato" data-index="4">
+            <div class="card contrato" data-index="4" role="tabpanel" aria-labelledby="benefit-5">
               <div class="card-content">
-                <h3>Contrato formalizado de afiliação</h3>
+                <h3 id="benefit-5">Contrato formalizado de afiliação</h3>
                 <p>Conte com um contrato formalizado que garante a segurança e transparência da sua
                   parceria.</p>
               </div>
             </div>
           </div>
-          <div class="next desktop"><i class="fas fa-chevron-right"></i></div>
+          <button class="next desktop" aria-label="Ver próximo benefício" aria-controls="carousel">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          </button>
         </div>
-        <div class="indicators">
-          <div class="indicator-dot active" data-index="0"></div>
-          <div class="indicator-dot" data-index="1"></div>
-          <div class="indicator-dot" data-index="2"></div>
-          <div class="indicator-dot" data-index="3"></div>
-          <div class="indicator-dot" data-index="4"></div>
+        <div class="indicators" role="tablist" aria-label="Indicadores do carrossel">
+          <button class="indicator-dot active" data-index="0" aria-label="Ir para benefício 1: Saque quinzenal" role="tab"></button>
+          <button class="indicator-dot" data-index="1" aria-label="Ir para benefício 2: Gerente exclusivo" role="tab"></button>
+          <button class="indicator-dot" data-index="2" aria-label="Ir para benefício 3: Bet mais buscada" role="tab"></button>
+          <button class="indicator-dot" data-index="3" aria-label="Ir para benefício 4: Acordos CPA e REV" role="tab"></button>
+          <button class="indicator-dot" data-index="4" aria-label="Ir para benefício 5: Contrato formalizado" role="tab"></button>
         </div>
       </div>
     </section>
@@ -212,7 +256,7 @@
           <button class="btn btn-secondary">Fale Conosco</button>
         </div>
         <div class="how-it-works-image">
-          <img src="/assets/images/MOBILE.webp" alt="Como Funciona">
+          <img src="/assets/images/MOBILE.webp" alt="Infográfico explicativo sobre como funciona o programa de afiliação Octor - passo a passo visual">
         </div>
       </div>
     </section>
@@ -226,7 +270,7 @@
             <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Logotipo do Grupo Octor" class="logo-img">
           </div>
           <div class="footer-eds-ona">
-            <img src="/assets/images/eds-ona.webp" alt="Logos Esportes da Sorte Onabet" />
+            <img src="/assets/images/eds-ona.webp" alt="Logotipos das marcas parceiras Esportes da Sorte e Onabet - casas de apostas líder no Brasil" />
           </div>
           <p class="services-exclusive-footer">Prestação de serviço exclusivo para as<br />
           empresas do Grupo Esportes Gaming Brasil
@@ -240,35 +284,35 @@
           <div class="footer-column">
             <h3>Contato</h3>
             <div class="contact-info">
-              <p><i class="fas fa-envelope"></i> contato@grupooctor.com</p>
-              <p><i class="fas fa-phone"></i> +55 (81) 99533-2328</p>
-              <p><i class="fas fa-map-marker-alt"></i> Recife, PE - Brasil</p>
+              <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contato@grupooctor.com" aria-label="Enviar email para contato@grupooctor.com">contato@grupooctor.com</a></p>
+              <p><i class="fas fa-phone" aria-hidden="true"></i> <a href="tel:+5581995332328" aria-label="Ligar para +55 (81) 99533-2328">+55 (81) 99533-2328</a></p>
+              <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Recife, PE - Brasil</p>
             </div>
           </div>
 
           <div class="footer-column">
             <h3>Serviços</h3>
-            <a href="#">Marketing Digital</a>
-            <a href="#">SEO & Analytics</a>
-            <a href="#">Desenvolvimento</a>
-            <a href="#">Consultoria</a>
+            <a href="#" aria-label="Conheça nossos serviços de Marketing Digital">Marketing Digital</a>
+            <a href="#" aria-label="Conheça nossos serviços de SEO e Analytics">SEO & Analytics</a>
+            <a href="#" aria-label="Conheça nossos serviços de Desenvolvimento">Desenvolvimento</a>
+            <a href="#" aria-label="Conheça nossos serviços de Consultoria">Consultoria</a>
           </div>
 
           <div class="footer-column">
             <h3>Empresa</h3>
-            <a href="javascript:void(0)" data-scroll-to="about">Sobre Nós</a>
-            <a href="#">Carreiras</a>
-            <a href="#">Blog</a>
-            <a href="javascript:void(0)" data-scroll-to="contact">Contato</a>
+            <a href="javascript:void(0)" data-scroll-to="about" aria-label="Saiba mais sobre o Grupo Octor">Sobre Nós</a>
+            <a href="#" aria-label="Conheça as oportunidades de carreira no Grupo Octor">Carreiras</a>
+            <a href="#" aria-label="Acesse o blog do Grupo Octor">Blog</a>
+            <a href="javascript:void(0)" data-scroll-to="contact" aria-label="Entre em contato conosco">Contato</a>
           </div>
 
           <div class="footer-column">
             <h3>Redes Sociais</h3>
             <div class="social-links">
-              <a href="https://br.linkedin.com/company/grupo-octor" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-linkedin"></i></a>
-              <a href="https://www.instagram.com/grupooctor/" target="_blank" rel="noopener noreferrer"><i
-                  class="fa-brands fa-instagram"></i></a>
+              <a href="https://br.linkedin.com/company/grupo-octor" target="_blank" rel="noopener noreferrer" aria-label="Siga o Grupo Octor no LinkedIn (abre em nova aba)"><i
+                  class="fa-brands fa-linkedin" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/grupooctor/" target="_blank" rel="noopener noreferrer" aria-label="Siga o Grupo Octor no Instagram (abre em nova aba)"><i
+                  class="fa-brands fa-instagram" aria-hidden="true"></i></a>
             </div>
           </div>
         </div>
@@ -277,8 +321,8 @@
     <div class="footer-bottom">
       <div class="container bottom lighter">
         <p>&copy; <span id="current-year">2025</span> Octor. Todos os direitos reservados.</p>
-        <a href="https://octor.pro/pages/privacy-policy.html">Política de Privacidade</a>
-        <a href="https://octor.pro/pages/terms-conditions.html">Termos de Uso</a>
+        <a href="https://octor.pro/pages/privacy-policy.html" aria-label="Leia nossa Política de Privacidade">Política de Privacidade</a>
+        <a href="https://octor.pro/pages/terms-conditions.html" aria-label="Leia nossos Termos de Uso">Termos de Uso</a>
       </div>
     </div>
   </footer>

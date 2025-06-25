@@ -8,12 +8,10 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    -webkit-border-radius: var(--border-radius-sm);
-    -moz-border-radius: var(--border-radius-sm);
-    border-radius: var(--border-radius-sm);
+    -webkit-border-radius: var(--border-radius-md);
+    -moz-border-radius: var(--border-radius-md);
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

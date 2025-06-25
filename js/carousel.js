@@ -20,6 +20,9 @@ class Carousel3D {
         } else {
             this.initDesktop();
         }
+        
+        // Inicializa atributos de acessibilidade
+        this.initAccessibility();
     }
 
     initDesktop() {
@@ -28,6 +31,26 @@ class Carousel3D {
 
     initMobile() {
         this.updateCarouselMobile();
+    }
+
+    initAccessibility() {
+        // Define atributos iniciais para os cards
+        this.cards.forEach((card, index) => {
+            card.setAttribute('aria-selected', index === this.currentIndex ? 'true' : 'false');
+            card.setAttribute('tabindex', index === this.currentIndex ? '0' : '-1');
+        });
+
+        // Define atributos iniciais para os indicadores
+        this.indicators.forEach((indicator, index) => {
+            indicator.setAttribute('aria-pressed', index === this.currentIndex ? 'true' : 'false');
+            indicator.setAttribute('tabindex', '0');
+        });
+
+        // Configura o carrossel como uma região landmark
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        if (carouselWrapper) {
+            carouselWrapper.setAttribute('aria-label', 'Carrossel de benefícios do programa de afiliação');
+        }
     }
 
     updateCarousel3D() {
@@ -137,6 +160,45 @@ class Carousel3D {
             this.updateCarousel3D();
         }
         this.updateIndicators();
+        this.updateAriaAttributes();
+    }
+
+    updateAriaAttributes() {
+        // Atualiza aria-selected nos cards
+        this.cards.forEach((card, index) => {
+            card.setAttribute('aria-selected', index === this.currentIndex ? 'true' : 'false');
+            card.setAttribute('tabindex', index === this.currentIndex ? '0' : '-1');
+        });
+
+        // Atualiza aria-pressed nos indicadores
+        this.indicators.forEach((indicator, index) => {
+            indicator.setAttribute('aria-pressed', index === this.currentIndex ? 'true' : 'false');
+        });
+
+        // Atualiza aria-live para anunciar mudanças
+        const currentCard = this.cards[this.currentIndex];
+        if (currentCard) {
+            const cardTitle = currentCard.querySelector('h3')?.textContent || '';
+            this.announceChange(`Benefício ${this.currentIndex + 1} de ${this.totalCards}: ${cardTitle}`);
+        }
+    }
+
+    announceChange(message) {
+        // Cria ou atualiza o elemento para screen readers
+        let announcer = document.getElementById('carousel-announcer');
+        if (!announcer) {
+            announcer = document.createElement('div');
+            announcer.id = 'carousel-announcer';
+            announcer.setAttribute('aria-live', 'polite');
+            announcer.setAttribute('aria-atomic', 'true');
+            announcer.style.position = 'absolute';
+            announcer.style.left = '-10000px';
+            announcer.style.width = '1px';
+            announcer.style.height = '1px';
+            announcer.style.overflow = 'hidden';
+            document.body.appendChild(announcer);
+        }
+        announcer.textContent = message;
     }
 
     bindEvents() {
@@ -159,6 +221,47 @@ class Carousel3D {
                 });
             });
         }
+
+        // Navegação por teclado
+        document.addEventListener('keydown', (e) => {
+            // Verifica se o foco está no carrossel ou seus elementos
+            const carouselContainer = document.querySelector('.benefits-section');
+            if (!carouselContainer.contains(document.activeElement)) {
+                return;
+            }
+
+            switch (e.key) {
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    this.prev();
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    this.next();
+                    break;
+                case 'Home':
+                    e.preventDefault();
+                    this.goTo(0);
+                    break;
+                case 'End':
+                    e.preventDefault();
+                    this.goTo(this.totalCards - 1);
+                    break;
+            }
+        });
+
+        // Focus management para indicadores
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('keydown', (e) => {
+                switch (e.key) {
+                    case 'Enter':
+                    case ' ':
+                        e.preventDefault();
+                        this.goTo(index);
+                        break;
+                }
+            });
+        });
 
         // Touch events for mobile
         if (this.isMobile && this.carouselWrapper) {
@@ -202,12 +305,6 @@ class Carousel3D {
                 }
             }, { passive: true });
         }
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') this.prev();
-            if (e.key === 'ArrowRight') this.next();
-        });
 
         // Window resize
         window.addEventListener('resize', () => {

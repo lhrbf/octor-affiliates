@@ -1,3 +1,30 @@
+/* Remove outline azul e outros elementos indesejados */
+* {
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove outline especificamente de elementos do header */
+header *:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove qualquer pseudo-elemento que possa aparecer */
+*::before,
+*::after {
+  outline: none !important;
+}
+
 header {
   -webkit-position: sticky;
   position: fixed;
@@ -129,6 +156,17 @@ nav ul li a:hover::after {
 
 .menu-toggle {
   font-size: var(--font-2xl);
+  color: white;
+  cursor: pointer;
+  padding: 8px;
+  background: none;
+  border: none;
+}
+
+.menu-toggle i {
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Header scroll effects */
@@ -256,5 +294,11 @@ nav ul li a::after {
   .logo-header-nav.mobile img {
     width: 80px;
     height: auto;
+  }
+}
+
+@media (max-width: 515px) {
+  .container.header {
+    padding: var(--spacing-md);
   }
 }

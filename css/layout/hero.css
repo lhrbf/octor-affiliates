@@ -48,9 +48,7 @@
   font-size: var(--font-xs);
   font-weight: 100;
   max-width: 240px;
-  text-align: center;
-  margin: 1rem auto;
-}
+  text-align: center;}
 
 .hero-buttons .btn {
   -webkit-backface-visibility: hidden;
@@ -84,6 +82,11 @@
 
   .hero-logo {
     margin: 0 auto;
+  }
+
+  .clique-aqui {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
