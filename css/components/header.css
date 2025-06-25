@@ -1,5 +1,8 @@
 header {
+  -webkit-position: sticky;
   position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   top: 0;
   width: 100%;
   z-index: var(--z-fixed);
@@ -140,6 +143,46 @@ nav ul li a:hover::after {
 .header-hide {
   transform: translateY(-100%) !important;
   transition: transform 0.3s ease-in-out !important;
+}
+
+/* Cross-browser compatibility for header */
+header {
+  -webkit-position: sticky;
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.header-bg-blur {
+  -webkit-backdrop-filter: blur(15px) !important;
+  backdrop-filter: blur(15px) !important;
+  -webkit-transition: all 0.3s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+nav ul li a::after {
+  -webkit-transition: width 0.4s ease;
+  -moz-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+}
+
+/* Firefox specific header fixes */
+@-moz-document url-prefix() {
+  .header-bg-blur {
+    background: rgba(0, 13, 71, 0.95) !important;
+  }
+}
+
+/* Safari iOS fixes */
+@supports (-webkit-touch-callout: none) {
+  header {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+  }
 }
 
 @media (max-width: 1024px) {

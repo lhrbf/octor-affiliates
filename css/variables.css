@@ -108,3 +108,32 @@
   --z-tooltip: 1070;
   --z-toast: 1080;
 }
+
+/* CSS Variables cross-browser support */
+/* Fallback for browsers without CSS custom properties support */
+@supports not (color: var(--primary)) {
+  body {
+    color: #333;
+    background-color: #fff;
+  }
+  
+  .btn-primary {
+    background-color: #8B5CF6;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    border: 2px solid #8B5CF6;
+    color: #8B5CF6;
+  }
+}
+
+/* Enhanced variable support for older Safari */
+@supports (-webkit-appearance: none) and (not (color: var(--primary))) {
+  :root {
+    --primary: #8B5CF6;
+    --white: #ffffff;
+    --bg-primary: #000d47;
+  }
+}

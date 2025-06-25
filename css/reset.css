@@ -4,6 +4,8 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -17,7 +19,9 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   background-color: var(--bg-primary);
 }
 
@@ -27,6 +31,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
   min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Media elements */
@@ -40,16 +45,40 @@ svg {
   height: auto;
 }
 
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
 button {
   border: none;
   background: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 input,
 textarea {
   border: none;
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove iOS button styling */
+input[type="submit"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
 }
 
 p,
@@ -88,16 +117,6 @@ table {
 :focus-visible {
   outline: 2px solid #005fcc;
   outline-offset: 2px;
-}
-
-/* Remove default button and input styles */
-button,
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
 }
 
 /* Remove default select styles */

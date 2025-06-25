@@ -1,5 +1,22 @@
 .how-it-works-text {
     max-width: 45%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.how-it-works-image img {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+}
+
+.how-it-works-section .btn {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 @media (max-width: 1024px) {
@@ -13,4 +30,26 @@
     .how-it-works-text {
         max-width: 100%;
     }
+}
+
+/* Cross-browser how-to section compatibility */
+.how-it-works-section {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Firefox how-to fixes */
+@-moz-document url-prefix() {
+  .how-it-works-image img {
+    -moz-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Safari how-to fixes */
+@supports (-webkit-appearance: none) {
+  .how-it-works-section {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
