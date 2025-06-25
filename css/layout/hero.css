@@ -47,12 +47,17 @@
   .hero-text {
     max-width: 80%;
     text-align: center;
+    order: 2;
     padding-right: 0;
   }
 
-  .clique-aqui {
-    margin: 1rem auto;
+  .hero-logo {
+    margin: 0 auto;
   }
+}
+
+.clique-aqui {
+  margin: 1rem auto;
 }
 
 @media (max-width: 768px) {

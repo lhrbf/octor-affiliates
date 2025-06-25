@@ -1,23 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
-    <!-- Main affiliate page -->
-    <url>
-        <loc>https://octor.pro/octor-affiliates/</loc>
-        <lastmod>2025-06-14</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
+  <!-- Homepage / Landing Page -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://octor.pro/octor-affiliates/assets/images/LEO-SANTANA.webp</image:loc>
+      <image:title>Partners Affiliate - Leo Santana</image:title>
+      <image:caption>Programa de afiliação Octor com Leo Santana</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://octor.pro/octor-affiliates/assets/icons/Logo-octor-Horizontal.webp</image:loc>
+      <image:title>Logo Grupo Octor</image:title>
+      <image:caption>Logotipo oficial do Grupo Octor</image:caption>
+    </image:image>
+  </url>
 
-    <!-- Benefits section (anchor link) -->
-    <url>
-        <loc>https://octor.pro/octor-affiliates/#benefits</loc>
-        <lastmod>2025-06-13</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
+  <!-- Benefits Section -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates#benefits</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- How to become affiliate Section -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates#affiliate</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact Section -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates#contact</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates/pages/privacy-policy.html</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://octor.pro/pages/privacy-policy.html</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://octor.pro/octor-affiliates/pages/terms-conditions.html</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://octor.pro/pages/terms-conditions.html</loc>
+    <lastmod>2025-06-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 
 </urlset>

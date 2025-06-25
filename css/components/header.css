@@ -24,6 +24,18 @@ header {
   justify-content: center;
 }
 
+.logo-header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-header a img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
 .logo-header img {
   width: 100%;
   max-width: 100px;
@@ -34,7 +46,6 @@ header {
   width: 100%;
   max-width: 250px;
   text-align: center;
-  padding: 0;
 }
 
 .logo-text span {
@@ -105,7 +116,7 @@ nav ul li a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: white;
+  background-color: #8B5CF6;
   transition: width 0.4s ease;
 }
 
@@ -119,7 +130,7 @@ nav ul li a:hover::after {
 
 /* Header scroll effects */
 .header-bg-blur {
-  background: rgba(0, 15, 71, 0.9) !important;
+  background: rgba(0, 13, 71, 0.9) !important;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1) !important;
@@ -172,7 +183,7 @@ nav ul li a:hover::after {
     display: flex;
     position: absolute;
     top: 0;
-    left: 0;
+    right: -100%;
     justify-content: end;
     align-items: end;
     flex-direction: column;
@@ -180,6 +191,11 @@ nav ul li a:hover::after {
     padding: 5.5rem 0 0;
     background-color: var(--bg-primary);
     min-height: 100vh;
+    transition: right 0.3s ease-in-out;
+  }
+
+  nav.open {
+    right: 0;
   }
 
   .logo-header-nav.mobile {
