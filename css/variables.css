@@ -90,9 +90,8 @@
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
   
   /* Colored Shadows */
-  --shadow-primary: 0 4px 12px rgba(0, 23, 128, 0.15);
-  --shadow-secondary: 0 4px 12px rgba(0, 62, 233, 0.15);
-  --shadow-purple: 0 4px 12px rgba(139, 92, 246, 0.15);
+  --shadow-primary: 0 4px 12px rgba(0, 47, 255, 0.15);
+  --shadow-secondary: 0 4px 10px 1px rgba(0, 40, 170, 0.25);
   
   /* Subtle Glow Effects */
   --glow-sm: 0 0 8px rgba(92, 141, 246, 0.2);

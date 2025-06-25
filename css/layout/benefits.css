@@ -40,9 +40,9 @@
   top: 50%;
   box-shadow: var(--shadow-secondary);
   border-radius: var(--border-radius);
-  padding: var(--spacing-xl);
-  width: 400px;
-  height: 410px;
+  padding: 0 var(--spacing-xl);
+  width: 425px;
+  height: 450px;
   transform-origin: center center;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
@@ -51,12 +51,11 @@
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
 }
 
 .card.saque {
-  background-image: url('/assets/images/cards/');
+  background-image: url('/assets/images/cards/calendar.png');
 }
 
 .card.chat {
@@ -64,15 +63,15 @@
 }
 
 .card.google-seo {
-  background-image: url('/assets/images/cards/');
+  background-image: url('/assets/images/cards/gseo.png');
 }
 
 .card.acordo {
-  background-image: url('/assets/images/cards/');
+  background-image: url('/assets/images/cards/saque.png');
 }
 
 .card.contrato {
-  background-image: url('/assets/images/cards/');
+  background-image: url('/assets/images/cards/contrato.png');
 }
 
 .card::before {
@@ -82,7 +81,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), transparent);
+  background: linear-gradient(45deg, rgba(9, 49, 158, 0.25), transparent);
   pointer-events: none;
   z-index: 1;
 }
@@ -96,9 +95,9 @@
   bottom: 0;
   background: linear-gradient(
     180deg, 
-    rgba(0, 32, 173, 0.25) 0%, 
-    rgba(2, 10, 54, 0.5) 50%, 
-    rgba(6, 1, 36, 0.8) 100%
+    rgba(104, 123, 206, 0.1) 0%, 
+    rgba(0, 15, 100, 0.4) 50%, 
+    rgba(2, 12, 78, 0.8) 100%
   );
   pointer-events: none;
   z-index: 2;
@@ -126,6 +125,7 @@
   font-weight: var(--font-benzin-bold);
   font-size: var(--font-md);
   line-height: 1.1;
+  margin-bottom: var(--spacing-sm);
 }
 
 .card-content p {

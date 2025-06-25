@@ -34,6 +34,7 @@ header {
   width: 100%;
   max-width: 250px;
   text-align: center;
+  padding: 0;
 }
 
 .logo-text span {
@@ -118,7 +119,7 @@ nav ul li a:hover::after {
 
 /* Header scroll effects */
 .header-bg-blur {
-  background: rgba(0, 13, 71, 0.9) !important;
+  background: rgba(0, 15, 71, 0.9) !important;
   backdrop-filter: blur(15px) !important;
   -webkit-backdrop-filter: blur(15px) !important;
   box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1) !important;
