@@ -15,15 +15,40 @@ header {
 
 .logo-header {
   position: absolute;
-  left: var(--spacing-2xl);
+  left: 24px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  width: clamp(5rem, 5vw, 10rem);
+  grid-column: 1;
+  z-index: 2;
+  gap: var(--spacing-xl);
 }
 
 .logo-header img {
   width: 100%;
+  max-width: 115px;
   height: auto;
+}
+
+.logo-text {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-text span {
+  font-size: 0.55rem;
+  color: white;
+}
+
+.logo-text img {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  padding: var(--spacing-xs);
 }
 
 .lang-select {
