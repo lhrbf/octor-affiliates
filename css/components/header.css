@@ -88,9 +88,28 @@ nav ul {
   gap: var(--spacing-2xl);
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
-  text-underline-offset: 4px;
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
 }
 
 .menu-toggle {
