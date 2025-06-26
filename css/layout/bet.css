@@ -1,5 +1,5 @@
 .bet-section {
-    background-image: url(../../assets/images/Leo-Santana-Carlinhos.webp);
+    background-image: url('../../assets/images/Leo-Santana-Carlinhos.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -48,12 +48,12 @@
 
 @media (max-width: 1024px) {
     .bet-section {
-        background-image: url(../../assets/images/Mobile-Carlinhos-Leo.webp);
+        background-image: url('../../assets/images/Mobile-Carlinhos-Leo.webp');
         background-position: bottom;
     }
 
     .container.bet {
         min-height: 95vh;
-        gap: var(--spacing-ssm);
+        gap: var(--spacing-sm);
     }
 }

@@ -126,7 +126,7 @@
 }
 
 .card-content h3 {
-  font-weight: var(--font-benzin-bold);
+  font-weight: var(--font-weight-benzin-bold);
   font-size: var(--font-md);
   line-height: 1.1;
   margin-bottom: var(--spacing-sm);
