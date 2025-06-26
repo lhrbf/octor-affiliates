@@ -82,6 +82,10 @@ header {
   width: 100%;
   max-width: 250px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo-text span {
@@ -338,7 +342,7 @@ nav ul li a::after {
 
   .logo-header-nav.mobile {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 100%;
     border-top: 1px solid #ccc;
