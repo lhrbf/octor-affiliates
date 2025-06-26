@@ -29,7 +29,7 @@
     color: var(--text-primary);
     max-width: 240px;
     font-size: var(--font-lg);
-    margin-block: var(--spacing-md);
+    margin-block: var(--spacing-lg);
 }
 
 .btn:hover {

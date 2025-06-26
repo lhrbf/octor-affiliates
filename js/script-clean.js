@@ -29,14 +29,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact buttons functionality
+// Contact buttons functionality - scroll only
 document.addEventListener('DOMContentLoaded', function() {
     const contactButtons = document.querySelectorAll('.btn');
     
     contactButtons.forEach(button => {
-        if (button.textContent.includes('Fale Conosco')) {
-            button.addEventListener('click', function() {
-                // Scroll to contact section
+        if (button.textContent.includes('Fale Conosco') || button.textContent.includes('Contact Us')) {
+            button.addEventListener('click', function(e) {
+                // Remove comportamento padrão para permitir que o GTM tracking funcione
+                e.preventDefault();
+                
+                // O GTM tracking será responsável por abrir o WhatsApp
+                // Este script apenas faz scroll se necessário
                 const contactSection = document.getElementById('contact');
                 if (contactSection) {
                     contactSection.scrollIntoView({
