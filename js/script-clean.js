@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Hero image loop functionality
+// Hero image loop functionality with smooth transition
 document.addEventListener('DOMContentLoaded', function() {
     const heroImage = document.querySelector('.hero-image img');
     
@@ -62,13 +62,30 @@ document.addEventListener('DOMContentLoaded', function() {
         
         let currentIndex = 0;
         
-        // Function to change image
+        // Preload images for smooth transition
+        const preloadedImages = [];
+        images.forEach((src, index) => {
+            const img = new Image();
+            img.src = src;
+            preloadedImages[index] = img;
+        });
+        
+        // Function to change image with smooth fade transition
         function changeImage() {
-            currentIndex = (currentIndex + 1) % images.length;
-            heroImage.src = images[currentIndex];
+            // Start fade out
+            heroImage.style.opacity = '0';
+            
+            // After fade out completes, change image and fade in
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % images.length;
+                heroImage.src = images[currentIndex];
+                
+                // Fade in new image
+                heroImage.style.opacity = '1';
+            }, 300); // Wait for fade out to complete (matches CSS transition)
         }
         
-        // Change image every 3 seconds
-        setInterval(changeImage, 3000);
+        // Change image every 4 seconds (increased to allow for transition)
+        setInterval(changeImage, 4000);
     }
 });

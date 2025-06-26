@@ -1,18 +1,14 @@
 // Sistema de tradução dinâmica - Octor Affiliates
 // Baseado no sistema do Grupo Octor
 const langSelect = document.getElementById('lang-select');
-const langSelectMobile = document.getElementById('lang-select-mobile');
 
 // Função para aplicar traduções via data-translate
 function applyDataTranslateElements(data) {
   const elementsWithDataTranslate = document.querySelectorAll('[data-translate]');
   
-  console.log('🔥 TRADUÇÃO DEBUG - Elementos encontrados:', elementsWithDataTranslate.length);
-  
   elementsWithDataTranslate.forEach(element => {
     const key = element.getAttribute('data-translate');
     if (data[key]) {
-      console.log(`✅ Traduzindo: ${key} ->`, data[key]);
       
       // Se o valor contém quebra de linha (\n), trata conforme o tipo de elemento
       if (data[key].includes('\n')) {
@@ -55,10 +51,9 @@ function applyDataTranslateElements(data) {
   });
 }
 
-// Sincroniza ambos os seletores de idioma
+// Sincroniza o seletor de idioma
 function syncLangSelects(value) {
   if (langSelect && langSelect.value !== value) langSelect.value = value;
-  if (langSelectMobile && langSelectMobile.value !== value) langSelectMobile.value = value;
 }
 
 // Função para carregar traduções
@@ -80,7 +75,7 @@ async function applyLanguage(lang) {
   // Atualiza atributo lang do HTML
   document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
   
-  // Sincroniza seletores
+  // Sincroniza seletor
   syncLangSelects(lang);
   
   // Carrega e aplica traduções
@@ -97,25 +92,17 @@ async function applyLanguage(lang) {
 
 // Inicialização do sistema de tradução
 window.addEventListener('DOMContentLoaded', () => {
-  // Define idioma padrão baseado no navegador ou valor dos selects
+  // Define idioma padrão baseado no navegador ou valor do select
   const savedLang = localStorage.getItem('preferred-language');
   const browserLang = navigator.language.startsWith('en') ? 'en' : 'pt-BR';
   const defaultLang = savedLang || 
                       (langSelect && langSelect.value) || 
-                      (langSelectMobile && langSelectMobile.value) || 
                       browserLang;
   
-  // Configura event listeners para ambos os seletores
+  // Configura event listener para o seletor
   if (langSelect) {
     langSelect.value = defaultLang;
     langSelect.addEventListener('change', (e) => {
-      applyLanguage(e.target.value);
-    });
-  }
-  
-  if (langSelectMobile) {
-    langSelectMobile.value = defaultLang;
-    langSelectMobile.addEventListener('change', (e) => {
       applyLanguage(e.target.value);
     });
   }

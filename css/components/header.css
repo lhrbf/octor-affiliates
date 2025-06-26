@@ -96,10 +96,6 @@ header {
   margin: 0 auto;
 }
 
-.lang-select-mobile {
-  display: none;
-}
-
 .header-right select {
   height: 44px;
   padding-right: 2.2em;
@@ -168,7 +164,7 @@ nav ul li a::after {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #8B5CF6;
+  background-color: white;
   transition: width 0.4s ease;
 }
 
