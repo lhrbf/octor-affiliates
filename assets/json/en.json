@@ -64,5 +64,8 @@
     "copyright": "Octor. All rights reserved.",
     "privacy_policy": "Privacy Policy",
     "terms_of_use": "Terms of Use"
+  },
+  "header": {
+    "exclusive": "Exclusive"
   }
 }
