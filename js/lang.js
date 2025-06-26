@@ -8,11 +8,18 @@ function applyDataTranslateElements(data) {
   
   elementsWithDataTranslate.forEach(element => {
     const key = element.getAttribute('data-translate');
-    if (data[key]) {
-      
+    
+    // Função para acessar propriedades aninhadas
+    function getNestedValue(obj, path) {
+      return path.split('.').reduce((current, prop) => current?.[prop], obj);
+    }
+    
+    const translatedValue = getNestedValue(data, key);
+    
+    if (translatedValue) {
       // Se o valor contém quebra de linha (\n), trata conforme o tipo de elemento
-      if (data[key].includes('\n')) {
-        const lines = data[key].split('\n');
+      if (translatedValue.includes('\n')) {
+        const lines = translatedValue.split('\n');
         
         // Para títulos de carousel ou headings, usa apenas a primeira linha
         if (element.classList.contains('carousel-title') || 
@@ -31,22 +38,27 @@ function applyDataTranslateElements(data) {
         } 
         // Para outros elementos, preserva formatação com quebras de linha
         else if (element.innerHTML.includes('<br')) {
-          element.innerHTML = data[key].replace(/\n/g, '<br />');
+          element.innerHTML = translatedValue.replace(/\n/g, '<br />');
         }
         // Para outros elementos, usa texto completo
         else {
-          element.textContent = data[key];
+          element.textContent = translatedValue;
         }
       } else {
         // Para valores sem quebra de linha, usa diretamente
-        if (element.innerHTML.includes('<br') && data[key].includes('br')) {
-          element.innerHTML = data[key];
+        if (element.innerHTML.includes('<br') && translatedValue.includes('br')) {
+          element.innerHTML = translatedValue;
+        } 
+        // Para botões ou elementos que contêm HTML (como ícones), usa innerHTML
+        else if (translatedValue.includes('<i class=') || element.tagName.toLowerCase() === 'button') {
+          element.innerHTML = translatedValue;
         } else {
-          element.textContent = data[key];
+          element.textContent = translatedValue;
         }
       }
+      console.log(`✅ Traduzindo: ${key} -> "${translatedValue}"`);
     } else {
-      console.log(`❌ Chave não encontrada: ${key}`);
+      console.warn(`❌ Chave não encontrada: ${key}`);
     }
   });
 }

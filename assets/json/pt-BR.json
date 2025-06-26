@@ -7,28 +7,29 @@
     "become_affiliate": "Seja Afiliado"
   },
   "hero": {
-    "title": "PROGRAMA DE AFILIAÇÃO",
-    "subtitle": "PARTNERS",
-    "click_here": "Clique aqui e se torne um afiliado exclusivo",
-    "contact_button": "Fale Conosco"
+    "title": "Partners Affiliate",
+    "description": "Nosso programa de afiliação conecta marcas a influenciadores de todos os portes, com gestão completa de parcerias, negociações alinhadas a cada campanha e foco em resultados eficientes e escaláveis.",
+    "bet_br": "A casa de apostas 100% brasileira 🇧🇷",
+    "contact_button": "Fale Conosco <i class=\"fab fa-whatsapp\"></i>",
+    "click_here": "Clique aqui e fale com nosso gerente de afiliação"
   },
   "benefits": {
-    "title": "BENEFÍCIOS EXCLUSIVOS PARA NOSSOS AFILIADOS",
+    "title": "BENEFÍCIOS",
     "saque": {
       "title": "Saque quinzenal",
       "description": "Receba seus ganhos a cada 15 dias, de forma rápida e segura, sem complicações."
     },
     "chat": {
-      "title": "Gerente exclusivo 24/7",
+      "title": "Gerente de contas exclusivo pra você 24/7",
       "description": "Conte com suporte dedicado e personalizado disponível todos os dias, 24 horas por dia."
     },
     "google_seo": {
-      "title": "Google SEO otimizado",
-      "description": "Aproveite nossa expertise em SEO para maximizar a visibilidade e o alcance do seu conteúdo."
+      "title": "A bet mais buscada no Google no Brasil",
+      "description": "Esteja à frente da concorrência com a bet mais popular do país."
     },
     "acordo": {
-      "title": "Acordo CPA e REV personalizados",
-      "description": "Desfrute de acordos feitos sob medida que se adaptam ao seu perfil e objetivos únicos."
+      "title": "Acordos com CPA e REV",
+      "description": "Maximize seus ganhos com acordos personalizados."
     },
     "contrato": {
       "title": "Contrato formalizado de afiliação",
@@ -36,24 +37,30 @@
     }
   },
   "bet_section": {
-    "title": "APOSTOU NA GENTE?",
-    "subtitle": "Então você já ganhou!",
-    "contact_button": "Fale Conosco"
+    "title": "A Bet mais buscada no Google no Brasil",
+    "contact_button": "Fale Conosco <i class=\"fab fa-whatsapp\"></i>"
   },
   "how_to": {
-    "title": "COMO FUNCIONA:",
-    "contact_button": "Fale Conosco"
+    "title": "Como se tornar afiliado",
+    "description": "Você só precisa fornecer alguns dados básicos: Nome completo, Email, Número de telefone, País de origem, criar sua senha de acesso e rapidamente finalizará essa parte!<br /><br />Aguardar nosso time entrar em contato: Após envio do formulário, um dos nossos gerentes de afiliação entrará em contato via WhatsApp ou email. Ele avaliará seu perfil e explicará exatamente como tudo funciona.<br /><br />Acesso à plataforma de afiliados: Quando sua conta for aprovada, você poderá acessar o painel exclusivo do Dashboard. Nele, você encontrará: Seu link de afiliação da Onabet / Esportes da Sorte, Materiais de apoio, Acompanhamento das comissões em tempo real e Suporte direto com a equipe EDS.",
+    "contact_button": "Fale Conosco <i class=\"fab fa-whatsapp\"></i>"
   },
   "footer": {
-    "about_title": "Sobre o Grupo Octor",
-    "about_text": "Somos uma empresa líder em marketing digital e afiliação, conectando marcas e influenciadores através de estratégias inovadoras e resultados comprovados.",
-    "quick_links": "Links Rápidos",
-    "benefits_link": "Benefícios",
-    "about_link": "Sobre",
-    "contact_link": "Contato",
+    "services_exclusive": "Prestação de serviço exclusivo<br />para as empresas do Grupo Esportes Gaming Brasil",
+    "independent_company": "Empresa independente",
+    "transforming_future": "Transformando o futuro digital, uma solução por vez.",
+    "contact_title": "Contato",
+    "services_title": "Serviços",
+    "marketing_digital": "Marketing Digital",
+    "seo_analytics": "SEO & Analytics",
+    "development": "Desenvolvimento",
+    "consulting": "Consultoria",
+    "company_title": "Empresa",
+    "about_us": "Sobre Nós",
+    "careers": "Carreiras",
+    "blog": "Blog",
+    "contact": "Contato",
     "social_title": "Redes Sociais",
-    "follow_linkedin": "Siga o Grupo Octor no LinkedIn",
-    "follow_instagram": "Siga o Grupo Octor no Instagram",
     "copyright": "Octor. Todos os direitos reservados.",
     "privacy_policy": "Política de Privacidade",
     "terms_of_use": "Termos de Uso"
