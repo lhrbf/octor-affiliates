@@ -93,13 +93,18 @@ h1 {
 }
 
 h2 {
+  margin-top: var(--spacing-md);
   margin-bottom: var(--spacing-xl);
 }
 
-h1,
+h1 {
+  font-size: var(--font-2xl);
+  font-weight: var(--font-weight-benzin-bold);
+}
+
 h2,
 h3 {
-  font-size: var(--font-2xl);
+  font-size: var(--font-xl);
   font-weight: var(--font-weight-benzin-bold);
 }
 
