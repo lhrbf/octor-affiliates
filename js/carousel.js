@@ -1,348 +1,399 @@
 class Carousel3D {
-    constructor() {
-        this.currentIndex = 0;
-        this.cards = document.querySelectorAll('.card');
-        this.indicators = document.querySelectorAll('.indicator-dot');
-        this.carouselWrapper = document.querySelector('.card-container .carousel-wrapper');
-        this.totalCards = this.cards.length;
-        this.isMobile = window.innerWidth <= 1024; // mudando para 1024px para pegar tablet também
-        
-        this.init();
-        this.bindEvents();
-        
-        // Auto-play
-        this.startAutoPlay();
+  constructor() {
+    this.currentIndex = 0;
+    this.cards = document.querySelectorAll(".card");
+    this.indicators = document.querySelectorAll(".indicator-dot");
+    this.carouselWrapper = document.querySelector(
+      ".card-container .carousel-wrapper"
+    );
+    this.totalCards = this.cards.length;
+    this.isMobile = window.innerWidth <= 1024; // mudando para 1024px para pegar tablet também
+
+    this.init();
+    this.bindEvents();
+
+    // Auto-play
+    this.startAutoPlay();
+  }
+
+  init() {
+    if (this.isMobile) {
+      this.initMobile();
+    } else {
+      this.initDesktop();
     }
 
-    init() {
-        if (this.isMobile) {
-            this.initMobile();
-        } else {
-            this.initDesktop();
-        }
-        
-        // Inicializa atributos de acessibilidade
-        this.initAccessibility();
+    // Inicializa atributos de acessibilidade
+    this.initAccessibility();
+  }
+
+  initDesktop() {
+    this.updateCarousel3D();
+  }
+
+  initMobile() {
+    this.updateCarouselMobile();
+  }
+
+  initAccessibility() {
+    // Define atributos iniciais para os cards
+    this.cards.forEach((card, index) => {
+      card.setAttribute(
+        "aria-selected",
+        index === this.currentIndex ? "true" : "false"
+      );
+      card.setAttribute("tabindex", index === this.currentIndex ? "0" : "-1");
+    });
+
+    // Define atributos iniciais para os indicadores
+    this.indicators.forEach((indicator, index) => {
+      indicator.setAttribute(
+        "aria-pressed",
+        index === this.currentIndex ? "true" : "false"
+      );
+      indicator.setAttribute("tabindex", "0");
+    });
+
+    // Configura o carrossel como uma região landmark
+    const carouselWrapper = document.querySelector(".carousel-wrapper");
+    if (carouselWrapper) {
+      carouselWrapper.setAttribute(
+        "aria-label",
+        "Carrossel de benefícios do programa de afiliação"
+      );
     }
+  }
 
-    initDesktop() {
-        this.updateCarousel3D();
-    }
+  updateCarousel3D() {
+    const angleStep = 360 / this.totalCards;
+    const radius = 550;
 
-    initMobile() {
-        this.updateCarouselMobile();
-    }
+    this.cards.forEach((card, index) => {
+      const angle = (index - this.currentIndex) * angleStep;
+      const radians = (angle * Math.PI) / 180;
 
-    initAccessibility() {
-        // Define atributos iniciais para os cards
-        this.cards.forEach((card, index) => {
-            card.setAttribute('aria-selected', index === this.currentIndex ? 'true' : 'false');
-            card.setAttribute('tabindex', index === this.currentIndex ? '0' : '-1');
-        });
+      // Posição no círculo
+      const x = Math.sin(radians) * radius;
+      const z = Math.cos(radians) * radius;
 
-        // Define atributos iniciais para os indicadores
-        this.indicators.forEach((indicator, index) => {
-            indicator.setAttribute('aria-pressed', index === this.currentIndex ? 'true' : 'false');
-            indicator.setAttribute('tabindex', '0');
-        });
+      // Scale baseado na posição Z
+      const scale = index === this.currentIndex ? 1 : 0.7;
+      const opacity = index === this.currentIndex ? 1 : 0.6;
 
-        // Configura o carrossel como uma região landmark
-        const carouselWrapper = document.querySelector('.carousel-wrapper');
-        if (carouselWrapper) {
-            carouselWrapper.setAttribute('aria-label', 'Carrossel de benefícios do programa de afiliação');
-        }
-    }
-
-    updateCarousel3D() {
-        const angleStep = 360 / this.totalCards;
-        const radius = 550;
-
-        this.cards.forEach((card, index) => {
-            const angle = (index - this.currentIndex) * angleStep;
-            const radians = (angle * Math.PI) / 180;
-            
-            // Posição no círculo
-            const x = Math.sin(radians) * radius;
-            const z = Math.cos(radians) * radius;
-            
-            // Scale baseado na posição Z
-            const scale = index === this.currentIndex ? 1 : 0.7;
-            const opacity = index === this.currentIndex ? 1 : 0.6;
-            
-            card.style.transform = `
+      card.style.transform = `
                 translate(-50%, -50%) 
                 translate3d(${x}px, 0, ${z}px) 
                 rotateY(${-angle}deg) 
                 scale(${scale})
             `;
-            card.style.opacity = opacity;
-            card.style.zIndex = index === this.currentIndex ? 10 : Math.round(z);
-            
-            // Classes ativas
-            card.classList.toggle('active', index === this.currentIndex);
-        });
+      card.style.opacity = opacity;
+      card.style.zIndex = index === this.currentIndex ? 10 : Math.round(z);
+
+      // Classes ativas
+      card.classList.toggle("active", index === this.currentIndex);
+    });
+  }
+
+  updateCarouselMobile() {
+    // Detecta automaticamente o tamanho do card
+    const cardWidth = this.cards[0].offsetWidth;
+    const gap = 20;
+    const containerWidth = this.carouselWrapper.parentElement.offsetWidth;
+    const isMobileSmall = window.innerWidth <= 768;
+    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+
+    if (isMobileSmall) {
+      // Cálculo para mobile (≤768px) - mais restritivo
+      const centerPosition = (containerWidth - cardWidth) / 2;
+      const cardOffset = this.currentIndex * (cardWidth + gap);
+      let translateX = centerPosition - cardOffset;
+
+      // Limites ajustados para que o último card fique mais à esquerda
+      const totalWidth = this.totalCards * (cardWidth + gap);
+      const minTranslate = containerWidth - totalWidth - 50; // Aumentado para empurrar mais à esquerda
+      const maxTranslate = 40;
+
+      // Se é o último card, força ele a ficar mais à esquerda
+      if (this.currentIndex === this.totalCards - 1) {
+        translateX = minTranslate + 30; // Ajuste específico para o último card
+      } else {
+        translateX = Math.max(minTranslate, Math.min(maxTranslate, translateX));
+      }
+
+      this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
+    } else if (isTablet) {
+      // Cálculo específico para tablet (769px-1024px)
+      const centerPosition = (containerWidth - cardWidth) / 2;
+      const cardOffset = this.currentIndex * (cardWidth + gap);
+
+      // Para tablet, vamos usar uma abordagem mais simples e consistente
+      let translateX = centerPosition - cardOffset;
+
+      // Calcula os limites baseados no tamanho total do conteúdo
+      const totalWidth = this.totalCards * (cardWidth + gap) - gap; // Remove o gap do último item
+      const minTranslate = containerWidth - totalWidth - 20; // Margem mínima
+      const maxTranslate = 20; // Margem máxima da esquerda
+
+      // Aplica os limites
+      translateX = Math.max(minTranslate, Math.min(maxTranslate, translateX));
+
+      // Ajuste especial para os últimos cards no tablet
+      if (this.currentIndex >= this.totalCards - 2) {
+        // Para os dois últimos cards, garante que ficam bem posicionados
+        const adjustedMinTranslate = Math.min(
+          minTranslate,
+          centerPosition - (this.totalCards - 1) * (cardWidth + gap)
+        );
+        translateX = Math.max(adjustedMinTranslate, translateX);
+      }
+
+      this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
     }
 
-    updateCarouselMobile() {
-        // Detecta automaticamente o tamanho do card
-        const cardWidth = this.cards[0].offsetWidth;
-        const gap = 20;
-        const containerWidth = this.carouselWrapper.parentElement.offsetWidth;
-        const isMobileSmall = window.innerWidth <= 768;
-        
-        if (isMobileSmall) {
-            // Cálculo para mobile (≤768px) - mais restritivo
-            const centerPosition = (containerWidth - cardWidth) / 2;
-            const cardOffset = this.currentIndex * (cardWidth + gap);
-            let translateX = centerPosition - cardOffset;
-            
-            // Limites mais conservadores para mobile
-            const totalWidth = this.totalCards * (cardWidth + gap);
-            const minTranslate = containerWidth - totalWidth + 40;
-            const maxTranslate = 40;
-            
-            translateX = Math.max(minTranslate, Math.min(maxTranslate, translateX));
-            
-            this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
-        } else {
-            // Cálculo para tablet (769px-1024px) - centraliza sempre
-            const centerPosition = (containerWidth - cardWidth) / 2;
-            const cardOffset = this.currentIndex * (cardWidth + gap);
-            let translateX = centerPosition - cardOffset;
-            
-            // Para tablet, permite centralização mas limita apenas no final
-            if (this.currentIndex <= 2) {
-                // Primeiros 3 cards: centraliza normalmente
-                translateX = centerPosition - cardOffset;
+    this.cards.forEach((card, index) => {
+      card.classList.toggle("active", index === this.currentIndex);
+    });
+  }
+
+  updateIndicators() {
+    this.indicators.forEach((indicator, index) => {
+      indicator.classList.toggle("active", index === this.currentIndex);
+    });
+  }
+
+  next() {
+    this.currentIndex = (this.currentIndex + 1) % this.totalCards;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  prev() {
+    this.currentIndex =
+      (this.currentIndex - 1 + this.totalCards) % this.totalCards;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  goTo(index) {
+    this.currentIndex = index;
+    this.updateCarousel();
+    this.resetAutoPlay();
+  }
+
+  updateCarousel() {
+    if (this.isMobile) {
+      this.updateCarouselMobile();
+    } else {
+      this.updateCarousel3D();
+    }
+    this.updateIndicators();
+    this.updateAriaAttributes();
+  }
+
+  updateAriaAttributes() {
+    // Atualiza aria-selected nos cards
+    this.cards.forEach((card, index) => {
+      card.setAttribute(
+        "aria-selected",
+        index === this.currentIndex ? "true" : "false"
+      );
+      card.setAttribute("tabindex", index === this.currentIndex ? "0" : "-1");
+    });
+
+    // Atualiza aria-pressed nos indicadores
+    this.indicators.forEach((indicator, index) => {
+      indicator.setAttribute(
+        "aria-pressed",
+        index === this.currentIndex ? "true" : "false"
+      );
+    });
+
+    // Atualiza aria-live para anunciar mudanças
+    const currentCard = this.cards[this.currentIndex];
+    if (currentCard) {
+      const cardTitle = currentCard.querySelector("h3")?.textContent || "";
+      this.announceChange(
+        `Benefício ${this.currentIndex + 1} de ${this.totalCards}: ${cardTitle}`
+      );
+    }
+  }
+
+  announceChange(message) {
+    // Cria ou atualiza o elemento para screen readers
+    let announcer = document.getElementById("carousel-announcer");
+    if (!announcer) {
+      announcer = document.createElement("div");
+      announcer.id = "carousel-announcer";
+      announcer.setAttribute("aria-live", "polite");
+      announcer.setAttribute("aria-atomic", "true");
+      announcer.style.position = "absolute";
+      announcer.style.left = "-10000px";
+      announcer.style.width = "1px";
+      announcer.style.height = "1px";
+      announcer.style.overflow = "hidden";
+      document.body.appendChild(announcer);
+    }
+    announcer.textContent = message;
+  }
+
+  bindEvents() {
+    // Navigation arrows
+    document
+      .querySelector(".prev")
+      ?.addEventListener("click", () => this.prev());
+    document
+      .querySelector(".next")
+      ?.addEventListener("click", () => this.next());
+
+    // Indicators
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener("click", () => this.goTo(index));
+    });
+
+    // Card clicks (desktop only)
+    if (!this.isMobile) {
+      this.cards.forEach((card, index) => {
+        card.addEventListener("click", () => {
+          if (index !== this.currentIndex) {
+            this.goTo(index);
+          }
+        });
+      });
+    }
+
+    // Navegação por teclado
+    document.addEventListener("keydown", (e) => {
+      // Verifica se o foco está no carrossel ou seus elementos
+      const carouselContainer = document.querySelector(".benefits-section");
+      if (!carouselContainer.contains(document.activeElement)) {
+        return;
+      }
+
+      switch (e.key) {
+        case "ArrowLeft":
+          e.preventDefault();
+          this.prev();
+          break;
+        case "ArrowRight":
+          e.preventDefault();
+          this.next();
+          break;
+        case "Home":
+          e.preventDefault();
+          this.goTo(0);
+          break;
+        case "End":
+          e.preventDefault();
+          this.goTo(this.totalCards - 1);
+          break;
+      }
+    });
+
+    // Focus management para indicadores
+    this.indicators.forEach((indicator, index) => {
+      indicator.addEventListener("keydown", (e) => {
+        switch (e.key) {
+          case "Enter":
+          case " ":
+            e.preventDefault();
+            this.goTo(index);
+            break;
+        }
+      });
+    });
+
+    // Touch events for mobile
+    if (this.isMobile && this.carouselWrapper) {
+      let startX = 0;
+      let startY = 0;
+      let isDragging = false;
+
+      this.carouselWrapper.addEventListener(
+        "touchstart",
+        (e) => {
+          startX = e.touches[0].clientX;
+          startY = e.touches[0].clientY;
+          isDragging = true;
+        },
+        { passive: true }
+      );
+
+      this.carouselWrapper.addEventListener(
+        "touchmove",
+        (e) => {
+          if (!isDragging) return;
+
+          const currentX = e.touches[0].clientX;
+          const currentY = e.touches[0].clientY;
+          const diffX = Math.abs(currentX - startX);
+          const diffY = Math.abs(currentY - startY);
+
+          // Se movimento horizontal é maior que vertical, previne scroll vertical
+          if (diffX > diffY) {
+            e.preventDefault();
+          }
+        },
+        { passive: false }
+      );
+
+      this.carouselWrapper.addEventListener(
+        "touchend",
+        (e) => {
+          if (!isDragging) return;
+          isDragging = false;
+
+          const endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+
+          if (Math.abs(diff) > 50) {
+            if (diff > 0) {
+              this.next();
             } else {
-                // Últimos cards: limita para não sair muito da tela
-                const totalWidth = this.totalCards * (cardWidth + gap);
-                const minTranslate = containerWidth - totalWidth + 20;
-                translateX = Math.max(minTranslate, translateX);
+              this.prev();
             }
-            
-            this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
-        }
-        
-        this.cards.forEach((card, index) => {
-            card.classList.toggle('active', index === this.currentIndex);
-        });
+          }
+        },
+        { passive: true }
+      );
     }
 
-    updateIndicators() {
-        this.indicators.forEach((indicator, index) => {
-            indicator.classList.toggle('active', index === this.currentIndex);
-        });
-    }
+    // Window resize
+    window.addEventListener("resize", () => {
+      const wasMobile = this.isMobile;
+      this.isMobile = window.innerWidth <= 1024;
 
-    next() {
-        this.currentIndex = (this.currentIndex + 1) % this.totalCards;
-        this.updateCarousel();
-        this.resetAutoPlay();
-    }
-
-    prev() {
-        this.currentIndex = (this.currentIndex - 1 + this.totalCards) % this.totalCards;
-        this.updateCarousel();
-        this.resetAutoPlay();
-    }
-
-    goTo(index) {
-        this.currentIndex = index;
-        this.updateCarousel();
-        this.resetAutoPlay();
-    }
-
-    updateCarousel() {
+      if (wasMobile !== this.isMobile) {
+        // Para autoplay se mudou para mobile
         if (this.isMobile) {
-            this.updateCarouselMobile();
-        } else {
-            this.updateCarousel3D();
+          clearInterval(this.autoPlayInterval);
         }
-        this.updateIndicators();
-        this.updateAriaAttributes();
+        this.init();
+      }
+    });
+  }
+
+  startAutoPlay() {
+    // Só inicia autoplay no desktop
+    if (!this.isMobile) {
+      this.autoPlayInterval = setInterval(() => {
+        this.next();
+      }, 6000);
     }
+  }
 
-    updateAriaAttributes() {
-        // Atualiza aria-selected nos cards
-        this.cards.forEach((card, index) => {
-            card.setAttribute('aria-selected', index === this.currentIndex ? 'true' : 'false');
-            card.setAttribute('tabindex', index === this.currentIndex ? '0' : '-1');
-        });
-
-        // Atualiza aria-pressed nos indicadores
-        this.indicators.forEach((indicator, index) => {
-            indicator.setAttribute('aria-pressed', index === this.currentIndex ? 'true' : 'false');
-        });
-
-        // Atualiza aria-live para anunciar mudanças
-        const currentCard = this.cards[this.currentIndex];
-        if (currentCard) {
-            const cardTitle = currentCard.querySelector('h3')?.textContent || '';
-            this.announceChange(`Benefício ${this.currentIndex + 1} de ${this.totalCards}: ${cardTitle}`);
-        }
+  resetAutoPlay() {
+    // Só reseta autoplay no desktop
+    if (!this.isMobile) {
+      clearInterval(this.autoPlayInterval);
+      this.startAutoPlay();
     }
-
-    announceChange(message) {
-        // Cria ou atualiza o elemento para screen readers
-        let announcer = document.getElementById('carousel-announcer');
-        if (!announcer) {
-            announcer = document.createElement('div');
-            announcer.id = 'carousel-announcer';
-            announcer.setAttribute('aria-live', 'polite');
-            announcer.setAttribute('aria-atomic', 'true');
-            announcer.style.position = 'absolute';
-            announcer.style.left = '-10000px';
-            announcer.style.width = '1px';
-            announcer.style.height = '1px';
-            announcer.style.overflow = 'hidden';
-            document.body.appendChild(announcer);
-        }
-        announcer.textContent = message;
-    }
-
-    bindEvents() {
-        // Navigation arrows
-        document.querySelector('.prev')?.addEventListener('click', () => this.prev());
-        document.querySelector('.next')?.addEventListener('click', () => this.next());
-
-        // Indicators
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('click', () => this.goTo(index));
-        });
-
-        // Card clicks (desktop only)
-        if (!this.isMobile) {
-            this.cards.forEach((card, index) => {
-                card.addEventListener('click', () => {
-                    if (index !== this.currentIndex) {
-                        this.goTo(index);
-                    }
-                });
-            });
-        }
-
-        // Navegação por teclado
-        document.addEventListener('keydown', (e) => {
-            // Verifica se o foco está no carrossel ou seus elementos
-            const carouselContainer = document.querySelector('.benefits-section');
-            if (!carouselContainer.contains(document.activeElement)) {
-                return;
-            }
-
-            switch (e.key) {
-                case 'ArrowLeft':
-                    e.preventDefault();
-                    this.prev();
-                    break;
-                case 'ArrowRight':
-                    e.preventDefault();
-                    this.next();
-                    break;
-                case 'Home':
-                    e.preventDefault();
-                    this.goTo(0);
-                    break;
-                case 'End':
-                    e.preventDefault();
-                    this.goTo(this.totalCards - 1);
-                    break;
-            }
-        });
-
-        // Focus management para indicadores
-        this.indicators.forEach((indicator, index) => {
-            indicator.addEventListener('keydown', (e) => {
-                switch (e.key) {
-                    case 'Enter':
-                    case ' ':
-                        e.preventDefault();
-                        this.goTo(index);
-                        break;
-                }
-            });
-        });
-
-        // Touch events for mobile
-        if (this.isMobile && this.carouselWrapper) {
-            let startX = 0;
-            let startY = 0;
-            let isDragging = false;
-
-            this.carouselWrapper.addEventListener('touchstart', (e) => {
-                startX = e.touches[0].clientX;
-                startY = e.touches[0].clientY;
-                isDragging = true;
-            }, { passive: true });
-
-            this.carouselWrapper.addEventListener('touchmove', (e) => {
-                if (!isDragging) return;
-                
-                const currentX = e.touches[0].clientX;
-                const currentY = e.touches[0].clientY;
-                const diffX = Math.abs(currentX - startX);
-                const diffY = Math.abs(currentY - startY);
-                
-                // Se movimento horizontal é maior que vertical, previne scroll vertical
-                if (diffX > diffY) {
-                    e.preventDefault();
-                }
-            }, { passive: false });
-
-            this.carouselWrapper.addEventListener('touchend', (e) => {
-                if (!isDragging) return;
-                isDragging = false;
-                
-                const endX = e.changedTouches[0].clientX;
-                const diff = startX - endX;
-
-                if (Math.abs(diff) > 50) {
-                    if (diff > 0) {
-                        this.next();
-                    } else {
-                        this.prev();
-                    }
-                }
-            }, { passive: true });
-        }
-
-        // Window resize
-        window.addEventListener('resize', () => {
-            const wasMobile = this.isMobile;
-            this.isMobile = window.innerWidth <= 1024;
-            
-            if (wasMobile !== this.isMobile) {
-                // Para autoplay se mudou para mobile
-                if (this.isMobile) {
-                    clearInterval(this.autoPlayInterval);
-                }
-                this.init();
-            }
-        });
-    }
-
-    startAutoPlay() {
-        // Só inicia autoplay no desktop
-        if (!this.isMobile) {
-            this.autoPlayInterval = setInterval(() => {
-                this.next();
-            }, 6000);
-        }
-    }
-
-    resetAutoPlay() {
-        // Só reseta autoplay no desktop
-        if (!this.isMobile) {
-            clearInterval(this.autoPlayInterval);
-            this.startAutoPlay();
-        }
-    }
+  }
 }
 
 // Initialize carousel when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Verificar se estamos na página que tem o carousel
-    if (document.querySelector('.benefits-section')) {
-        new Carousel3D();
-    }
+document.addEventListener("DOMContentLoaded", () => {
+  // Verificar se estamos na página que tem o carousel
+  if (document.querySelector(".benefits-section")) {
+    new Carousel3D();
+  }
 });
