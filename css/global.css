@@ -85,6 +85,14 @@ h5,
 h6 {
   font-family: var(--font-family-primary);
   line-height: var(--line-height-tight);
+}
+
+h1 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+}
+
+h2 {
   margin-bottom: var(--spacing-xl);
 }
 
@@ -107,7 +115,6 @@ h6 {
 
 p {
   font-size: var(--font-md);
-  margin-bottom: var(--spacing-md);
   color: var(--text-secondary);
   line-height: var(--line-height-normal);
 }
