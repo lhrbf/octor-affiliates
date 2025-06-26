@@ -121,31 +121,11 @@ class Carousel3D {
       }
 
       this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
-    } else if (isTablet) {
-      // Cálculo específico para tablet (769px-1024px)
+    } else {
+      // Cálculo para tablet (769px-1024px) - simples e direto
       const centerPosition = (containerWidth - cardWidth) / 2;
       const cardOffset = this.currentIndex * (cardWidth + gap);
-
-      // Para tablet, vamos usar uma abordagem mais simples e consistente
-      let translateX = centerPosition - cardOffset;
-
-      // Calcula os limites baseados no tamanho total do conteúdo
-      const totalWidth = this.totalCards * (cardWidth + gap) - gap; // Remove o gap do último item
-      const minTranslate = containerWidth - totalWidth - 20; // Margem mínima
-      const maxTranslate = 20; // Margem máxima da esquerda
-
-      // Aplica os limites
-      translateX = Math.max(minTranslate, Math.min(maxTranslate, translateX));
-
-      // Ajuste especial para os últimos cards no tablet
-      if (this.currentIndex >= this.totalCards - 2) {
-        // Para os dois últimos cards, garante que ficam bem posicionados
-        const adjustedMinTranslate = Math.min(
-          minTranslate,
-          centerPosition - (this.totalCards - 1) * (cardWidth + gap)
-        );
-        translateX = Math.max(adjustedMinTranslate, translateX);
-      }
+      const translateX = centerPosition - cardOffset;
 
       this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
     }
