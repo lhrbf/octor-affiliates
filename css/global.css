@@ -194,3 +194,39 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--bg-primary);
 }
+
+/* ===== IMPROVED ACCESSIBILITY STYLES ===== */
+button:focus,
+.btn:focus,
+a:focus {
+  outline: 2px solid #7C3AED;
+  outline-offset: 2px;
+}
+
+/* Improve contrast for texts */
+.hero-section h1,
+.hero-section h2,
+.benefits-section h2,
+.bet-section h2,
+.how-to-section h2 {
+  color: contrast check;
+}
+
+/* Ensure all links have clear visual indicators */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+/* Improve visual indicators for interactive elements */
+.carousel-card:hover,
+.benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}

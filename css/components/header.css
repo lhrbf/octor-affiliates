@@ -1,3 +1,5 @@
+/* Debugando o CSS atual */
+
 /* Remove outline azul e outros elementos indesejados */
 * {
   outline: none !important;
@@ -55,15 +57,19 @@ header {
 }
 
 .logo-header a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
+  height: 1.8rem;
+  line-height: 1;
 }
 
 .logo-header a img {
-  width: 100%;
-  max-width: 100px;
-  height: auto;
+  height: 1.8rem !important;
+  width: auto !important;
+  object-fit: contain;
+  display: block;
+  max-width: none;
 }
 
 .logo-header img {
@@ -221,6 +227,44 @@ nav ul li a::after {
   .menu-toggle {
     -webkit-tap-highlight-color: transparent;
   }
+}
+
+/* Melhorias de acessibilidade para o header */
+.header {
+  position: relative;
+  z-index: 1000;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Melhorias para foco do teclado */
+.logo-header a:focus,
+.btn-header:focus,
+.menu-mobile button:focus {
+  outline: 2px solid #7C3AED;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip link para acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #7C3AED;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+}
+
+.skip-link:focus {
+  top: 6px;
 }
 
 @media (max-width: 1024px) {

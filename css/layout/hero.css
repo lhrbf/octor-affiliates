@@ -9,12 +9,6 @@
   height: auto;
 }
 
-.hero-logo {
-  width: clamp(5rem, 6vw, 11rem);
-  height: auto;
-  padding: var(--spacing-md) 0;
-}
-
 .hero-image img {
   width: 100%;
   height: 100%;
@@ -32,6 +26,22 @@
   opacity: 0;
 }
 
+.hero-logo {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-logo img {
+  width: 100%;
+  height: auto;
+  max-width: 80px;
+  object-fit: contain;
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;
@@ -41,7 +51,7 @@
 }
 
 .bet-br {
-  font-size: var(--font-base);
+  font-size: var(--font-sm);
   margin-top: var(--spacing-sm);
   font-weight: var(--font-weight-benzin-bold);
 }
@@ -99,6 +109,21 @@
   }
 
   .hero-text {
+    margin-top: var(--spacing-lg);
     max-width: 100%;
+  }
+
+  .hero-logo {
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+
+  .hero-logo img {
+    max-width: 50px;
+  }
+
+  .clique-aqui {
+    max-width: 60%;
+    margin: 0 auto;
   }
 }
