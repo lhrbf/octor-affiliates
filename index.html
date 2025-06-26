@@ -128,25 +128,31 @@
       </div>
       <nav class="menu" role="navigation" aria-label="Menu principal">
         <ul>
-          <li><a href="#benefits" aria-label="Ver benefícios do programa de afiliação">Benefícios</a></li>
+          <li><a href="#benefits" aria-label="Ver benefícios do programa de afiliação" data-translate="navigation.benefits">Benefícios</a></li>
           <li><a href="https://octor.pro" target="_blank" rel="noopener noreferrer"
-              aria-label="Visitar site do Grupo Octor (abre em nova aba)">Grupo Octor</a></li>
-          <li><a href="#affiliate" aria-label="Saiba como se tornar afiliado">Seja Afiliado</a></li>
+              aria-label="Visitar site do Grupo Octor (abre em nova aba)" data-translate="navigation.grupo_octor">Grupo Octor</a></li>
+          <li><a href="#affiliate" aria-label="Saiba como se tornar afiliado" data-translate="navigation.become_affiliate">Seja Afiliado</a></li>
         </ul>
-        <button class="btn btn-primary mobile" aria-label="Entrar em contato conosco">
+        <button class="btn btn-primary mobile" aria-label="Entrar em contato conosco" data-translate="hero.contact_button">
           Fale Conosco <i class="fab fa-whatsapp"></i>
         </button>
+        <div class="lang-select-mobile">
+          <select id="lang-select-mobile" aria-label="Selecionar idioma">
+            <option value="pt-BR">PT</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
         <div class="logo-header-nav mobile">
           <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor versão branca">
           <img src="assets/images/eds-ona.webp" alt="Logos Esportes da Sorte e Onabet" class="eds-ona">
         </div>
       </nav>
       <div class="header-right">
-        <div class="lang-select" role="group" aria-label="Seletor de idioma">
-          <button class="lang-btn active" aria-label="Idioma Português (selecionado)" aria-pressed="true">PT</button>
-          <button class="lang-btn" aria-label="Idioma Inglês" aria-pressed="false">EN</button>
-        </div>
-        <button class="btn btn-primary desktop" aria-label="Entrar em contato conosco">
+        <select id="lang-select" aria-label="Selecionar idioma">
+          <option value="pt-BR">PT</option>
+          <option value="en">EN</option>
+        </select>
+        <button class="btn btn-primary desktop" aria-label="Entrar em contato conosco" data-translate="hero.contact_button">
           Fale Conosco <i class="fab fa-whatsapp"></i>
         </button>
       </div>
@@ -168,17 +174,17 @@
             <img src="assets/images/logos-eds/Esportes-Gaming-Brasil.svg"
               alt="Logotipo Esportes Gaming Brasil - Grupo de apostas">
           </div>
-          <h1 id="hero-title">Partners Affiliate</h1>
-          <p>Nosso programa de afiliação conecta marcas a influenciadores de todos os portes, com gestão
+          <h1 id="hero-title" data-translate="hero.title">Partners Affiliate</h1>
+          <p data-translate="hero.description">Nosso programa de afiliação conecta marcas a influenciadores de todos os portes, com gestão
             completa de parcerias, negociações alinhadas
             a cada campanha e foco em resultados eficientes
             e escaláveis.</p>
           <div class="hero-buttons">
-            <p class="bet-br">A casa de apostas 100% brasileira 🇧🇷</p>
-            <button class="btn btn-secondary" aria-label="Entrar em contato para mais informações">
+            <p class="bet-br" data-translate="hero.bet_br">A casa de apostas 100% brasileira 🇧🇷</p>
+            <button class="btn btn-secondary" aria-label="Entrar em contato para mais informações" data-translate="hero.contact_button">
               Fale Conosco <i class="fab fa-whatsapp"></i>
             </button>
-            <p class="clique-aqui">Clique aqui e fale com nosso gerente de afiliados</p>
+            <p class="clique-aqui" data-translate="hero.click_here">Clique aqui e fale com nosso gerente de afiliados</p>
           </div>
         </div>
         <div class="hero-image">
@@ -190,7 +196,7 @@
 
     <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
       <div class="container benefits">
-        <h2 id="benefits-title">Benefícios</h2>
+        <h2 id="benefits-title" data-translate="benefits.title">Benefícios</h2>
         <div class="card-container" role="region" aria-label="Carrossel de benefícios do programa">
           <button class="prev desktop" aria-label="Ver benefício anterior" aria-controls="carousel">
             <i class="fas fa-chevron-left" aria-hidden="true"></i>
@@ -198,32 +204,32 @@
           <div class="carousel-wrapper" id="carousel" role="tablist">
             <div class="card saque active" data-index="0" role="tabpanel" aria-labelledby="benefit-1">
               <div class="card-content">
-                <h3 id="benefit-1">Saque quinzenal</h3>
-                <p>Receba seus ganhos a cada 15 dias, com total transparência e agilidade.</p>
+                <h3 id="benefit-1" data-translate="benefits.saque.title">Saque quinzenal</h3>
+                <p data-translate="benefits.saque.description">Receba seus ganhos a cada 15 dias, com total transparência e agilidade.</p>
               </div>
             </div>
             <div class="card chat active" data-index="1" role="tabpanel" aria-labelledby="benefit-2">
               <div class="card-content">
-                <h3 id="benefit-2">Gerente de contas exclusivo pra você 24/7</h3>
-                <p>Receba suporte dedicado a qualquer hora do dia, com um gerente de contas exclusivo.</p>
+                <h3 id="benefit-2" data-translate="benefits.chat.title">Gerente de contas exclusivo pra você 24/7</h3>
+                <p data-translate="benefits.chat.description">Receba suporte dedicado a qualquer hora do dia, com um gerente de contas exclusivo.</p>
               </div>
             </div>
             <div class="card google-seo" data-index="2" role="tabpanel" aria-labelledby="benefit-3">
               <div class="card-content">
-                <h3 id="benefit-3">A bet mais buscada no Google no Brasil</h3>
-                <p>Esteja à frente da concorrência com a bet mais popular do país.</p>
+                <h3 id="benefit-3" data-translate="benefits.google_seo.title">A bet mais buscada no Google no Brasil</h3>
+                <p data-translate="benefits.google_seo.description">Esteja à frente da concorrência com a bet mais popular do país.</p>
               </div>
             </div>
             <div class="card acordo" data-index="3" role="tabpanel" aria-labelledby="benefit-4">
               <div class="card-content">
-                <h3 id="benefit-4">Acordos com CPA e REV</h3>
-                <p>Maximize seus ganhos com acordos personalizados.</p>
+                <h3 id="benefit-4" data-translate="benefits.acordo.title">Acordos com CPA e REV</h3>
+                <p data-translate="benefits.acordo.description">Maximize seus ganhos com acordos personalizados.</p>
               </div>
             </div>
             <div class="card contrato" data-index="4" role="tabpanel" aria-labelledby="benefit-5">
               <div class="card-content">
-                <h3 id="benefit-5">Contrato formalizado de afiliação</h3>
-                <p>Conte com um contrato formalizado que garante a segurança e transparência da sua
+                <h3 id="benefit-5" data-translate="benefits.contrato.title">Contrato formalizado de afiliação</h3>
+                <p data-translate="benefits.contrato.description">Conte com um contrato formalizado que garante a segurança e transparência da sua
                   parceria.</p>
               </div>
             </div>
@@ -249,8 +255,8 @@
 
     <section class="bet-section" id="bet">
       <div class="container bet">
-        <h2>A Bet mais buscada no Google no Brasil</h2>
-        <button class="btn btn-secondary">
+        <h2 data-translate="bet_section.title">A Bet mais buscada no Google no Brasil</h2>
+        <button class="btn btn-secondary" data-translate="bet_section.contact_button">
           Fale Conosco <i class="fab fa-whatsapp"></i>
         </button>
       </div>
@@ -259,8 +265,8 @@
     <section class="how-it-works-section" id="affiliate">
       <div class="container how-it-works">
         <div class="how-it-works-text">
-          <h2>Como se tornar afiliado</h2>
-          <p>Você só precisa informar alguns dados básicos: Nome completo, E-mail, Número de telefone País de
+          <h2 data-translate="how_to.title">Como se tornar afiliado</h2>
+          <p data-translate="how_to.description">Você só precisa informar alguns dados básicos: Nome completo, E-mail, Número de telefone País de
             origem, criar sua senha de acesso e rapidinho você finaliza essa parte!
             <br>
             <br>
@@ -276,7 +282,7 @@
             Materiais de apoio, Acompanhamento em tempo real das comissões e Suporte direto com a equipe
             EDS.
           </p>
-          <button class="btn btn-secondary">
+          <button class="btn btn-secondary" data-translate="how_to.contact_button">
             Fale Conosco <i class="fab fa-whatsapp"></i>
           </button>
         </div>
@@ -302,17 +308,17 @@
             <img src="assets/images/logos-eds/Esportes-Gaming-Brasil.svg"
               alt="Logotipo Esportes Gaming Brasil - Grupo de apostas">
           </div>
-          <p class="services-exclusive-footer">Prestação de serviço exclusivo para as<br />
+          <p class="services-exclusive-footer" data-translate="footer.services_exclusive">Prestação de serviço exclusivo para as<br />
             empresas do Grupo Esportes Gaming Brasil
           </p>
-          <p class="independent-company">
+          <p class="independent-company" data-translate="footer.independent_company">
             Empresa independente</p>
-          <p>Transformando o futuro digital, uma solução por vez.</p>
+          <p data-translate="footer.transforming_future">Transformando o futuro digital, uma solução por vez.</p>
         </div>
 
         <div class="footer-links">
           <div class="footer-column">
-            <h3>Contato</h3>
+            <h3 data-translate="footer.contact_title">Contato</h3>
             <div class="contact-info">
               <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:contato@grupooctor.com"
                   aria-label="Enviar email para contato@grupooctor.com">contato@grupooctor.com</a></p>
@@ -323,24 +329,24 @@
           </div>
 
           <div class="footer-column">
-            <h3>Serviços</h3>
-            <a href="#" aria-label="Conheça nossos serviços de Marketing Digital">Marketing Digital</a>
-            <a href="#" aria-label="Conheça nossos serviços de SEO e Analytics">SEO & Analytics</a>
-            <a href="#" aria-label="Conheça nossos serviços de Desenvolvimento">Desenvolvimento</a>
-            <a href="#" aria-label="Conheça nossos serviços de Consultoria">Consultoria</a>
+            <h3 data-translate="footer.services_title">Serviços</h3>
+            <a href="#" aria-label="Conheça nossos serviços de Marketing Digital" data-translate="footer.marketing_digital">Marketing Digital</a>
+            <a href="#" aria-label="Conheça nossos serviços de SEO e Analytics" data-translate="footer.seo_analytics">SEO & Analytics</a>
+            <a href="#" aria-label="Conheça nossos serviços de Desenvolvimento" data-translate="footer.development">Desenvolvimento</a>
+            <a href="#" aria-label="Conheça nossos serviços de Consultoria" data-translate="footer.consulting">Consultoria</a>
           </div>
 
           <div class="footer-column">
-            <h3>Empresa</h3>
-            <a href="javascript:void(0)" data-scroll-to="about" aria-label="Saiba mais sobre o Grupo Octor">Sobre
+            <h3 data-translate="footer.company_title">Empresa</h3>
+            <a href="javascript:void(0)" data-scroll-to="about" aria-label="Saiba mais sobre o Grupo Octor" data-translate="footer.about_us">Sobre
               Nós</a>
-            <a href="#" aria-label="Conheça as oportunidades de carreira no Grupo Octor">Carreiras</a>
-            <a href="#" aria-label="Acesse o blog do Grupo Octor">Blog</a>
-            <a href="javascript:void(0)" data-scroll-to="contact" aria-label="Entre em contato conosco">Contato</a>
+            <a href="#" aria-label="Conheça as oportunidades de carreira no Grupo Octor" data-translate="footer.careers">Carreiras</a>
+            <a href="#" aria-label="Acesse o blog do Grupo Octor" data-translate="footer.blog">Blog</a>
+            <a href="javascript:void(0)" data-scroll-to="contact" aria-label="Entre em contato conosco" data-translate="footer.contact">Contato</a>
           </div>
 
           <div class="footer-column">
-            <h3>Redes Sociais</h3>
+            <h3 data-translate="footer.social_title">Redes Sociais</h3>
             <div class="social-links">
               <a href="https://br.linkedin.com/company/grupo-octor" target="_blank" rel="noopener noreferrer"
                 aria-label="Siga o Grupo Octor no LinkedIn (abre em nova aba)"><i class="fa-brands fa-linkedin"
@@ -355,10 +361,10 @@
     </div>
     <div class="footer-bottom">
       <div class="container bottom lighter">
-        <p>&copy; <span id="current-year">2025</span> Octor. Todos os direitos reservados.</p>
-        <a href="https://octor.pro/pages/privacy-policy.html" aria-label="Leia nossa Política de Privacidade">Política
+        <p>&copy; <span id="current-year">2025</span> <span data-translate="footer.copyright">Octor. Todos os direitos reservados.</span></p>
+        <a href="https://octor.pro/pages/privacy-policy.html" aria-label="Leia nossa Política de Privacidade" data-translate="footer.privacy_policy">Política
           de Privacidade</a>
-        <a href="https://octor.pro/pages/terms-conditions.html" aria-label="Leia nossos Termos de Uso">Termos de Uso</a>
+        <a href="https://octor.pro/pages/terms-conditions.html" aria-label="Leia nossos Termos de Uso" data-translate="footer.terms_of_use">Termos de Uso</a>
       </div>
     </div>
   </footer>
@@ -366,6 +372,7 @@
   <script src="js/script-clean.js"></script>
   <script src="js/header.js"></script>
   <script src="js/carousel.js"></script>
+  <script src="js/lang.js"></script>
 </body>
 
 </html>

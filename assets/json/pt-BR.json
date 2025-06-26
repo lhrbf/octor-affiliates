@@ -1,0 +1,61 @@
+{
+  "page_title": "Afiliados Octor | Programa de Afiliação Partners - Esportes da Sorte",
+  "page_description": "Torne-se um afiliado Octor e ganhe com o programa Partners. Conectamos marcas a influenciadores com gestão completa, saque quinzenal e suporte 24/7.",
+  "navigation": {
+    "benefits": "Benefícios",
+    "grupo_octor": "Grupo Octor",
+    "become_affiliate": "Seja Afiliado"
+  },
+  "hero": {
+    "title": "PROGRAMA DE AFILIAÇÃO",
+    "subtitle": "PARTNERS",
+    "click_here": "Clique aqui e se torne um afiliado exclusivo",
+    "contact_button": "Fale Conosco"
+  },
+  "benefits": {
+    "title": "BENEFÍCIOS EXCLUSIVOS PARA NOSSOS AFILIADOS",
+    "saque": {
+      "title": "Saque quinzenal",
+      "description": "Receba seus ganhos a cada 15 dias, de forma rápida e segura, sem complicações."
+    },
+    "chat": {
+      "title": "Gerente exclusivo 24/7",
+      "description": "Conte com suporte dedicado e personalizado disponível todos os dias, 24 horas por dia."
+    },
+    "google_seo": {
+      "title": "Google SEO otimizado",
+      "description": "Aproveite nossa expertise em SEO para maximizar a visibilidade e o alcance do seu conteúdo."
+    },
+    "acordo": {
+      "title": "Acordo CPA e REV personalizados",
+      "description": "Desfrute de acordos feitos sob medida que se adaptam ao seu perfil e objetivos únicos."
+    },
+    "contrato": {
+      "title": "Contrato formalizado de afiliação",
+      "description": "Conte com um contrato formalizado que garante a segurança e transparência da sua parceria."
+    }
+  },
+  "bet_section": {
+    "title": "APOSTOU NA GENTE?",
+    "subtitle": "Então você já ganhou!",
+    "contact_button": "Fale Conosco"
+  },
+  "how_to": {
+    "title": "COMO FUNCIONA:",
+    "contact_button": "Fale Conosco"
+  },
+  "footer": {
+    "about_title": "Sobre o Grupo Octor",
+    "about_text": "Somos uma empresa líder em marketing digital e afiliação, conectando marcas e influenciadores através de estratégias inovadoras e resultados comprovados.",
+    "quick_links": "Links Rápidos",
+    "benefits_link": "Benefícios",
+    "about_link": "Sobre",
+    "contact_link": "Contato",
+    "social_title": "Redes Sociais",
+    "follow_linkedin": "Siga o Grupo Octor no LinkedIn",
+    "follow_instagram": "Siga o Grupo Octor no Instagram",
+    "copyright": "Octor. Todos os direitos reservados.",
+    "privacy_policy": "Política de Privacidade",
+    "terms_of_use": "Termos de Uso"
+  }
+}
