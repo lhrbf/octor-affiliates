@@ -41,8 +41,8 @@
   box-shadow: var(--shadow-secondary);
   border-radius: var(--border-radius);
   padding: 0 var(--spacing-xl);
-  width: 425px;
-  height: 450px;
+  width: 400px;
+  height: 425px;
   transform-origin: center center;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
@@ -51,7 +51,8 @@
   align-items: center;
   justify-content: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
 }
 
 .card.saque {
@@ -64,6 +65,8 @@
 
 .card.google-seo {
   background-image: url('../../assets/images/cards/gseo.png');
+  background-size: 80% auto;
+  background-position: center top;
 }
 
 .card.acordo {
@@ -332,25 +335,4 @@
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
-}
-
-/* Fix image paths for cards */
-.card.saque::before {
-  background-image: url(../../assets/images/cards/saque.png);
-}
-
-.card.chat::before {
-  background-image: url(../../assets/images/cards/chat.png);
-}
-
-.card.google-seo::before {
-  background-image: url(../../assets/images/cards/gseo.png);
-}
-
-.card.acordo::before {
-  background-image: url(../../assets/images/cards/calendar.png);
-}
-
-.card.contrato::before {
-  background-image: url(../../assets/images/cards/contrato.png);
 }
