@@ -1,5 +1,4 @@
 // Octor Affiliates - Main Script
-console.log('Octor Affiliates loaded successfully');
 
 // Footer year update
 document.addEventListener('DOMContentLoaded', function() {

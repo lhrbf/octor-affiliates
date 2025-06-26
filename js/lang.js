@@ -26,7 +26,6 @@ function applyDataTranslateElements(data) {
             /^h[1-6]$/i.test(element.tagName) ||
             element.classList.contains('title')) {
           element.textContent = lines[0];
-          console.log(`📝 Título aplicado: "${lines[0]}"`);
         } 
         // Para descrições de carousel ou parágrafos, usa o resto do texto (SEM o primeiro elemento que é o título)
         else if (element.classList.contains('carousel-description') || 
@@ -34,7 +33,6 @@ function applyDataTranslateElements(data) {
                  element.classList.contains('description')) {
           const description = lines.slice(1).join(' ').trim();
           element.textContent = description;
-          console.log(`📄 Descrição aplicada: "${description}"`);
         } 
         // Para outros elementos, preserva formatação com quebras de linha
         else if (element.innerHTML.includes('<br')) {
@@ -56,7 +54,6 @@ function applyDataTranslateElements(data) {
           element.textContent = translatedValue;
         }
       }
-      console.log(`✅ Traduzindo: ${key} -> "${translatedValue}"`);
     } else {
       console.warn(`❌ Chave não encontrada: ${key}`);
     }
@@ -82,7 +79,6 @@ async function loadTranslations(lang) {
 
 // Função principal para aplicar idioma
 async function applyLanguage(lang) {
-  console.log('🌐 Aplicando idioma:', lang);
   
   // Atualiza atributo lang do HTML
   document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
@@ -98,8 +94,6 @@ async function applyLanguage(lang) {
   
   // Salva preferência no localStorage
   localStorage.setItem('preferred-language', lang);
-  
-  console.log('✅ Idioma aplicado com sucesso');
 }
 
 // Inicialização do sistema de tradução
