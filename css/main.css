@@ -1,6 +1,7 @@
 @import './variables.css';
 @import './reset.css';
 @import './global.css';
+@import './safari-fixes.css';
 @import './components/button.css';
 @import './components/footer.css';
 @import './components/header.css';

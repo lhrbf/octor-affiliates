@@ -1,0 +1,37 @@
+/* Safari-specific CSS fixes for octor-affiliates */
+
+/* Fix para o bug do Safari com header transparente inicial */
+_::-webkit-full-page-media, _:future, :root header {
+  background-color: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+/* Força transparência inicial no Safari */
+@supports (-webkit-appearance: none) and (not (overflow: -webkit-marquee)) and (not (-ms-ime-align: auto)) {
+  header:not(.header-bg-blur) {
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Safari iOS fixes */
+@supports (-webkit-touch-callout: none) {
+  header {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .menu-toggle {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Firefox specific header fixes */
+@-moz-document url-prefix() {
+  .header-bg-blur {
+    background: rgba(0, 13, 71, 0.95) !important;
+  }
+}

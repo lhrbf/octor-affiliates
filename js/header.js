@@ -1,6 +1,26 @@
 // Menu responsivo: alterna ícones e exibe/esconde menu mobile
 
 document.addEventListener('DOMContentLoaded', function () {
+  // Fix para Safari - força redesenho do header para garantir transparência inicial
+  const header = document.querySelector('header');
+  
+  if (header) {
+    // Detecta Safari
+    const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    
+    if (isSafari) {
+      // Força repaint no Safari
+      window.addEventListener('load', () => {
+        header.style.display = 'none';
+        requestAnimationFrame(() => {
+          header.style.display = '';
+          // Garante que o header inicie transparente
+          header.classList.remove('header-bg-blur');
+        });
+      });
+    }
+  }
+  
   // --- Menu responsivo ---
   const menuToggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.menu');
@@ -133,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // --- Header blur, opacity e esconder/mostrar ao scroll ---
-  const header = document.querySelector('header');
   const firstSection = document.querySelector('main > section');
   let lastScroll = window.scrollY;
   let ticking = false;
