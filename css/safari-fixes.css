@@ -1,23 +1,5 @@
 /* Safari-specific CSS fixes for octor-affiliates */
 
-/* Safari-specific CSS fixes for octor-affiliates */
-
-/* Fix principal para Safari: evita background transparent puro com backdrop-filter */
-@supports (-webkit-backdrop-filter: blur(10px)) {
-  header:not(.header-bg-blur) {
-    background-color: rgba(255, 255, 255, 0.001) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
-  }
-}
-
-/* Fix para o bug do Safari com header transparente inicial - fallback */
-_::-webkit-full-page-media, _:future, :root header:not(.header-bg-blur) {
-  background-color: rgba(255, 255, 255, 0.001) !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-}
-
 /* Safari iOS fixes */
 @supports (-webkit-touch-callout: none) {
   header {
