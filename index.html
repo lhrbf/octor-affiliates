@@ -46,8 +46,13 @@
   <link rel="canonical" href="https://octor.pro/octor-affiliates">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="assets/icons/Favicon-octor.jpg">
-  <link rel="apple-touch-icon" href="assets/icons/Favicon-octor.jpg">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/assets/icons/favicon-16x16.png?v=3.0" sizes="16x16" type="image/png">
+  <link rel="icon" href="/assets/icons/favicon-32x32.png?v=3.0" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png?v=3.0" sizes="180x180">
+  <link rel="icon" href="/assets/icons/android-chrome-192x192.png?v=3.0" sizes="192x192" type="image/png">
+  <link rel="icon" href="/assets/icons/android-chrome-512x512.png?v=3.0" sizes="512x512" type="image/png">
+  <link rel="manifest" href="/site.webmanifest?v=3.0">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css">
@@ -142,7 +147,7 @@
             alt="Logotipos Esportes da Sorte e Onabet - Parceiros exclusivos">
         </div>
       </div>
-      <nav class="menu" role="navigation" aria-label="Menu principal">
+      <nav class="menu" aria-label="Menu principal">
         <ul>
           <li><a href="#benefits" aria-label="Ver benefícios do programa de afiliação"
               data-translate="navigation.benefits">Benefícios</a></li>
@@ -177,7 +182,7 @@
     </div>
   </header>
 
-  <main role="main">
+  <main>
     <section class="hero-section" id="hero" aria-labelledby="hero-title">
       <div class="container hero">
         <div class="hero-text">
@@ -214,26 +219,26 @@
     <section class="benefits-section" id="benefits" aria-labelledby="benefits-title">
       <div class="container benefits">
         <h2 id="benefits-title" data-translate="benefits.title">Benefícios</h2>
-        <div class="card-container" role="region" aria-label="Carrossel de benefícios do programa">
+        <div class="card-container" aria-label="Carrossel de benefícios do programa">
           <button class="prev desktop" aria-label="Ver benefício anterior" aria-controls="carousel">
             <i class="fas fa-chevron-left" aria-hidden="true"></i>
           </button>
-          <div class="carousel-wrapper" id="carousel" role="tablist">
-            <div class="card saque active" data-index="0" role="tabpanel" aria-labelledby="benefit-1">
+          <div class="carousel-wrapper" id="carousel">
+            <div class="card saque active" data-index="0" aria-labelledby="benefit-1">
               <div class="card-content">
                 <h3 id="benefit-1" data-translate="benefits.saque.title">Saque quinzenal</h3>
                 <p data-translate="benefits.saque.description">Receba seus ganhos a cada 15 dias, com total
                   transparência e agilidade.</p>
               </div>
             </div>
-            <div class="card chat active" data-index="1" role="tabpanel" aria-labelledby="benefit-2">
+            <div class="card chat active" data-index="1" aria-labelledby="benefit-2">
               <div class="card-content">
                 <h3 id="benefit-2" data-translate="benefits.chat.title">Gerente de contas exclusivo pra você 24/7</h3>
                 <p data-translate="benefits.chat.description">Receba suporte dedicado a qualquer hora do dia, com um
                   gerente de contas exclusivo.</p>
               </div>
             </div>
-            <div class="card google-seo" data-index="2" role="tabpanel" aria-labelledby="benefit-3">
+            <div class="card google-seo" data-index="2" aria-labelledby="benefit-3">
               <div class="card-content">
                 <h3 id="benefit-3" data-translate="benefits.google_seo.title">A bet mais buscada no Google no Brasil
                 </h3>
@@ -241,13 +246,13 @@
                   popular do país.</p>
               </div>
             </div>
-            <div class="card acordo" data-index="3" role="tabpanel" aria-labelledby="benefit-4">
+            <div class="card acordo" data-index="3" aria-labelledby="benefit-4">
               <div class="card-content">
                 <h3 id="benefit-4" data-translate="benefits.acordo.title">Acordos com CPA e REV</h3>
                 <p data-translate="benefits.acordo.description">Maximize seus ganhos com acordos personalizados.</p>
               </div>
             </div>
-            <div class="card contrato" data-index="4" role="tabpanel" aria-labelledby="benefit-5">
+            <div class="card contrato" data-index="4" aria-labelledby="benefit-5">
               <div class="card-content">
                 <h3 id="benefit-5" data-translate="benefits.contrato.title">Contrato formalizado de afiliação</h3>
                 <p data-translate="benefits.contrato.description">Conte com um contrato formalizado que garante a
@@ -260,17 +265,12 @@
             <i class="fas fa-chevron-right" aria-hidden="true"></i>
           </button>
         </div>
-        <div class="indicators" role="tablist" aria-label="Indicadores do carrossel">
-          <button class="indicator-dot active" data-index="0" aria-label="Ir para benefício 1: Saque quinzenal"
-            role="tab"></button>
-          <button class="indicator-dot" data-index="1" aria-label="Ir para benefício 2: Gerente exclusivo"
-            role="tab"></button>
-          <button class="indicator-dot" data-index="2" aria-label="Ir para benefício 3: Bet mais buscada"
-            role="tab"></button>
-          <button class="indicator-dot" data-index="3" aria-label="Ir para benefício 4: Acordos CPA e REV"
-            role="tab"></button>
-          <button class="indicator-dot" data-index="4" aria-label="Ir para benefício 5: Contrato formalizado"
-            role="tab"></button>
+        <div class="indicators" aria-label="Indicadores do carrossel">
+          <button class="indicator-dot active" data-index="0" aria-label="Ir para benefício 1: Saque quinzenal"></button>
+          <button class="indicator-dot" data-index="1" aria-label="Ir para benefício 2: Gerente exclusivo"></button>
+          <button class="indicator-dot" data-index="2" aria-label="Ir para benefício 3: Bet mais buscada"></button>
+          <button class="indicator-dot" data-index="3" aria-label="Ir para benefício 4: Acordos CPA e REV"></button>
+          <button class="indicator-dot" data-index="4" aria-label="Ir para benefício 5: Contrato formalizado"></button>
         </div>
       </div>
     </section>
@@ -278,7 +278,8 @@
     <section class="bet-section" id="bet">
       <div class="container bet">
         <h2 data-translate="bet_section.title">A Bet mais buscada no Google no Brasil</h2>
-        <button class="btn btn-secondary" data-translate="bet_section.contact_button">
+        <button class="btn btn-secondary" data-translate="bet_section.contact_button"
+          aria-label="Entrar em contato para mais informações sobre apostas">
           Fale Conosco <i class="fab fa-whatsapp"></i>
         </button>
       </div>
@@ -305,7 +306,8 @@
             Materiais de apoio, Acompanhamento em tempo real das comissões e Suporte direto com a equipe
             EDS.
           </p>
-          <button class="btn btn-secondary" data-translate="how_to.contact_button">
+          <button class="btn btn-secondary" data-translate="how_to.contact_button"
+            aria-label="Entrar em contato para saber como se tornar afiliado">
             Fale Conosco <i class="fab fa-whatsapp"></i>
           </button>
         </div>
