@@ -78,7 +78,6 @@ class Carousel3D {
 
       // Scale baseado na posição Z
       const scale = index === this.currentIndex ? 1 : 0.7;
-      const opacity = index === this.currentIndex ? 1 : 0.6;
 
       card.style.transform = `
                 translate(-50%, -50%) 
@@ -86,7 +85,6 @@ class Carousel3D {
                 rotateY(${-angle}deg) 
                 scale(${scale})
             `;
-      card.style.opacity = opacity;
       card.style.zIndex = index === this.currentIndex ? 10 : Math.round(z);
 
       // Classes ativas
@@ -95,41 +93,19 @@ class Carousel3D {
   }
 
   updateCarouselMobile() {
-    // Detecta automaticamente o tamanho do card
+    // Simples: apenas centraliza o card ativo
     const cardWidth = this.cards[0].offsetWidth;
     const gap = 20;
     const containerWidth = this.carouselWrapper.parentElement.offsetWidth;
-    const isMobileSmall = window.innerWidth <= 768;
-    const isTablet = window.innerWidth > 768 && window.innerWidth <= 1024;
+    
+    // Centraliza o card ativo
+    const centerPosition = (containerWidth - cardWidth) / 2;
+    const cardOffset = this.currentIndex * (cardWidth + gap);
+    const translateX = centerPosition - cardOffset;
 
-    if (isMobileSmall) {
-      // Cálculo para mobile (≤768px) - mais restritivo
-      const centerPosition = (containerWidth - cardWidth) / 2;
-      const cardOffset = this.currentIndex * (cardWidth + gap);
-      let translateX = centerPosition - cardOffset;
+    this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
 
-      // Limites ajustados para que o último card fique mais à esquerda
-      const totalWidth = this.totalCards * (cardWidth + gap);
-      const minTranslate = containerWidth - totalWidth - 50; // Aumentado para empurrar mais à esquerda
-      const maxTranslate = 40;
-
-      // Se é o último card, força ele a ficar mais à esquerda
-      if (this.currentIndex === this.totalCards - 1) {
-        translateX = minTranslate + 30; // Ajuste específico para o último card
-      } else {
-        translateX = Math.max(minTranslate, Math.min(maxTranslate, translateX));
-      }
-
-      this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
-    } else {
-      // Cálculo para tablet (769px-1024px) - simples e direto
-      const centerPosition = (containerWidth - cardWidth) / 2;
-      const cardOffset = this.currentIndex * (cardWidth + gap);
-      const translateX = centerPosition - cardOffset;
-
-      this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
-    }
-
+    // Atualiza classes ativas
     this.cards.forEach((card, index) => {
       card.classList.toggle("active", index === this.currentIndex);
     });
@@ -217,12 +193,20 @@ class Carousel3D {
   }
 
   bindEvents() {
-    // Navigation arrows
+    // Navigation arrows (desktop)
     document
       .querySelector(".prev")
       ?.addEventListener("click", () => this.prev());
     document
       .querySelector(".next")
+      ?.addEventListener("click", () => this.next());
+
+    // Navigation arrows (mobile)
+    document
+      .querySelector(".prev-mobile")
+      ?.addEventListener("click", () => this.prev());
+    document
+      .querySelector(".next-mobile")
       ?.addEventListener("click", () => this.next());
 
     // Indicators
