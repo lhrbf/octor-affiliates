@@ -67,5 +67,8 @@
   },
   "header": {
     "exclusive": "Exclusivo"
+  },
+  "carousel": {
+    "learn_more": "Saiba Mais"
   }
 }

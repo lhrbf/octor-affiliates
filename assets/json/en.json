@@ -67,5 +67,8 @@
   },
   "header": {
     "exclusive": "Exclusive"
+  },
+  "carousel": {
+    "learn_more": "Learn More"
   }
 }
