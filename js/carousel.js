@@ -87,8 +87,12 @@ class Carousel3D {
             `;
       card.style.zIndex = index === this.currentIndex ? 10 : Math.round(z);
 
-      // Classes ativas
+      // Classes ativas e inativas para styling
       card.classList.toggle("active", index === this.currentIndex);
+      card.classList.toggle("inactive", index !== this.currentIndex);
+      
+      // Desabilita pointer events para cards inativos
+      card.style.pointerEvents = index === this.currentIndex ? "auto" : "none";
     });
   }
 
@@ -217,9 +221,12 @@ class Carousel3D {
     // Card clicks (desktop only)
     if (!this.isMobile) {
       this.cards.forEach((card, index) => {
-        card.addEventListener("click", () => {
+        card.addEventListener("click", (e) => {
+          // Desabilita clique se não for o card ativo
           if (index !== this.currentIndex) {
-            this.goTo(index);
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
           }
         });
       });
