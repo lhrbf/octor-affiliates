@@ -17,6 +17,7 @@
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+    margin-block: var(--spacing-xl);
 }
 
 @media (max-width: 1024px) {

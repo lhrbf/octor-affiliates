@@ -12,7 +12,7 @@
     flex-direction: column;
     text-align: center;
     min-height: 110vh;
-    gap: var(--spacing-lg);
+    gap: 0;
 }
 
 
@@ -22,6 +22,7 @@
     max-width: 550px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    margin-bottom: var(--spacing-sm);
 }
 
 .bet-section .btn {
@@ -54,6 +55,6 @@
 
     .container.bet {
         min-height: 95vh;
-        gap: var(--spacing-sm);
+         gap: 0;
     }
 }

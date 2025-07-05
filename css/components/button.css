@@ -32,19 +32,9 @@
   margin-block: var(--spacing-lg);
 }
 
-.btn-carousel {
-  background-color: var(--primary-color);
-  color: white;
-  max-width: 100px;
-  font-size: var(--font-xs);
-  padding: var(--spacing-sm);
-  align-self: flex-end;
-  margin-right: var(--spacing-md);
-}
-
 .btn:hover {
   cursor: pointer;
-  transform: scale(1.02) translateY(-2px);
+  transform: scale(1.04) translateY(-2px);
   box-shadow: var(--shadow-lg);
   -webkit-transform: translateY(-2px);
   -moz-transform: translateY(-2px);
@@ -60,6 +50,16 @@
 .btn.active {
   transform: scale(0.95) translateY(1px);
   box-shadow: none;
+}
+
+.btn-primary i {
+  font-size: 15px;
+  margin-left: 4px;
+}
+
+.btn-secondary i {
+  font-size: 20px;
+  margin-left: 6px;
 }
 
 /* Firefox button fixes */
@@ -85,10 +85,5 @@
 
   .btn-primary.mobile {
     margin-right: var(--spacing-lg);
-  }
-
-  .btn-carousel {
-    font-size: var(--font-sm);
-    max-width: 150px;
   }
 }
