@@ -66,7 +66,7 @@ class Carousel3D {
 
   updateCarousel3D() {
     const angleStep = 360 / this.totalCards;
-    const radius = 550;
+    const radius = 700;
 
     this.cards.forEach((card, index) => {
       const angle = (index - this.currentIndex) * angleStep;
@@ -348,7 +348,7 @@ class Carousel3D {
     if (!this.isMobile) {
       this.autoPlayInterval = setInterval(() => {
         this.next();
-      }, 6000);
+      }, 15000); // 15 segundos por card
     }
   }
 

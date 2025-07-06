@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  min-height: 110vh;
 }
 
 .container.benefits h2 {
@@ -24,7 +23,7 @@
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  perspective: 1450px;
+  perspective: 1900px;
 }
 
 .carousel-wrapper {
@@ -41,7 +40,7 @@
   top: 50%;
   box-shadow: var(--shadow-secondary);
   border-radius: var(--border-radius);
-  padding: var(--spacing-lg) var(--spacing-xl);
+  padding: var(--spacing-md) var(--spacing-lg);
   width: 415px;
   height: 420px;
   transform-origin: center center;
@@ -96,24 +95,24 @@
 
 .card-content {
   color: var(--primary-color);
-  height: 70%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   z-index: 3;
+  gap: var(--spacing-md);
 }
 
 .card-content h3 {
   font-weight: var(--font-weight-benzin-bold);
-  font-size: var(--font-sm);
-  line-height: 1.1;
-  margin-bottom: var(--spacing-sm);
+  font-size: var(--font-xs);
+  line-height: 1.05;
 }
 
 .card-content p {
-  font-size: var(--font-sm);
-  line-height: 1.2;
+  font-size: var(--font-xs);
+  line-height: 1.1;
   color: var(--primary-color);
 }
 
@@ -143,11 +142,11 @@
 }
 
 .prev {
-  right: 385px;
+  right: 350px;
 }
 
 .next {
-  left: 385px;
+  left: 350px;
 }
 
 .prev i,

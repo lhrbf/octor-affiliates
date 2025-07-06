@@ -20,12 +20,12 @@
       "description": "Receive your earnings every 15 days, quickly and securely, without complications."
     },
     "chat": {
-      "title": "Exclusive account manager for you 24/7",
-      "description": "Count on dedicated and personalized support available every day, 24 hours a day."
+      "title": "Exclusive account manager for you",
+      "description": "Our manager will assist you on your journey with dedicated and personalized support."
     },
     "google_seo": {
       "title": "The most searched bet in Google in Brazil",
-      "description": "Stay ahead of the competition with the most popular bet in the country."
+      "description": "Stay ahead of the competition with the most popular bet in the country. You will be at the forefront representing the Most Popular Bet in the Country."
     },
     "acordo": {
       "title": "CPA and REV agreements",
@@ -34,6 +34,22 @@
     "contrato": {
       "title": "Formalized affiliation contract",
       "description": "Count on a formalized contract that guarantees the security and transparency of your partnership."
+    },
+    "conversao": {
+      "title": "Conversion and Retention",
+      "description": "We have one of the highest LTV in the Brazilian Market! And with a conversion rate of up to 60% (registration x FTD)."
+    },
+    "midia_kit": {
+      "title": "Media Kit",
+      "description": "We will deliver a robust media kit, designed to boost your growth. In addition, we provide exclusive images and videos of our ambassadors — Today we have the largest cast of high-engagement personalities in the market. It's heavy content for you to use strategically."
+    },
+    "pixel": {
+      "title": "Pixel Integration",
+      "description": "For you who are focused on direct traffic, we will help you with the integration of your pixel via postback. Optimizing your campaign and lowering your costs."
+    },
+    "grupo_info": {
+      "title": "Information Group",
+      "description": "Communication channel with tips on funnels that convert the most, and assertive creatives for the moment and real-time updates on promotions we have on our sites."
     }
   },
   "bet_section": {

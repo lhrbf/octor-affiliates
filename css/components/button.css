@@ -25,9 +25,11 @@
 }
 
 .btn-secondary {
-  background-color: var(--success-color);
-  color: var(--text-primary);
-  font-size: var(--font-lg);
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: var(--font-xs);
+  max-width: 100px;
+  padding: var(--spacing-xs);
 }
 
 .btn-outline {

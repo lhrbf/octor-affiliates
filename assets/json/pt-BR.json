@@ -20,12 +20,12 @@
       "description": "Receba seus ganhos a cada 15 dias, de forma rápida e segura, sem complicações."
     },
     "chat": {
-      "title": "Gerente de contas exclusivo pra você 24/7",
-      "description": "Conte com suporte dedicado e personalizado disponível todos os dias, 24 horas por dia."
+      "title": "Gerente de contas exclusivo pra você",
+      "description": "Nosso gerente vai lhe auxiliar na sua jornada com suporte dedicado e personalizado."
     },
     "google_seo": {
       "title": "A bet mais buscada no Google no Brasil",
-      "description": "Esteja à frente da concorrência com a bet mais popular do país."
+      "description": "Esteja à frente da concorrência com a bet mais popular do país. Você estará a frente representando a Bet mais Popular do País."
     },
     "acordo": {
       "title": "Acordos com CPA e REV",
@@ -34,6 +34,22 @@
     "contrato": {
       "title": "Contrato formalizado de afiliação",
       "description": "Conte com um contrato formalizado que garante a segurança e transparência da sua parceria."
+    },
+    "conversao": {
+      "title": "Conversão e Retenção",
+      "description": "Temos um dos maiores LTV do Mercado Brasileiro! E com uma taxa de conversão de até 60% (cadastro x FTD)."
+    },
+    "midia_kit": {
+      "title": "Mídia Kit",
+      "description": "Vamos te entregar um mídia kit robusto, pensado pra impulsionar seu crescimento. Além disso, disponibilizamos imagens e vídeos exclusivos dos nossos embaixadores — Hoje temos o maior elenco de personalidades de alto engajamento do mercado. É conteúdo de peso pra você usar com estratégia."
+    },
+    "pixel": {
+      "title": "Integração de Pixel",
+      "description": "Para você que é focado em tráfego direto, te ajudaremos com a integração do seu pixel via postback. Otimizando sua campanha e baixando seus custos."
+    },
+    "grupo_info": {
+      "title": "Grupo de Informações",
+      "description": "Canal de comunicação com dicas de funis que mais convertem, e criativos assertivos para o momento e atualização em tempo real de promoções que temos em nossos sites."
     }
   },
   "bet_section": {
