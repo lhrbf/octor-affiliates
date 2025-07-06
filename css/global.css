@@ -126,7 +126,7 @@ p {
 
 a,
 button {
-  font-size: var(--font-base);
+  font-size: var(--font-sm);
 }
 
 /* ===== LAYOUT ===== */
