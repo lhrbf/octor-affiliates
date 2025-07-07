@@ -45,8 +45,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
-  max-width: 46%;
-  padding-right: var(--spacing-md);
+  max-width: 45%;
+  padding-right: var(--spacing-lg);
 }
 
 .bet-br {

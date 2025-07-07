@@ -3,7 +3,7 @@
 :root {
   /* Colors */
   --primary-color:#101544;
-  --secondary-color: #0d237c;
+  --secondary-color: #101992;
   --tertiary-color: #8b5cf6;
   --accent-color: #06b6d4;
   --success-color: #008d2a;
@@ -84,8 +84,8 @@
   --border-radius-full: 9999px;
 
   /* Modern Shadows */
-  --shadow-sm: 0 1px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 11px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 9px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.2);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2);
   --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.2);
   

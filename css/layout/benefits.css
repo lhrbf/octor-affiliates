@@ -84,6 +84,14 @@
   align-items: start;
 }
 
+.grupo-img {
+  padding: 0 !important;
+}
+
+.midia-kit-img {
+  padding: 0 var(--spacing-md) !important;
+}
+
 .card-image img {
   width: 100%;
   max-width: 280px;
