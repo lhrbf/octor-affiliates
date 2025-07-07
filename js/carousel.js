@@ -66,7 +66,7 @@ class Carousel3D {
 
   updateCarousel3D() {
     const angleStep = 360 / this.totalCards;
-    const radius = 710;
+    const radius = 725;
 
     this.cards.forEach((card, index) => {
       const angle = (index - this.currentIndex) * angleStep;
