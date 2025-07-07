@@ -54,3 +54,21 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+/* Links funcionais na seção how-to */
+.how-it-works-text .affiliate-link,
+.how-it-works-text .contact-link {
+    text-decoration: underline;
+    font-size: var(--font-md);
+    transition: color 0.3s ease, text-decoration-color 0.3s ease;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1px;
+
+}
+
+.how-it-works-text .affiliate-link:focus,
+.how-it-works-text .contact-link:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    border-radius: 2px;
+}

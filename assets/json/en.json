@@ -8,9 +8,10 @@
   },
   "hero": {
     "title": "Partners Affiliate",
-    "description": "Our affiliation program connects brands to influencers of all sizes, with complete partnership management, negotiations aligned to each campaign and focus on efficient and scalable results.",
+    "description": "We are the largest Brazilian affiliate company and we work exclusively for the Esportes Gaming Brasil group. Today we are the unique channel for affiliation of the brands that make up the Group. From prospecting, negotiation, contract formalization, management and relationship. Together with Octor, you will be directly with the company, without any intermediary, enabling the best negotiations in the market. All this, with great security and transparency.",
     "bet_br": "The 100% Brazilian betting house 🇧🇷",
     "contact_button": "Contact Us <i class=\"fab fa-whatsapp\"></i>",
+    "affiliate_button": "Become an Affiliate",
     "click_here": "Click here and talk to our affiliate manager"
   },
   "benefits": {
@@ -58,7 +59,7 @@
   },
   "how_to": {
     "title": "How to become an affiliate",
-    "description": "You just need to provide some basic data: Full name, Email, Phone number, Country of origin, create your access password and you'll quickly finish this part!<br /><br />Wait for our team to get in touch: After submitting the form, one of our affiliate managers will contact you via WhatsApp or email. They will evaluate your profile and explain exactly how everything works.<br /><br />Access to the affiliate platform: When your account is approved, you will be able to access the exclusive Dashboard panel. In it, you will find: Your Onabet / Esportes da Sorte affiliate link, Support materials, Real-time tracking of commissions and Direct support with the EDS team.",
+    "description": "Click on the <a href=\"#\" class=\"affiliate-link\" data-translate=\"hero.affiliate_button\">become an affiliate</a> link and fill in your personal information to create your account and access password.<br /><br />After that, click on the <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">contact us</a> link and send your created username to our personalized support. So we can include you in our affiliate ecosystem.<br /><br />In this same <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">contact us</a> link you will negotiate your commission plan, send data for contract formalization and share a bit of your strategy so we can help you with whatever is necessary.<br /><br />In case of doubts, click on <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">contact us</a> and we will help you from start to finish in your affiliate process.<br /><br /><strong style=\"font-size: 1.5em;\">WELCOME!</strong>",
     "contact_button": "Contact Us <i class=\"fab fa-whatsapp\"></i>"
   },
   "footer": {

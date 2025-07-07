@@ -1,7 +1,7 @@
 .btn {
   padding: var(--spacing-sm) var(--spacing-md);
   width: 100%;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   border-radius: var(--border-radius-md);
   transition: all 0.4s ease;
   -webkit-appearance: none;
@@ -16,7 +16,7 @@
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  max-width: 200px;
+  max-width: 220px;
 }
 
 .btn-primary {
@@ -27,16 +27,30 @@
 .btn-secondary {
   background-color: var(--secondary-color);
   color: white;
-  font-size: var(--font-xs);
-  max-width: 100px;
-  padding: var(--spacing-xs);
+  max-width: 250px;
 }
 
 .btn-outline {
-  background-color: transparent;
+  background-color: rgba(49, 49, 49, 0.15);
   color: white;
-  border: 2px solid white;
-  margin-block: var(--spacing-lg);
+  border: 1.5px outset white;
+  max-width: 230px;
+}
+
+.btn-secondary, .btn-outline {
+   padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.duo-btns {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-sm);
+  width: 100%;
+}
+
+.bet-search {
+  justify-content: center;
 }
 
 .btn:hover {

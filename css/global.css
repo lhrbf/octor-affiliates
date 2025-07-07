@@ -124,9 +124,12 @@ p {
   line-height: var(--line-height-normal);
 }
 
-a,
-button {
+a {
   font-size: var(--font-sm);
+}
+
+button {
+  font-size: var(--font-md);
 }
 
 /* ===== LAYOUT ===== */

@@ -92,3 +92,29 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(changeImage, 4000);
     }
 });
+
+// Link functionality for affiliate and contact links in how-to section
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to simulate button click
+    function simulateButtonClick(selector) {
+        const button = document.querySelector(selector);
+        if (button) {
+            button.click();
+        }
+    }
+
+    // Add event listeners for affiliate links
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('affiliate-link')) {
+            e.preventDefault();
+            // Simulate click on the "Torne-se um afiliado" button
+            simulateButtonClick('.btn.btn-secondary[data-translate="hero.affiliate_button"]');
+        }
+        
+        if (e.target.classList.contains('contact-link')) {
+            e.preventDefault();
+            // Simulate click on the "Fale Conosco" button
+            simulateButtonClick('.btn.btn-outline[data-translate="hero.contact_button"]');
+        }
+    });
+});

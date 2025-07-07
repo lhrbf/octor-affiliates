@@ -8,9 +8,10 @@
   },
   "hero": {
     "title": "Partners Affiliate",
-    "description": "Nosso programa de afiliação conecta marcas a influenciadores de todos os portes, com gestão completa de parcerias, negociações alinhadas a cada campanha e foco em resultados eficientes e escaláveis.",
+    "description": "Somos a maior empresa de afiliação brasileira e trabalhamos de forma exclusiva para o grupo Esportes Gaming Brasil. Hoje somos o canal único para afiliação das marcas que compõem o Grupo. Desde prospecção, negociação, formalização de contrato, gestão e relacionamento. Junto com a Octor, você estará diretamente com a empresa, sem nenhum intermediário, possibilitando as melhores negociações do mercado. Tudo isso, com muita segurança, e transparência.",
     "bet_br": "A casa de apostas 100% brasileira 🇧🇷",
     "contact_button": "Fale Conosco <i class=\"fab fa-whatsapp\"></i>",
+    "affiliate_button": "Torne-se um afiliado",
     "click_here": "Clique aqui e fale com nosso gerente de afiliação"
   },
   "benefits": {
@@ -58,7 +59,7 @@
   },
   "how_to": {
     "title": "Como se tornar afiliado",
-    "description": "Você só precisa fornecer alguns dados básicos: Nome completo, Email, Número de telefone, País de origem, criar sua senha de acesso e rapidamente finalizará essa parte!<br /><br />Aguardar nosso time entrar em contato: Após envio do formulário, um dos nossos gerentes de afiliação entrará em contato via WhatsApp ou email. Ele avaliará seu perfil e explicará exatamente como tudo funciona.<br /><br />Acesso à plataforma de afiliados: Quando sua conta for aprovada, você poderá acessar o painel exclusivo do Dashboard. Nele, você encontrará: Seu link de afiliação da Onabet / Esportes da Sorte, Materiais de apoio, Acompanhamento das comissões em tempo real e Suporte direto com a equipe EDS.",
+    "description": "Clique no link <a href=\"#\" class=\"affiliate-link\" data-translate=\"hero.affiliate_button\">torne-se um afiliado</a> e preencha com suas informações pessoais para criar sua conta e senha de acesso.<br /><br />Após isso, clique no link <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">fale conosco</a> e envie para nosso atendimento personalizado o seu username criado. Para que a gente possa te incluir no nosso ecossistema de afiliação.<br /><br />Neste mesmo link de <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">fale conosco</a> você irá negociar o seu plano de comissão, enviar dados para formalização de contrato e compartilhar um pouco da sua estratégia para a gente te ajudar no que for necessário.<br /><br />Em caso de dúvidas, clique em <a href=\"#\" class=\"contact-link\" data-translate=\"hero.contact_button\">fale conosco</a> e te ajudaremos do início ao fim no seu processo de afiliação.<br /><br /><strong style=\"font-size: 1.5em;\">SEJA BEM-VINDO!</strong>",
     "contact_button": "Fale Conosco <i class=\"fab fa-whatsapp\"></i>"
   },
   "footer": {
