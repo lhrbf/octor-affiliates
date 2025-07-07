@@ -2,8 +2,8 @@
 
 :root {
   /* Colors */
-  --primary-color: #001780;
-  --secondary-color: #003ee9;
+  --primary-color:#101544;
+  --secondary-color: #0d2175;
   --tertiary-color: #8b5cf6;
   --accent-color: #06b6d4;
   --success-color: #008d2a;
@@ -48,7 +48,7 @@
   --font-weight-benzin-bold: 700;
 
   /* Font Sizes */
-  --font-xs: clamp(0.75rem, 0.7vw + 0.2rem, 0.9rem);
+  --font-xs: clamp(0.75rem, 0.7vw + 0.2rem, 0.85rem);
   --font-sm: clamp(0.9rem, 0.9vw + 0.2rem, 1rem);
   --font-base: 16px;
   --font-md: clamp(1rem, 1.1vw + 0.2rem, 1.25rem);
