@@ -28,10 +28,19 @@
   font-size: var(--font-sm);
 }
 
+.btn-primary:hover {
+  color: var(--secondary-color);
+  background-color: #f7f7f7;
+}
+
 .btn-secondary {
   background-color: var(--secondary-color);
   color: white;
   max-width: 250px;
+}
+
+.btn-secondary:hover {
+  background-color: #071092;
 }
 
 .btn-outline {
@@ -58,12 +67,17 @@
   justify-content: center;
 }
 
+.btn-outline:hover {
+  background-color: white;
+  color: var(--primary-color);
+}
+
 .btn:hover {
   cursor: pointer;
-  transform: scale(1.04) translateY(-2px);
+  transform: scale(1.04) translateY(-3px);
   box-shadow: var(--shadow-lg);
-  -webkit-transform: translateY(-2px);
-  -moz-transform: translateY(-2px);
+  -webkit-transform: translateY(-3px);
+  -moz-transform: translateY(-3px);
 }
 
 .btn:active {
