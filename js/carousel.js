@@ -66,7 +66,7 @@ class Carousel3D {
 
   updateCarousel3D() {
     const angleStep = 360 / this.totalCards;
-    const radius = 725;
+    const radius = 675;
 
     this.cards.forEach((card, index) => {
       const angle = (index - this.currentIndex) * angleStep;
@@ -97,17 +97,20 @@ class Carousel3D {
   }
 
   updateCarouselMobile() {
-    // Simples: apenas centraliza o card ativo
+    // Obtém dimensões atuais do card e container
     const cardWidth = this.cards[0].offsetWidth;
-    const gap = 20;
+    const cardMargin = parseInt(getComputedStyle(this.cards[0]).marginRight) || 0;
+    const gap = cardMargin * 2; // Margem dos dois lados
     const containerWidth = this.carouselWrapper.parentElement.offsetWidth;
     
-    // Centraliza o card ativo
-    const centerPosition = (containerWidth - cardWidth) / 2;
+    // Centraliza o card ativo considerando o número total de cards
+    // Ajuste para mover um pouco mais para a esquerda
+    const centerPosition = (containerWidth - cardWidth) / 2 - 10;
     const cardOffset = this.currentIndex * (cardWidth + gap);
     const translateX = centerPosition - cardOffset;
 
     this.carouselWrapper.style.transform = `translateX(${translateX}px)`;
+    this.carouselWrapper.style.transition = 'transform 0.5s ease-in-out';
 
     // Atualiza classes ativas
     this.cards.forEach((card, index) => {
@@ -339,6 +342,9 @@ class Carousel3D {
           clearInterval(this.autoPlayInterval);
         }
         this.init();
+      } else if (this.isMobile) {
+        // Se ainda está no mobile, recalcula a posição
+        this.updateCarouselMobile();
       }
     });
   }
