@@ -1,5 +1,5 @@
 # Robots.txt for Octor Affiliates
-# https://octor.pro/octor-affiliates
+# https://grupoegbpartners.com
 
 User-agent: *
 Allow: /
@@ -18,7 +18,7 @@ Allow: /assets/
 Allow: /images/
 
 # Sitemap location
-Sitemap: https://octor.pro/octor-affiliates/sitemap.xml
+Sitemap: https://grupoegbpartners.com/sitemap.xml
 
 # Crawl delay (optional)
 Crawl-delay: 1

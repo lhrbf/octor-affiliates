@@ -4,17 +4,17 @@
 
   <!-- Homepage / Landing Page -->
   <url>
-    <loc>https://octor.pro/octor-affiliates</loc>
+    <loc>https://grupoegbpartners.com</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://octor.pro/octor-affiliates/assets/images/LEO-SANTANA.webp</image:loc>
+      <image:loc>https://grupoegbpartners.com/assets/images/LEO-SANTANA.webp</image:loc>
       <image:title>Partners Affiliate - Leo Santana</image:title>
       <image:caption>Programa de afiliação Octor com Leo Santana</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://octor.pro/octor-affiliates/assets/icons/Logo-octor-Horizontal.webp</image:loc>
+      <image:loc>https://grupoegbpartners.com/assets/icons/Logo-octor-Horizontal.webp</image:loc>
       <image:title>Logo Grupo Octor</image:title>
       <image:caption>Logotipo oficial do Grupo Octor</image:caption>
     </image:image>
@@ -22,7 +22,7 @@
 
   <!-- Benefits Section -->
   <url>
-    <loc>https://octor.pro/octor-affiliates#benefits</loc>
+    <loc>https://grupoegbpartners.com#benefits</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -30,7 +30,7 @@
 
   <!-- How to become affiliate Section -->
   <url>
-    <loc>https://octor.pro/octor-affiliates#affiliate</loc>
+    <loc>https://grupoegbpartners.com#affiliate</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -38,7 +38,7 @@
 
   <!-- Contact Section -->
   <url>
-    <loc>https://octor.pro/octor-affiliates#contact</loc>
+    <loc>https://grupoegbpartners.com#contact</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -46,13 +46,7 @@
 
   <!-- Privacy Policy -->
   <url>
-    <loc>https://octor.pro/octor-affiliates/pages/privacy-policy.html</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://octor.pro/pages/privacy-policy.html</loc>
+    <loc>https://grupoegbpartners.com/pages/privacy-policy.html</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -60,13 +54,7 @@
 
   <!-- Terms and Conditions -->
   <url>
-    <loc>https://octor.pro/octor-affiliates/pages/terms-conditions.html</loc>
-    <lastmod>2025-06-25</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://octor.pro/pages/terms-conditions.html</loc>
+    <loc>https://grupoegbpartners.com/pages/terms-conditions.html</loc>
     <lastmod>2025-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
