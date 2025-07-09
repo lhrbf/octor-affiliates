@@ -119,10 +119,16 @@
 @media (max-width: 768px) {
   .btn {
     width: 100%;
-    max-width: 190px;
+    max-width: 265px;
   }
 
   .btn-primary.mobile {
     margin-right: var(--spacing-lg);
+  }
+
+  .duo-btns {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-lg);
   }
 }

@@ -1,28 +1,27 @@
 .bet-section {
-    background-image: url('../../assets/images/Leo-Santana-Carlinhos.webp');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
+  background-image: url("../../assets/images/Leo-Santana-Carlinhos.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 .container.bet {
-    justify-content: flex-start;
-    flex-direction: column;
-    text-align: center;
-    min-height: 110vh;
-    gap: 0;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  min-height: 110vh;
+  gap: 0;
 }
 
-
 .container.bet h2 {
-    font-size: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
-    line-height: 1.5;
-    max-width: 550px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    margin-bottom: var(--spacing-sm);
+  font-size: clamp(1.5rem, 2vw + 0.5rem, 2.5rem);
+  line-height: 1.5;
+  max-width: 550px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-bottom: var(--spacing-sm);
 }
 
 .bet-section .btn {
@@ -48,13 +47,12 @@
 }
 
 @media (max-width: 1024px) {
-    .bet-section {
-        background-image: url('../../assets/images/Mobile-Carlinhos-Leo.webp');
-        background-position: bottom;
-    }
+  .bet-section {
+    background-image: url("../../assets/images/Mobile-Carlinhos-Leo.webp");
+    background-position: bottom;
+  }
 
-    .container.bet {
-        min-height: 95vh;
-         gap: 0;
-    }
+  .container.bet {
+    gap: 0;
+  }
 }
