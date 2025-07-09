@@ -29,26 +29,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Contact buttons functionality - scroll only
+// Button functionality - contact and affiliate actions
 document.addEventListener('DOMContentLoaded', function() {
-    const contactButtons = document.querySelectorAll('.btn');
+    // Function to redirect to affiliate signup
+    function simulateAffiliateAction() {
+        window.open('http://go.onabet.com/signup/?am=113', '_blank', 'noopener,noreferrer');
+    }
+
+    // Handle all button clicks
+    const allButtons = document.querySelectorAll('.btn');
     
-    contactButtons.forEach(button => {
-        if (button.textContent.includes('Fale Conosco') || button.textContent.includes('Contact Us')) {
-            button.addEventListener('click', function(e) {
-                // Remove comportamento padrão para permitir que o GTM tracking funcione
+    allButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            // Check if it's an affiliate button
+            if (button.classList.contains('btn-secondary') && button.getAttribute('data-translate') === 'hero.affiliate_button') {
                 e.preventDefault();
-                
-                // O GTM tracking será responsável por abrir o WhatsApp
-                // Este script apenas faz scroll se necessário
-                const contactSection = document.getElementById('contact');
-                if (contactSection) {
-                    contactSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
+                simulateAffiliateAction();
+            }
+            // Contact buttons (Fale Conosco) are handled by GTM tracking
+            // No need to preventDefault for them
+        });
+    });
+
+    // Handle affiliate links in text
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('affiliate-link')) {
+            e.preventDefault();
+            simulateAffiliateAction();
         }
     });
 });
@@ -91,30 +98,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // Change image every 4 seconds (increased to allow for transition)
         setInterval(changeImage, 4000);
     }
-});
-
-// Link functionality for affiliate and contact links in how-to section
-document.addEventListener('DOMContentLoaded', function() {
-    // Function to simulate button click
-    function simulateButtonClick(selector) {
-        const button = document.querySelector(selector);
-        if (button) {
-            button.click();
-        }
-    }
-
-    // Add event listeners for affiliate links
-    document.addEventListener('click', function(e) {
-        if (e.target.classList.contains('affiliate-link')) {
-            e.preventDefault();
-            // Simulate click on the "Torne-se um afiliado" button
-            simulateButtonClick('.btn.btn-secondary[data-translate="hero.affiliate_button"]');
-        }
-        
-        if (e.target.classList.contains('contact-link')) {
-            e.preventDefault();
-            // Simulate click on the "Fale Conosco" button
-            simulateButtonClick('.btn.btn-outline[data-translate="hero.contact_button"]');
-        }
-    });
 });
