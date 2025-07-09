@@ -35,6 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function simulateAffiliateAction() {
         window.open('http://go.onabet.com/signup/?am=113', '_blank', 'noopener,noreferrer');
     }
+    
+    // Function to simulate contact button click for text links
+    function simulateContactAction() {
+        // Find and click the first "Fale Conosco" button to trigger GTM tracking
+        const contactButton = document.querySelector('.btn[data-translate="hero.contact_button"]');
+        if (contactButton) {
+            contactButton.click();
+        }
+    }
 
     // Handle all button clicks
     const allButtons = document.querySelectorAll('.btn');
@@ -51,11 +60,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle affiliate links in text
+    // Handle affiliate and contact links in text
     document.addEventListener('click', function(e) {
         if (e.target.classList.contains('affiliate-link')) {
             e.preventDefault();
             simulateAffiliateAction();
+        }
+        
+        if (e.target.classList.contains('contact-link')) {
+            e.preventDefault();
+            simulateContactAction();
         }
     });
 });
