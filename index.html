@@ -56,8 +56,33 @@
 
   <!-- Stylesheets -->
   <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- CSS inline para ícones Font Awesome críticos -->
+  <style>
+    /* Envelope */
+    .fa-envelope:before { content: "\f0e0"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* WhatsApp */
+    .fa-whatsapp:before, .fab.fa-whatsapp:before { content: "\f232"; font-family: 'Font Awesome 6 Brands'; font-weight: 400; }
+    /* Map Marker Alt */
+    .fa-map-marker-alt:before { content: "\f3c5"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* Phone */
+    .fa-phone:before { content: "\f095"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* Chevron Left */
+    .fa-chevron-left:before { content: "\f053"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* Chevron Right */
+    .fa-chevron-right:before { content: "\f054"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* LinkedIn */
+    .fa-linkedin:before, .fab.fa-linkedin:before { content: "\f08c"; font-family: 'Font Awesome 6 Brands'; font-weight: 400; }
+    /* Instagram */
+    .fa-instagram:before, .fab.fa-instagram:before { content: "\f16d"; font-family: 'Font Awesome 6 Brands'; font-weight: 400; }
+    /* Bars */
+    .fa-bars:before, .fa-solid.fa-bars:before { content: "\f0c9"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* Xmark */
+    .fa-xmark:before, .fa-solid.fa-xmark:before { content: "\f00d"; font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    /* Font Awesome base styles */
+    .fa, .fas, .fab, .fa-solid { display: inline-block; font-style: normal; font-variant: normal; text-rendering: auto; line-height: 1; }
+    .fa, .fas, .fa-solid { font-family: 'Font Awesome 6 Free'; font-weight: 900; }
+    .fab { font-family: 'Font Awesome 6 Brands'; font-weight: 400; }
+  </style>
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
@@ -71,14 +96,21 @@
   <!-- End Google Tag Manager -->
 
   <!-- Preload critical resources -->
-  <link rel="preload" href="assets/images/LEO-SANTANA.webp" as="image" type="image/webp">
+  <link rel="preload" href="assets/images/LEO-SANTANA.webp" as="image" type="image/webp" fetchpriority="high">
   <link rel="preload" href="assets/icons/Logo-octor-Horizontal.webp" as="image" type="image/webp">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
-<noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</noscript>
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+  <style>
+    @font-face {
+      font-family: 'Benzin';
+      src: url('/assets/fonts/Benzin-Regular.ttf') format('truetype');
+      font-display: swap;
+    }
+    html, body {
+      font-family: 'Benzin', Arial, Helvetica, sans-serif;
+    }
+  </style>
 
   <!-- Structured Data / Schema.org -->
   <script type="application/ld+json">
@@ -142,12 +174,12 @@
       <div class="logo-header">
         <a href="/" aria-label="Ir para página inicial do Grupo Octor">
           <img src="assets/icons/Logo-octor-Horizontal.webp"
-            alt="Logotipo do Grupo Octor - Empresa de Marketing Digital" />
+            alt="Logotipo do Grupo Octor - Empresa de Marketing Digital" width="180" height="40" />
         </a>
         <div class="logo-text desktop">
           <span class="logo-text-bold" data-translate="header.exclusive">Exclusivo</span>
           <img class="eds-ona" src="assets/images/eds-ona.webp"
-            alt="Logotipos Esportes da Sorte e Onabet - Parceiros exclusivos">
+            alt="Logotipos Esportes da Sorte e Onabet - Parceiros exclusivos" width="120" height="40">
         </div>
       </div>
       <nav class="menu" aria-label="Menu principal">
@@ -191,10 +223,10 @@
         <div class="hero-text">
           <div class="hero-logo">
             <img src="assets/images/logos-eds/ESPORTES-DA-SORTE.svg"
-              alt="Logotipo Esportes da Sorte - Casa de apostas parceira">
-            <img src="assets/images/logos-eds/ONABET.svg" alt="Logotipo Onabet - Casa de apostas parceira">
+              alt="Logotipo Esportes da Sorte - Casa de apostas parceira" width="80" height="40">
+            <img src="assets/images/logos-eds/ONABET.svg" alt="Logotipo Onabet - Casa de apostas parceira" width="80" height="40">
             <img src="assets/images/logos-eds/Esportes-Gaming-Brasil.svg"
-              alt="Logotipo Esportes Gaming Brasil - Grupo de apostas">
+              alt="Logotipo Esportes Gaming Brasil - Grupo de apostas" width="80" height="40">
           </div>
           <h1 id="hero-title" data-translate="hero.title">Partners Affiliate</h1>
           <p data-translate="hero.description">Somos a maior empresa de afiliação brasileira e trabalhamos de forma
@@ -218,7 +250,7 @@
         </div>
         <div class="hero-image">
           <img src="assets/images/LEO-SANTANA.webp"
-            alt="Leo Santana, cantor e influenciador parceiro do programa de afiliados Octor">
+            alt="Leo Santana, cantor e influenciador parceiro do programa de afiliados Octor" width="400" height="400" fetchpriority="high">
         </div>
       </div>
     </section>
@@ -234,6 +266,7 @@
             <div class="card saque active" data-index="0" aria-labelledby="benefit-1">
               <div class="card-image">
                 <img src="assets/images/cards/saque.avif" alt="Imagem representando saque quinzenal">
+                alt="Imagem representando saque quinzenal" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-1" data-translate="benefits.saque.title">Saque quinzenal</h3>
@@ -244,6 +277,7 @@
             <div class="card chat active" data-index="1" aria-labelledby="benefit-2">
               <div class="card-image">
                 <img src="assets/images/cards/chat.avif" alt="Imagem representando chat com gerente">
+                alt="Imagem representando chat com gerente" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-2" data-translate="benefits.chat.title">Gerente de contas exclusivo pra você 24/7</h3>
@@ -254,6 +288,7 @@
             <div class="card google-seo" data-index="2" aria-labelledby="benefit-3">
               <div class="card-image">
                 <img src="assets/images/cards/gseo.avif" alt="Imagem representando a bet mais buscada no Google">
+                alt="Imagem representando a bet mais buscada no Google" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-3" data-translate="benefits.google_seo.title">A bet mais buscada no Google no Brasil
@@ -265,6 +300,7 @@
             <div class="card acordo" data-index="3" aria-labelledby="benefit-4">
               <div class="card-image">
                 <img src="assets/images/cards/acordo.avif" alt="Imagem representando acordos com CPA e REV">
+                alt="Imagem representando acordos com CPA e REV" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-4" data-translate="benefits.acordo.title">Acordos com CPA e REV</h3>
@@ -274,7 +310,7 @@
             <div class="card contrato" data-index="4" aria-labelledby="benefit-5">
               <div class="card-image">
                 <img src="assets/images/cards/contrato.png"
-                  alt="Imagem representando contrato formalizado de afiliação">
+                  alt="Imagem representando contrato formalizado de afiliação" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-5" data-translate="benefits.contrato.title">Contrato formalizado de afiliação</h3>
@@ -286,6 +322,7 @@
             <div class="card conversao" data-index="5" aria-labelledby="benefit-6">
               <div class="card-image">
                 <img src="assets/images/cards/conversao.avif" alt="Imagem representando conversão e retenção">
+                alt="Imagem representando conversão e retenção" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-6" data-translate="benefits.conversao.title">Conversão e Retenção</h3>
@@ -296,6 +333,7 @@
             <div class="card midia-kit" data-index="6" aria-labelledby="benefit-7">
               <div class="card-image">
                 <img class="midia-kit-img" src="assets/images/cards/midia-kit.avif" alt="Imagem representando mídia kit">
+                alt="Imagem representando mídia kit" width="120" height="80">
               </div>
               <div class="card-content midia-kit-content">
                 <h3 id="benefit-7" data-translate="benefits.midia_kit.title">Mídia Kit</h3>
@@ -308,6 +346,7 @@
             <div class="card pixel" data-index="7" aria-labelledby="benefit-8">
               <div class="card-image">
                 <img src="assets/images/cards/Integraçao-de-pixel.avif" alt="Imagem representando integração de pixel">
+                alt="Imagem representando integração de pixel" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-8" data-translate="benefits.pixel.title">Integração de Pixel</h3>
@@ -318,6 +357,7 @@
             <div class="card grupo-info" data-index="8" aria-labelledby="benefit-9">
               <div class="card-image">
                 <img class="grupo-img" src="assets/images/cards/grupo-de-informacoes.avif" alt="Imagem representando grupo de informações">
+                alt="Imagem representando grupo de informações" width="120" height="80">
               </div>
               <div class="card-content">
                 <h3 id="benefit-9" data-translate="benefits.grupo_info.title">Grupo de Informações</h3>
@@ -388,7 +428,7 @@
         </div>
         <div class="how-it-works-image">
           <img src="assets/images/MOBILE.webp"
-            alt="Infográfico explicativo sobre como funciona o programa de afiliação Octor - passo a passo visual">
+            alt="Infográfico explicativo sobre como funciona o programa de afiliação Octor - passo a passo visual" width="400" height="400">
         </div>
       </div>
     </section>
