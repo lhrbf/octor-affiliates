@@ -7,8 +7,8 @@
     "become_affiliate": "Become Affiliate"
   },
   "hero": {
-    "title": "Partners Affiliate",
-    "description": "We are the largest Brazilian affiliate company and we work exclusively for the Esportes Gaming Brasil group. Today we are the unique channel for affiliation of the brands that make up the Group. From prospecting, negotiation, contract formalization, management and relationship. Together with Octor, you will be directly with the company, without any intermediary, enabling the best negotiations in the market. All this, with great security and transparency.",
+    "title": "OCTOR AFFILIATE",
+    "description": "We are affiliate partnership hub. By connecting affiliates, brands, and performance marketing, we drive growth through collaboration that delivers measurable results.",
     "bet_br": "The 100% Brazilian betting house 🇧🇷",
     "contact_button": "Contact Us <i class=\"fab fa-whatsapp\"></i>",
     "affiliate_button": "Become an Affiliate",
@@ -25,8 +25,8 @@
       "description": "Our manager will assist you on your journey with dedicated and personalized support."
     },
     "google_seo": {
-      "title": "The most searched bet in Google in Brazil",
-      "description": "Stay ahead of the competition with the most popular bet in the country. You will be at the forefront representing the Most Popular Bet in the Country."
+      "title": "GOOGLE SEO",
+      "description": "Specialize in Google Ads and SEO, combining with paid traffic strategies, we make your brand visible, credible, and profitable where it matters most: Google."
     },
     "acordo": {
       "title": "CPA and REV agreements",
@@ -37,20 +37,20 @@
       "description": "Count on a formalized contract that guarantees the security and transparency of your partnership."
     },
     "conversao": {
-      "title": "Conversion and Retention",
-      "description": "We have one of the highest LTV in the Brazilian Market! And with a conversion rate of up to 60% (registration x FTD)."
+      "title": "CONVERSION & RETENTION",
+      "description": "We deliver one of the highest Lifetime Values (LTV) in the Brazilian market — with conversion rates reaching up to 60% from registration to FTD."
     },
     "midia_kit": {
-      "title": "Media Kit",
-      "description": "We will deliver a robust media kit, designed to boost your growth. In addition, we provide exclusive images and videos of our ambassadors — Today we have the largest cast of high-engagement personalities in the market. It's heavy content for you to use strategically."
+      "title": "MEDIA KIT",
+      "description": "Get a powerful media kit packed with premium assets — including exclusive videos and images of our top ambassadors.\nWe work with the most influential and high-performing talent in the market today. Strategic, high-impact content designed to elevate your brand and drive real results."
     },
     "pixel": {
-      "title": "Pixel Integration",
-      "description": "For you who are focused on direct traffic, we will help you with the integration of your pixel via postback. Optimizing your campaign and lowering your costs."
+      "title": "PIXEL INTEGRATION",
+      "description": "If you're focused on direct traffic, we’ll support you with pixel integration via postback — optimizing your campaign and reducing acquisition costs."
     },
     "grupo_info": {
-      "title": "Information Group",
-      "description": "Communication channel with tips on funnels that convert the most, and assertive creatives for the moment and real-time updates on promotions we have on our sites."
+      "title": "INFORMATION GROUP",
+      "description": "Join our WhatsApp & Telegram groups for exclusive funnel insights, battle-tested creatives, and real-time promo alerts. Stay sharp. Stay ahead."
     }
   },
   "bet_section": {
