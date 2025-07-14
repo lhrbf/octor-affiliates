@@ -83,7 +83,7 @@ header {
 
 .logo-header img {
   width: 100%;
-  max-width: 100px;
+  max-width: 44px;
   height: auto;
 }
 
@@ -100,13 +100,6 @@ header {
 .logo-text span {
   font-size: 0.55rem;
   color: white;
-}
-
-.logo-text img {
-  width: 100%;
-  max-width: 50px;
-  height: auto;
-  margin: 0 auto;
 }
 
 .header-right select {
@@ -151,7 +144,7 @@ header {
   align-items: center;
   justify-content: center;
   right: 28px;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-lg);
 }
 
 nav ul {

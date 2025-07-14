@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         // Se for um link externo (tem target="_blank") ou link para o grupo-octor
         if (link.hasAttribute('target') && link.getAttribute('target') === '_blank' || 
-            href === 'https://octor.pro' || href === 'https://octor.pro/') {
+            href === 'https://grupooctor.com/' || href === 'https://grupooctor.com//') {
           // Close mobile menu after clicking external link
           if (menu && menu.classList.contains('open')) {
             closeMenu();
