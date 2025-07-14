@@ -55,7 +55,7 @@
   <link rel="manifest" href="/site.webmanifest?v=3.0">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -73,7 +73,10 @@
   <!-- Preload critical resources -->
   <link rel="preload" href="assets/images/LEO-SANTANA.webp" as="image" type="image/webp">
   <link rel="preload" href="assets/icons/Logo-octor-Horizontal.webp" as="image" type="image/webp">
-  <link rel="preload" href="css/main.css" as="style">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</noscript>
   <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
@@ -444,13 +447,13 @@
 
           <div class="footer-column">
             <h3 data-translate="footer.services_title">Serviços</h3>
-            <a href="#" aria-label="Conheça nossos serviços de Marketing Digital"
+            <a href="#Mkt digital" aria-label="Conheça nossos serviços de Marketing Digital"
               data-translate="footer.marketing_digital">Marketing Digital</a>
-            <a href="#" aria-label="Conheça nossos serviços de SEO e Analytics"
+            <a href="#SEO e Analytics" aria-label="Conheça nossos serviços de SEO e Analytics"
               data-translate="footer.seo_analytics">SEO & Analytics</a>
-            <a href="#" aria-label="Conheça nossos serviços de Desenvolvimento"
+            <a href="#Desenvolvimento" aria-label="Conheça nossos serviços de Desenvolvimento"
               data-translate="footer.development">Desenvolvimento</a>
-            <a href="#" aria-label="Conheça nossos serviços de Consultoria"
+            <a href="#Consultoria" aria-label="Conheça nossos serviços de Consultoria"
               data-translate="footer.consulting">Consultoria</a>
           </div>
 
@@ -459,9 +462,9 @@
             <a href="javascript:void(0)" data-scroll-to="about" aria-label="Saiba mais sobre o Grupo Octor"
               data-translate="footer.about_us">Sobre
               Nós</a>
-            <a href="#" aria-label="Conheça as oportunidades de carreira no Grupo Octor"
+            <a href="#careers" aria-label="Conheça as oportunidades de carreira no Grupo Octor"
               data-translate="footer.careers">Carreiras</a>
-            <a href="#" aria-label="Acesse o blog do Grupo Octor" data-translate="footer.blog">Blog</a>
+            <a href="#blog" aria-label="Acesse o blog do Grupo Octor" data-translate="footer.blog">Blog</a>
             <a href="javascript:void(0)" data-scroll-to="contact" aria-label="Entre em contato conosco"
               data-translate="footer.contact">Contato</a>
           </div>
@@ -493,11 +496,11 @@
     </div>
   </footer>
 
-  <script src="js/script-clean.js"></script>
-  <script src="js/header.js"></script>
-  <script src="js/carousel.js"></script>
-  <script src="js/lang.js"></script>
-  <script src="js/gtm-tracking.js"></script>
+  <script src="js/script-clean.js" defer></script>
+  <script src="js/header.js" defer></script>
+  <script src="js/carousel.js" defer></script>
+  <script src="js/lang.js" defer></script>
+  <script src="js/gtm-tracking.js" defer></script>
 </body>
 
 </html>
