@@ -1,3 +1,7 @@
+/* Garantir tamanho explícito para h1 dentro de section para evitar aviso de API descontinuada */
+section h1 {
+  font-size: var(--font-2xl);
+}
 /* ===== GLOBAL STYLES - Octor Affiliates ===== */
 
 /* ===== FONT FACES ===== */
