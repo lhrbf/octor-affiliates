@@ -24,6 +24,12 @@
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#8B5CF6">
 
+  <!-- Font Awesome CDN -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" as="style" onload="this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </noscript>
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://grupoegbpartners.com">
@@ -56,6 +62,33 @@
 
   <!-- Stylesheets -->
   <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      z-index: 1000;
+      background: #8B5CF6;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: left 0.2s;
+    }
+    .skip-link:focus {
+      left: 16px;
+      top: 16px;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+  </style>
   <!-- CSS inline para ícones Font Awesome críticos -->
   <style>
     /* Envelope */
@@ -168,7 +201,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <a href="#main-content" class="skip-link" tabindex="0">Pular para o conteúdo principal</a>
   <header>
     <div class="container header">
       <div class="logo-header">
@@ -197,7 +230,7 @@
           Fale Conosco <i class="fab fa-whatsapp"></i>
         </button>
         <div class="logo-header-nav mobile">
-          <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor versão branca">
+          <img src="assets/icons/LOGO-OCTOR-BRANCO.svg" alt="Logo Octor versão branca" width="180" height="40">
         </div>
       </nav>
       <div class="header-right">
@@ -263,7 +296,7 @@
             <i class="fas fa-chevron-left" aria-hidden="true"></i>
           </button>
           <div class="carousel-wrapper" id="carousel">
-            <div class="card saque active" data-index="0" aria-labelledby="benefit-1">
+            <div class="card saque active" role="option" data-index="0" aria-labelledby="benefit-1">
               <div class="card-image">
                 <img src="assets/images/cards/saque.avif" alt="Imagem representando saque quinzenal">
                 alt="Imagem representando saque quinzenal" width="120" height="80">
@@ -274,7 +307,7 @@
                   transparência e agilidade.</p>
               </div>
             </div>
-            <div class="card chat active" data-index="1" aria-labelledby="benefit-2">
+            <div class="card chat active" role="option" data-index="1" aria-labelledby="benefit-2">
               <div class="card-image">
                 <img src="assets/images/cards/chat.avif" alt="Imagem representando chat com gerente">
                 alt="Imagem representando chat com gerente" width="120" height="80">
@@ -285,7 +318,7 @@
                   gerente de contas exclusivo.</p>
               </div>
             </div>
-            <div class="card google-seo" data-index="2" aria-labelledby="benefit-3">
+            <div class="card google-seo" role="option" data-index="2" aria-labelledby="benefit-3">
               <div class="card-image">
                 <img src="assets/images/cards/gseo.avif" alt="Imagem representando a bet mais buscada no Google">
                 alt="Imagem representando a bet mais buscada no Google" width="120" height="80">
@@ -297,7 +330,7 @@
                   popular do país.</p>
               </div>
             </div>
-            <div class="card acordo" data-index="3" aria-labelledby="benefit-4">
+            <div class="card acordo" role="option" data-index="3" aria-labelledby="benefit-4">
               <div class="card-image">
                 <img src="assets/images/cards/acordo.avif" alt="Imagem representando acordos com CPA e REV">
                 alt="Imagem representando acordos com CPA e REV" width="120" height="80">
@@ -307,7 +340,7 @@
                 <p data-translate="benefits.acordo.description">Maximize seus ganhos com acordos personalizados.</p>
               </div>
             </div>
-            <div class="card contrato" data-index="4" aria-labelledby="benefit-5">
+            <div class="card contrato" role="option" data-index="4" aria-labelledby="benefit-5">
               <div class="card-image">
                 <img src="assets/images/cards/contrato.png"
                   alt="Imagem representando contrato formalizado de afiliação" width="120" height="80">
@@ -319,7 +352,7 @@
                   parceria.</p>
               </div>
             </div>
-            <div class="card conversao" data-index="5" aria-labelledby="benefit-6">
+            <div class="card conversao" role="option" data-index="5" aria-labelledby="benefit-6">
               <div class="card-image">
                 <img src="assets/images/cards/conversao.avif" alt="Imagem representando conversão e retenção">
                 alt="Imagem representando conversão e retenção" width="120" height="80">
@@ -330,7 +363,7 @@
                   uma taxa de conversão de até 60% (cadastro x FTD).</p>
               </div>
             </div>
-            <div class="card midia-kit" data-index="6" aria-labelledby="benefit-7">
+            <div class="card midia-kit" role="option" data-index="6" aria-labelledby="benefit-7">
               <div class="card-image">
                 <img class="midia-kit-img" src="assets/images/cards/midia-kit.avif" alt="Imagem representando mídia kit">
                 alt="Imagem representando mídia kit" width="120" height="80">
@@ -343,7 +376,7 @@
                   de peso pra você usar com estratégia.</p>
               </div>
             </div>
-            <div class="card pixel" data-index="7" aria-labelledby="benefit-8">
+            <div class="card pixel" role="option" data-index="7" aria-labelledby="benefit-8">
               <div class="card-image">
                 <img src="assets/images/cards/Integraçao-de-pixel.avif" alt="Imagem representando integração de pixel">
                 alt="Imagem representando integração de pixel" width="120" height="80">
@@ -354,7 +387,7 @@
                   com a integração do seu pixel via postback. Otimizando sua campanha e baixando seus custos.</p>
               </div>
             </div>
-            <div class="card grupo-info" data-index="8" aria-labelledby="benefit-9">
+            <div class="card grupo-info" role="option" data-index="8" aria-labelledby="benefit-9">
               <div class="card-image">
                 <img class="grupo-img" src="assets/images/cards/grupo-de-informacoes.avif" alt="Imagem representando grupo de informações">
                 alt="Imagem representando grupo de informações" width="120" height="80">
@@ -455,16 +488,16 @@
       <div class="footer-content">
         <div class="footer-brand">
           <div class="footer-logo">
-            <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Logotipo do Grupo Octor" class="logo-img">
+            <img src="assets/icons/Logo-octor-Horizontal.webp" alt="Logotipo do Grupo Octor" class="logo-img" width="180" height="40">
           </div>
           <p class="independent-company" data-translate="footer.independent_company">
             Empresa independente</p>
           <div class="footer-eds-ona">
             <img src="assets/images/logos-eds/ESPORTES-DA-SORTE.svg"
-              alt="Logotipo Esportes da Sorte - Casa de apostas parceira">
-            <img src="assets/images/logos-eds/ONABET.svg" alt="Logotipo Onabet - Casa de apostas parceira">
+              alt="Logotipo Esportes da Sorte - Casa de apostas parceira" width="80" height="40">
+            <img src="assets/images/logos-eds/ONABET.svg" alt="Logotipo Onabet - Casa de apostas parceira" width="80" height="40">
             <img src="assets/images/logos-eds/Esportes-Gaming-Brasil.svg"
-              alt="Logotipo Esportes Gaming Brasil - Grupo de apostas">
+              alt="Logotipo Esportes Gaming Brasil - Grupo de apostas" width="80" height="40">
           </div>
           <p class="services-exclusive-footer" data-translate="footer.services_exclusive">Prestação de serviço exclusivo
             para as<br />
