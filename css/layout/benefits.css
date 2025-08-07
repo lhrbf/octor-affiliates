@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 75vh;
-  perspective: 1600px;
+  min-height: 78vh;
+  perspective: 1750px;
 }
 
 .carousel-wrapper {
