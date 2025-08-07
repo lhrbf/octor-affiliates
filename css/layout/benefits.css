@@ -22,8 +22,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 78vh;
-  perspective: 1750px;
+  min-height: 75vh;
+  perspective: 1850px;
 }
 
 .carousel-wrapper {
@@ -54,7 +54,7 @@
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .card.active {
@@ -137,8 +137,8 @@
   transform: translateY(-50%);
   background: rgba(127, 157, 255, 0.1);
   border: none;
-  width: 75px;
-  height: 75px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
   cursor: pointer;
   color: var(--primary-color);
@@ -155,16 +155,16 @@
 }
 
 .prev {
-  right: 370px;
+  right: 320px;
 }
 
 .next {
-  left: 370px;
+  left: 320px;
 }
 
 .prev i,
 .next i {
-  font-size: 3rem;
+  font-size: 2.6rem;
 }
 
 /* Indicators */
